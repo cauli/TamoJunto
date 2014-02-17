@@ -12,7 +12,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: omniauth['provider'])
         sign_in_and_redirect(authorization.user, event: :authentication)
       else
-        session[:omniauth] = omniauth
+        session[:omniauth] = omniauth.except('extra')
         redirect_to new_user_registration_path
       end
     end

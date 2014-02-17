@@ -1,15 +1,23 @@
 doctype html
-html
-  head
-    title = page_title app_name: "TamoJunto"
-    = stylesheet_link_tag "application"
-    meta[charset="utf-8"]
-    = yield(:meta_tags)
-    = csrf_meta_tag
-    = javascript_include_tag "application"
-  body
-    = initjs_tag app_name: "TamoJunto"
-    = render 'layouts/flash', flash: flash if flash.present?
-    = render 'layouts/header'
-    = yield
-    = render 'layouts/footer'
+/ http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+/[if lte IE 8 ]
+  |<html class='lt-ie9' lang='en'>
+/[if IE 9 ]
+  |<html class='ie9' lang='en'>
+/[if (gt IE 9)|!(IE)]
+  |<html lang='en'>
+
+head
+  title = page_title app_name: 'Tamo Junto'
+  = stylesheet_link_tag 'application'
+  meta[charset='utf-8']
+  = yield(:meta_tags)
+  = csrf_meta_tag
+  = javascript_include_tag 'application'
+body
+  = initjs_tag app_name: 'TamoJunto'
+  = render 'layouts/header'
+  = render 'layouts/flash', flash: flash if flash.present?
+  = yield
+  = render 'layouts/footer'
+|</html>

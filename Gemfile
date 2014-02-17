@@ -12,6 +12,7 @@ gem 'thin'
 # Improvements
 gem 'inherited_resources', '~> 1.4.1'
 gem 'simple_form', '~> 3.0.0'
+gem 'rails-settings-cached'
 
 # I18n
 gem 'rails-i18n'

@@ -25,5 +25,13 @@ class ApplicationController < ActionController::Base
                                                                    :current_password,
                                                                    :password_confirmation) }
   end
+
+  def after_sign_in_path_for(resource)
+    unless resource.active?
+      resource.update_attribute(:active, true)
+      flash[:notice] = t('registrations.reactivated')
+    end
+    root_path
+  end
 end
 

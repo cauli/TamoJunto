@@ -1,0 +1,9 @@
+- content_for :page_title, "#{t('.profile')} #{@user.name}"
+.profile
+  .row
+    .large-2.columns
+      = image_tag @user.avatar_url(200)
+    .large-10.columns
+      h2 = t('.profile') + ' ' + @user.name
+
+

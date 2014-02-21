@@ -13,14 +13,21 @@ class User < ActiveRecord::Base
       if auth = session[:omniauth]
         user.email = auth.info.email if auth.info.email.present?
         user.name = auth.info.name
-        user.image = auth.info.image
+        user.remote_image_url = auth.info.image
         user.authorizations.build(provider: auth.provider, uid: auth.uid)
       end
     end
   end
 
-  def avatar_url(size = 100)
-    return image if image.present?
+  def update_image(url)
+    unless self.image.present?
+      self.image_url = url if url.present?
+      self.save!
+    end
+  end
+
+  def avatar_url(size = '100x100#')
+    return image.thumb(size).url if image.present?
     "http://gravatar.com/avatar/#{Digest::MD5.new.update(email)}.jpg?s=#{size}"
   end
 

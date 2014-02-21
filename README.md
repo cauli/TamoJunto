@@ -1,4 +1,5 @@
 # TamoJunto
+[![Build Status](https://travis-ci.org/engageis/TamoJunto.png)](https://travis-ci.org/engageis/TamoJunto) [![Code Climate](https://codeclimate.com/github/engageis/TamoJunto.png)](https://codeclimate.com/github/engageis/TamoJunto)
 
 
 ## Development environment

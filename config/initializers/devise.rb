@@ -252,7 +252,7 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   begin
-    config.omniauth :facebook, Setting['omniauth.facebook.id'], Setting['omniauth.facebook.secret'], scope: 'email', image_size: 'normal'
+    config.omniauth :facebook, Setting['omniauth.facebook.id'], Setting['omniauth.facebook.secret'], scope: 'email', image_size: 'large'
   rescue Exception => e
     Rails.logger.warn "Error loading settings: #{e}"
   end

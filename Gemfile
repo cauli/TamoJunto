@@ -16,6 +16,7 @@ gem 'inherited_resources', '~> 1.4.1'
 gem 'simple_form', '~> 3.0.0'
 gem 'rails-settings-cached'
 gem 'pundit', '~> 0.2.2'
+gem 'dragonfly'
 
 # I18n
 gem 'rails-i18n'

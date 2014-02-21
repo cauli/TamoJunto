@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   has_many :authorizations, dependent: :destroy
   validates :name, presence: true
 
+  dragonfly_accessor :image
+
   def self.new_with_session(params, session)
     super.tap do |user|
       if auth = session[:omniauth]

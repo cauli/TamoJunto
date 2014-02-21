@@ -5,6 +5,7 @@ describe Users::OmniauthCallbacksController do
   let(:omniauth_attrs) do
     { 'provider' => 'facebook',
       'uid'      => '230470' }
+
   end
 
   before do

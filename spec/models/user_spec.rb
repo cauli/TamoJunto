@@ -67,4 +67,22 @@ describe User do
     it{ should validate_presence_of :email }
     it{ should validate_presence_of :password }
   end
+
+  describe "#avatar_url" do
+    context 'with image' do
+      let(:user) { User.make! image: File.open("#{Rails.root}/spec/fixtures/image.png") }
+
+      it { expect(user.image_uid).to be_present }
+      it { expect(user.avatar_url).to be_present }
+
+    end
+
+    context 'without avatar' do
+      let(:user) { User.make! image_uid: nil }
+
+      it { expect(user.image_uid).not_to be_present }
+      it { expect(user.avatar_url).to be_present }
+
+    end
+  end
 end

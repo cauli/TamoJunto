@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: TamoJunto_development
+  database: tamojunto_development
   pool: 5
   #username: postgres
   #password:
@@ -10,7 +10,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: TamoJunto_test
+  database: tamojunto_test
   pool: 5
   username: postgres
   password: password
@@ -20,7 +20,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: TamoJunto_production
+  database: tamojunto_production
   pool: 5
   username: postgres
   password:

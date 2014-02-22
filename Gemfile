@@ -17,6 +17,7 @@ gem 'simple_form', '~> 3.0.0'
 gem 'rails-settings-cached'
 gem 'pundit', '~> 0.2.2'
 gem 'dragonfly'
+gem 'auto_html', '~> 1.6.1'
 
 # I18n
 gem 'rails-i18n'

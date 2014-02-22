@@ -5,6 +5,7 @@ class Organization < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :name, presence: true
+  validates :kind, inclusion: { in: %w{individual legal_entity NGO university public_organ}}
 
   dragonfly_accessor :image
 

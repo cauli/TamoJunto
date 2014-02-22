@@ -32,3 +32,8 @@ en:
       edit:
         are_you_sure: 'Are you sure?'
         update: 'Update'
+        individual: 'Individual'
+        legal_entity: 'Legal Entity'
+        NGO: 'Non-governamental organization'
+        university: 'University'
+        public_organ: 'Public Organ'

@@ -1,0 +1,15 @@
+= simple_form_for [:admin, @article] do |f|
+  .row
+    .large-10.columns
+      = f.input :title
+      = f.input :content
+    .large-2.columns
+      = f.input :image, as: :file
+      - if @article.image.present?
+        = image_tag @article.image.thumb('150x').url
+  .row
+    .large-10.columns
+      .text-right
+        = link_to 'Cancel', :back, class: 'button secondary'
+        | &nbsp;
+        = f.button :submit

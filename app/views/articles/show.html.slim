@@ -5,3 +5,7 @@
 
     .content
       p = @article.content_html
+
+    .image
+      h4 IMAGE
+      = image_tag @article.image.url

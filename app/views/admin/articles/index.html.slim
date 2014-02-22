@@ -1,0 +1,17 @@
+.row
+  .large-12.columns
+    h2 Articles
+
+    = link_to 'Create', new_admin_article_path, class: 'button'
+    table
+      tr
+        th Title
+        th Created At
+        th
+        th
+      - for article in @articles.each do
+        tr
+          td = article.title
+          td = article.created_at
+          td = link_to  'Edit', edit_admin_article_path(article)
+          td = link_to 'Remove', [:admin, article], data: { confirm: 'Are you sure?' }, method: :delete

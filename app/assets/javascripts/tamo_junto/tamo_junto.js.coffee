@@ -14,7 +14,6 @@ window.TamoJunto =
     # if you're not using the turbolinks or pjax, there's no difference between init and initPage.
 
   init: ->
-    # Something here. This is called in every page.
+    $(document).foundation()
 
   modules: -> []
-    # Some modules that will be used on every page.

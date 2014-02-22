@@ -7,6 +7,7 @@ TamoJunto::Application.routes.draw do
   root :to => "home#index"
 
   resources :users, only: :show
+  resources :articles, only: :show
 
   namespace :admin do
     get '/', to: 'dashboard#index'

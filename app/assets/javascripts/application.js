@@ -13,10 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-
+//= require foundation
 //= require ./lib/underscore.js
 //= require ./lib/backbone.js
 //= require tamo_junto/tamo_junto.js
 //= require init.js
 //= require_tree ./lib
-

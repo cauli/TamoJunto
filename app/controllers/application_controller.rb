@@ -48,7 +48,7 @@ class ApplicationController < ActionController::Base
     if resource.kind_of?(User)
       unless resource.active?
         resource.update_attribute(:active, true)
-        flash[:notice] = t('registrations.reactivated')
+        flash[:notice] = t('controllers.registrations.reactivated')
       end
     end
     root_path

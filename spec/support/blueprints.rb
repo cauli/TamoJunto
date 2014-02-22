@@ -14,3 +14,8 @@ Authorization.blueprint do
   provider {"facebook"}
   uid {10000}
 end
+
+Article.blueprint do
+  title {'Some article'}
+  content {'Lorem Ipson'}
+end

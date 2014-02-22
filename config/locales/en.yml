@@ -23,3 +23,12 @@ en:
   hello: "Hello world"
   registrations:
     reactivated: 'Account reactivated'
+  layouts:
+    header:
+      org-sign-up: 'Org. Sign Up'
+      org-sign-ip: 'Org. Sign In'
+  organizations:
+    registrations:
+      edit:
+        are_you_sure: 'Are you sure?'
+        update: 'Update'

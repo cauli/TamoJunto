@@ -1,7 +1,8 @@
 TamoJunto::Application.routes.draw do
   resources :authorizations, only: [:destroy]
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: 'users/registrations' }
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: 'users/registrations', sessions: 'users/sessions' }
+  devise_for :organizations, :controllers => { registrations: 'organizations/registrations', sessions: 'organizations/sessions'}
 
   root :to => "home#index"
 

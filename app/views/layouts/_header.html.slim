@@ -1,44 +1,42 @@
 header
-  nav.top-bar
-    .row
-      ul.title-area
-        li.name
-          h1
-           = link_to '#TamoJunto', root_path
+  nav.top-bar[data-topbar]
+    ul.title-area
+      li.name
+        h1
+         = link_to '#TamoJunto', root_path
 
-        / Mobile thing
-        li.toggle-topbar.menu-icon
-          a href="#"
-            span Menu
+      / Mobile thing
+      li.toggle-topbar.menu-icon
+        a href="#"
+          span Menu
 
-      .top-bar-section
-        / Left Nav Section
-        ul.left
-          li#new_idea
+    section.top-bar-section
+      / Left Nav Section
+      ul.left
+        li#new_idea
+        li
+
+      / Right Nav Section
+      ul.right
+        - if user_signed_in?
           li
-
-        / Right Nav Section
-        ul.right
-          - if user_signed_in?
-            li
-              span.user-actions[class="#{'un-signed-in' unless user_signed_in?}"]
-                = link_to edit_user_registration_path(current_user), class: 'user-profile' do
-                  = image_tag current_user.avatar_url('18x18#'), size: "18x18", class: 'profile-picture', alt: ''
-                  |  Olá, #{ current_user.name }!
-            li = link_to t('.sign-out'), destroy_user_session_path, method: :delete, class: 'sign-out button'
-          - elsif organization_signed_in?
-            li
-              span.user-actions[class="#{'un-signed-in' unless organization_signed_in?}"]
-                = link_to edit_organization_registration_path(current_organization), class: 'user-profile' do
-                  |  Olá, #{ current_organization.name }!
-            li = link_to t('.sign-out'), destroy_organization_session_path, method: :delete, class: 'sign-out button'
-          - else
-            li = link_to t('.sign-up'), new_user_registration_path, class: 'sign-up button'
-            li &nbsp;
-            li = link_to t('.sign-in'), new_user_session_path, class: 'sign-in button'
-            li &nbsp;
-            li = link_to t('layouts.header.org-sign-up'), new_organization_registration_path, class: 'sign-up button'
-            li &nbsp;
-            li = link_to t('layouts.header..org-sign-in'), new_organization_session_path, class: 'sign-in button'
-
+            span.user-actions[class="#{'un-signed-in' unless user_signed_in?}"]
+              = link_to edit_user_registration_path(current_user), class: 'user-profile' do
+                = image_tag current_user.avatar_url('18x18#'), size: "18x18", class: 'profile-picture', alt: ''
+                |  Olá, #{ current_user.name }!
+          li = link_to t('.sign-out'), destroy_user_session_path, method: :delete, class: 'sign-out button'
+        - elsif organization_signed_in?
+          li
+            span.user-actions[class="#{'un-signed-in' unless organization_signed_in?}"]
+              = link_to edit_organization_registration_path(current_organization), class: 'user-profile' do
+                |  Olá, #{ current_organization.name }!
+          li = link_to t('.sign-out'), destroy_organization_session_path, method: :delete, class: 'sign-out button'
+        - else
+          li = link_to t('.sign-up'), new_user_registration_path, class: 'sign-up button'
           li &nbsp;
+          li = link_to t('.sign-in'), new_user_session_path, class: 'sign-in button'
+          li &nbsp;
+          li = link_to t('layouts.header.org-sign-up'), new_organization_registration_path, class: 'sign-up button'
+          li &nbsp;
+          li = link_to t('layouts.header..org-sign-in'), new_organization_session_path, class: 'sign-in button'
+

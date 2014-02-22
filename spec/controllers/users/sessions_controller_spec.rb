@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Devise::SessionsController do
+describe Users::SessionsController do
   describe 'Reactivate User' do
     before do
       @request.env["devise.mapping"] = Devise.mappings[:user]

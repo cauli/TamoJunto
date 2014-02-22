@@ -11,19 +11,37 @@ class ApplicationController < ActionController::Base
 
   protected
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name,
-                                                            :email,
-                                                            :password,
-                                                            :password_confirmation) }
+    if resource_class == User
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name,
+                                                              :email,
+                                                              :password,
+                                                              :password_confirmation) }
 
-    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name,
-                                                                   :email,
-                                                                   :bio,
-                                                                   :image,
-                                                                   :location,
-                                                                   :password,
-                                                                   :current_password,
-                                                                   :password_confirmation) }
+      devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name,
+                                                                     :email,
+                                                                     :bio,
+                                                                     :image,
+                                                                     :location,
+                                                                     :password,
+                                                                     :current_password,
+                                                                     :password_confirmation) }
+    elsif resource_class == Organization
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name,
+                                                              :email,
+                                                              :password,
+                                                              :password_confirmation) }
+
+      devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name,
+                                                                     :email,
+                                                                     :kind,
+                                                                     :image,
+                                                                     :about,
+                                                                     :city,
+                                                                     :phone,
+                                                                     :password,
+                                                                     :current_password,
+                                                                     :password_confirmation) }
+    end
   end
 
   def after_sign_in_path_for(resource)

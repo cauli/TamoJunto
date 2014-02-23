@@ -28,6 +28,7 @@ class ApplicationController < ActionController::Base
     elsif resource_class == Organization
       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name,
                                                               :email,
+                                                              :kind,
                                                               :password,
                                                               :password_confirmation) }
 

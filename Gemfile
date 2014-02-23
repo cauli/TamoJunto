@@ -19,6 +19,9 @@ gem 'pundit', '~> 0.2.2'
 gem 'dragonfly'
 gem 'auto_html', '~> 1.6.1'
 gem 'video_info'
+gem 'reverse_markdown'
+gem 'foundation-wysihtml5-rails', path: '../foundation-wysihtml5-rails'
+gem 'font-awesome-rails'
 
 # I18n
 gem 'rails-i18n'

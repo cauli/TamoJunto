@@ -6,6 +6,8 @@ h2
   .form-inputs
     = f.input :name, :required => true, :autofocus => true
     = f.input :email, :required => true
+    - if resource.image.present?
+      = image_tag resource.image.thumb('60x60#').url
     = f.input :image, as: :file
     = f.input :password, :autocomplete => "off", :required => false
     = f.input :password_confirmation, :required => false

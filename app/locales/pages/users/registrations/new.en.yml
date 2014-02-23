@@ -1,0 +1,26 @@
+en:
+  users:
+    registrations:
+      new:
+        sign_up: "Sign Up"
+        sign_in: "Sign In"
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        omniauth_description: "Complete your registration setting a password."
+        sign_in_with: "Sign in with %{provider}"
+    shared:
+      social_links:
+        sign_in_with: "Sign in with %{provider}"
+      links:
+        sign_in: "Sign in"
+        sign_up: "Sign up"
+        reset_your_password: "Reset your password"
+        didn_t_receive_confirmation_instructions?: "Didn't receive confirmation instructions?"
+        didn_t_receive_unlock_instructions?: "Didn't receive unlock instructions?"
+        unlock_my_account: "Unlock my account"
+        confirm_my_account: "Confirm my account"
+        change_my_password: "Change my password"
+        or: " or "
+        back: "Back"

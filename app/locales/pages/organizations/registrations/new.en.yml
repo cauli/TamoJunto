@@ -1,17 +1,14 @@
 en:
   organizations:
     registrations:
-      edit:
-        provider: "Provider"
-        connect_disconnect: "Connect/Disconect"
-        unhappy: "Unhappy?"
-        cancel_my_account: "Cancel my account"
-        edit_devise_resource: "Edit %{resource_name}"
-        connect_your_provider: "Connect your %{provider_name}"
-        disconnect_from_provider: "Disconnect from %{provider_name}"
-        back: "Back"
-        update: "Update"
-        are_you_sure: "Are you sure?"
+      new:
+        sign_up: "Sign Up"
+        sign_in: "Sign In"
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        omniauth_description: "Complete your registration setting a password."
         individual: 'Individual'
         legal_entity: 'Legal Entity'
         NGO: 'Non-governamental organization'

@@ -1,0 +1,12 @@
+en:
+  organizations:
+    show:
+      city: 'City'
+      phone: 'Phone'
+      about: 'About'
+      organization: 'Organization'
+      individual: 'Individual'
+      legal_entity: 'Legal Entity'
+      NGO: 'Non-governamental organization'
+      university: 'University'
+      public_organ: 'Public Organ'

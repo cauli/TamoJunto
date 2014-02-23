@@ -1,9 +1,18 @@
-- content_for :page_title, "#{t('.profile')} #{@user.name}"
+- content_for :page_title, "#{t('.organization')} #{@organization.name}"
 .profile
   .row
     .large-2.columns
-      = image_tag @user.avatar_url(200)
+      = image_tag @organization.image.thumb('400x400#').url
     .large-10.columns
-      h2 = t('.profile') + ' ' + @user.name
+      h2 = t('.organization') + ' ' + @organization.name
+  .row
+    .large12.columns
+      p #{t('.city')}: #{@organization.city}
+      p #{t('.phone')}: #{@organization.phone}
+      p = t('.' + @organization.kind)
+  .row
+    .large-12.columns
+      h2 = t('.about')
+      p = @organization.about
 
 

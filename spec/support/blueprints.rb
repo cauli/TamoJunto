@@ -19,3 +19,11 @@ Article.blueprint do
   title {'Some article'}
   content {'Lorem Ipson'}
 end
+
+Organization.blueprint do
+  name {'Some nice organization'}
+  email {"someniceorg#{sn}@gmail.com"}
+  kind {'individual'}
+  password {'niceorg123'}
+  password_confirmation {'niceorg123'}
+end

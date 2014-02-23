@@ -2,6 +2,8 @@
   - for key, value in flash
     - if value.present?
       .alert-box.animated.fadeIn[class="#{key}" data-alert="true"]
-        = value.html_safe
-        a.close &times;
+        .row
+          .large-12.columns
+            = value.html_safe
+            a.close &times;
 

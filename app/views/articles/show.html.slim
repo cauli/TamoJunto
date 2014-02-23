@@ -8,4 +8,4 @@
 
     .image
       h4 IMAGE
-      = image_tag @article.image.url
+      = image_tag @article.image.url if @article.image.present?

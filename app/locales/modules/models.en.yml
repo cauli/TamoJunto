@@ -1,0 +1,3 @@
+en:
+  video:
+    url_regex_validation: 'URL isnt valid'

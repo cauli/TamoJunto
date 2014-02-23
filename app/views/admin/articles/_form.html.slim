@@ -1,8 +1,10 @@
+javascript:
+  $(document).ready(function(){$('.editor').wysihtml5({size: 'tiny', html: true});});
 = simple_form_for [:admin, @article] do |f|
   .row
-    .large-10.columns
+    .large-10.columns[data-no-turbolinks]
       = f.input :title
-      = f.input :content
+      = f.input :content_html_test, as: :text, input_html: { class: 'editor', style: 'height: 500px' }
     .large-2.columns
       = f.input :image, as: :file
       - if @article.image.present?

@@ -20,7 +20,7 @@ gem 'dragonfly'
 gem 'auto_html', '~> 1.6.1'
 gem 'video_info'
 gem 'reverse_markdown'
-gem 'foundation-wysihtml5-rails', path: '../foundation-wysihtml5-rails'
+gem 'foundation-wysihtml5-rails', '~> 1.0.0'
 gem 'font-awesome-rails'
 
 # I18n

@@ -18,6 +18,7 @@ gem 'rails-settings-cached'
 gem 'pundit', '~> 0.2.2'
 gem 'dragonfly'
 gem 'auto_html', '~> 1.6.1'
+gem 'video_info'
 
 # I18n
 gem 'rails-i18n'

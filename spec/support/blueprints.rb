@@ -27,3 +27,9 @@ Organization.blueprint do
   password {'niceorg123'}
   password_confirmation {'niceorg123'}
 end
+
+Video.blueprint do
+  url {'http://www.youtube.com/watch?v=xRrL7Zgi8Rg'}
+  title {'Some nice video'}
+  description {'Some nice description about the video'}
+end

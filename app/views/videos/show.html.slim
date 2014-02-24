@@ -1,0 +1,10 @@
+.row
+  .large-12.columns
+    .title
+      h2 = @video.title
+
+    .content
+      p = @video.description
+
+    .link
+      = link_to 'Link', @video.url

@@ -6,5 +6,5 @@
     .content
       p = @video.description
 
-    .link
-      = link_to 'Link', @video.url
+    .embed
+      iframe width="560" height="315" src="//#{@video.embed_url}" frameborder="0" allowfullscreen

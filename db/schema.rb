@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140223202743) do
+ActiveRecord::Schema.define(version: 20140227211339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 20140223202743) do
   end
 
   add_index "authorizations", ["user_id"], name: "index_authorizations_on_user_id", using: :btree
+
+  create_table "documents", force: true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "file_uid"
+    t.string   "file_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "organizations", force: true do |t|
     t.string   "email",                  default: "", null: false

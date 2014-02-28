@@ -33,3 +33,9 @@ Video.blueprint do
   title {'Some nice video'}
   description {'Some nice description about the video'}
 end
+
+Document.blueprint do
+  title {'Some nice document'}
+  description {'Some nice description to the document'}
+  file {File.open("#{Rails.root}/spec/fixtures/image.png")}
+end

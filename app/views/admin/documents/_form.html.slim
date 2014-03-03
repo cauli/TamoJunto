@@ -1,7 +1,16 @@
 = simple_form_for [:admin, @document] do |f|
-  - if @document.file.present?
-    p = link_to @document.file.name, @document.file.url
-  = f.input :file, as: :file
-  = f.input :title
-  = f.input :description
-  = f.submit
+  .row
+    .large-8.columns
+      = f.input :title
+      = f.input :description
+    .large-4.columns
+      = f.input :file, as: :file
+      - if @document.file.present?
+        p = link_to @document.file.name, @document.file.url
+
+  .row
+    .large-10.columns
+      .text-right
+        = link_to 'Cancel', :back, class: 'button secondary'
+        | &nbsp;
+        = f.button :submit

@@ -15,5 +15,6 @@ TamoJunto::Application.routes.draw do
     get '/', to: 'dashboard#index'
     resources :articles, except: :show
     resources :videos, except: :show
+    resources :documents, except: :show
   end
 end

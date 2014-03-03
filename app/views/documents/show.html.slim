@@ -1,0 +1,10 @@
+.row
+  .large-12.columns
+    .title
+      h2 = @document.title
+
+    .content
+      p = @document.description
+
+    .file
+      p = link_to @document.file_name, @document.file.url

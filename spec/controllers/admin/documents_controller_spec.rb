@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Admin::DocumentsController do
-
   let(:user) {User.make! admin: true }
   let(:document) { Document.make! }
 

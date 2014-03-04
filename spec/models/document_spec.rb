@@ -1,9 +1,6 @@
 require 'spec_helper'
 
 describe Document do
-  subject(:document) { Document.make! }
-
-  it{ should be_valid }
 
   describe 'validations' do
     it{ should validate_presence_of :title }

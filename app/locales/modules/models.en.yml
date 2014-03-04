@@ -1,3 +1,5 @@
 en:
   video:
     url_regex_validation: "URL isn't valid"
+  document:
+    invalid_extension: "You can't upload that kind of file"

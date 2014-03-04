@@ -40,7 +40,6 @@ describe Admin::DocumentsController do
 
   protected
   def document_params
-    Document.make.attributes.merge(file: File.open("#{Rails.root}/spec/fixtures/image.png"))
+    { "title" => 'Some nice file', "description" => 'Some nice description', "file" => fixture_file_upload('file.txt', 'text/txt') }
   end
-
 end

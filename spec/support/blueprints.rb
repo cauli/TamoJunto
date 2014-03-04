@@ -37,5 +37,5 @@ end
 Document.blueprint do
   title {'Some nice document'}
   description {'Some nice description to the document'}
-  file {File.open("#{Rails.root}/spec/fixtures/image.png")}
+  file {File.open("#{Rails.root}/spec/fixtures/file.txt")}
 end

@@ -18,6 +18,7 @@ body
   = initjs_tag app_name: 'TamoJunto'
   = render 'layouts/header'
   = render 'layouts/flash', flash: flash if flash.present?
+  = render 'layouts/admin_menu' if admin?
   = yield
   = render 'layouts/footer'
 |</html>

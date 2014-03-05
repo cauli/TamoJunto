@@ -1,5 +1,13 @@
 = simple_form_for [:admin, @video] do |f|
-  = f.input :url
-  = f.input :title
-  = f.input :description
-  = f.submit
+  .row
+    .large-10.columns
+      = f.input :url
+      = f.input :title
+      = f.input :description
+
+  .row
+    .large-10.columns
+      .text-right
+        = link_to t('.cancel'), :back, class: 'button secondary'
+        | &nbsp;
+        = f.button :submit

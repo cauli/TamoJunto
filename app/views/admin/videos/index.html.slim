@@ -1,18 +1,18 @@
 .row
   .large-12.columns
-    h2 Videos
+    h2 = t('.videos')
 
-    = link_to 'Create', new_admin_video_path, class: 'button'
+    = link_to t('.create'), new_admin_video_path, class: 'button'
     table
       tr
-        th Title
-        th Created At
+        th = t('.title')
+        th = t('.created_at')
         th
         th
       - for video in @videos.each do
         tr
           td = video.title
           td = video.created_at
-          td = link_to  'Edit', edit_admin_video_path(video)
-          td = link_to 'Remove', [:admin, video], data: { confirm: 'Are you sure?' }, method: :delete
+          td = link_to  t('.edit'), edit_admin_video_path(video)
+          td = link_to t('.remove'), [:admin, video], data: { confirm: t('.are_you_sure') }, method: :delete
 

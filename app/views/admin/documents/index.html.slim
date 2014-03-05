@@ -5,8 +5,8 @@
     = link_to t('.create'), new_admin_document_path, class: 'button'
     table
       tr
-        th Title
-        th Created At
+        th = t('.title')
+        th = t('.created_at')
         th
         th
       - for document in @documents.each do

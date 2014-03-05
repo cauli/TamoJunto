@@ -1,3 +1,8 @@
 en:
-  org-sign-up: 'Org. Sign Up'
-  org-sign-ip: 'Org. Sign In'
+  layouts:
+    header:
+      sign-up: 'Sign up'
+      sign-in: 'Sign in'
+      org-sign-up: 'Org. Sign Up'
+      org-sign-in: 'Org. Sign In'
+      sign-out: 'Sign out'

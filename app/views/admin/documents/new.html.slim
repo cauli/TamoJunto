@@ -1,5 +1,6 @@
+- content_for :page_title, t('.new_document')
 .row
   .large-12.columns
-    h1 Admin::Documents#new
+    h2 = yield :page_title
     = render 'form'
 

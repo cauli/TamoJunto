@@ -54,3 +54,7 @@ Service.blueprint do
   description { 'Some description' }
   local { 'Some local' }
 end
+
+ActsAsTaggableOn::Tag.blueprint do
+  name { 'test' }
+end

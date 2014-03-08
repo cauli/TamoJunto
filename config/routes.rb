@@ -41,5 +41,6 @@ TamoJunto::Application.routes.draw do
         get :approve
       end
     end
+    resources :tags, only: [:index, :destroy]
   end
 end

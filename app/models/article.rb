@@ -1,4 +1,4 @@
 class Article < ActiveRecord::Base
-  validates :title, :content, presence: true
+  validates :title, :content_html, presence: true
   dragonfly_accessor :image
 end

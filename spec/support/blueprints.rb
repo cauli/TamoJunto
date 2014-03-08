@@ -17,7 +17,7 @@ end
 
 Article.blueprint do
   title {'Some article'}
-  content {'Lorem Ipson'}
+  content_html {'Lorem Ipson'}
 end
 
 Organization.blueprint do

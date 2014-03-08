@@ -1,0 +1,14 @@
+en:
+  admin:
+    videos:
+      index:
+        videos: 'Users'
+        create: 'Create'
+        edit: 'Edit'
+        remove: 'Remove'
+        are_you_sure: 'Are you sure?'
+        name: 'Name'
+        admin: 'Admin?'
+        true: 'yes'
+        false: 'no'
+        created_at: 'Created at'

@@ -1,0 +1,67 @@
+div.tagsinput
+  margin-bottom: rem-calc(15px)
+  border: 1px solid $input-border-color
+  +radius($global-radius)
+  background: $input-bg-color
+  box-shadow: $input-box-shadow
+  padding: rem-calc(5px)
+  height: rem-calc(100px)
+  overflow-y: auto
+  span.tag
+    border: 1px solid darken($primary-color, 7%)
+    +radius(2px)
+    display: block
+    float: left
+    padding: rem-calc(5px)
+    background: $primary-color
+    color: white
+    margin-right: rem-calc(5px)
+    margin-bottom: rem-calc(5px)
+    font-family: helvetica
+    a
+      font-weight: bold
+      color: #f9f9f9
+      text-decoration: none
+      font-size: 90%
+
+  input
+    width: 100px
+    margin: 0px
+    font-family: helvetica
+    border: none
+    padding: rem-calc(5px)
+    background: transparent
+    outline: 0px
+    margin-right: rem-calc(5px)
+    margin-bottom: rem-calc(5px)
+    box-shadow: none
+    transition: none
+    &:focus
+      box-shadow: none
+      border: none
+
+  .tags_clear
+    clear: both
+    width: 100%
+    height: 0px
+
+  .not_valid
+    background: $alert-color
+    color: white !important
+  .ui-helper-hidden-accessible
+    display: none
+
+ul.ui-autocomplete
+  width: 150px
+  background: white
+  padding: rem-calc(2px)
+  border: 1px solid $border-color
+  li
+    list-style: none
+    a
+      padding: rem-calc(5px)
+      display: block
+      &:hover, &.ui-state-focus, &.ui-state-active
+        background: $primary-color
+        color: white
+        +radius(2px)

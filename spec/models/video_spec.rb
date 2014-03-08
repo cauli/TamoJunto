@@ -41,4 +41,10 @@ describe Video do
 
     it_should_behave_like 'a voteable model'
   end
+
+  describe 'tags' do
+    it { should have_many :tags }
+    it { should respond_to :tag_list }
+    it { should respond_to :tag_list= }
+  end
 end

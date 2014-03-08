@@ -22,7 +22,7 @@ describe Admin::UsersController do
   end
 
   describe '#update' do
-    before { post :update, id: user, video: user_params }
+    before { post :update, id: user, user: user_params }
     it { expect(response).to redirect_to(admin_users_path) }
   end
 

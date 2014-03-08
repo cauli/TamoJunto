@@ -1,0 +1,14 @@
+.row
+  .large-12.columns
+    h2 = t('.title')
+
+    table
+      tr
+        th = t('.name')
+        th = t('.count')
+        th
+      - for tag in @tags.each do
+        tr
+          td = tag.name
+          td = tag.taggings.count
+          td = link_to t('.remove'), admin_tag_path(tag), data: { confirm: t('.are_you_sure') }, method: :delete

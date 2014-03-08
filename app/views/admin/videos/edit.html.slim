@@ -1,5 +1,5 @@
+- content_for :page_title, t('.edit_video')
 .row
   .large-12.columns
-    h1 Admin::Videos#edit
-    p Find me in app/views/admin/videos/edit.html.slim
+    h2 = yield :page_title
     = render 'form'

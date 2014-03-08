@@ -1,5 +1,5 @@
+- content_for :page_title, t('.edit_article')
 .row
   .large-12.columns
-    h1 Admin::Articles#edit
-    p Find me in app/views/admin/articles/edit.html.slim
+    h2 = yield :page_title
     = render 'form'

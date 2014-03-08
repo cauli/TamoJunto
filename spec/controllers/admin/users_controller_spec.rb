@@ -27,7 +27,7 @@ describe Admin::UsersController do
   end
 
   protected
-  def video_params
-    Video.make.attributes.merge({ 'admin' => 'true' })
+  def user_params
+    User.make.attributes.merge({ 'admin' => 'true' })
   end
 end

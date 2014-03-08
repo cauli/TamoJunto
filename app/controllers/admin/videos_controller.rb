@@ -5,6 +5,6 @@ class Admin::VideosController < Admin::BaseController
 
   protected
   def permitted_params
-    params.permit(video: [:title, :description, :url])
+    params.permit(video: [:title, :description, :url, :tag_list])
   end
 end

@@ -1,0 +1,16 @@
+= simple_form_for [:admin, @organization] do |f|
+  .row
+    .large-10.columns
+      = f.input :name
+      = f.input :kind, as: :select, collection: { t('.individual') => 'individual', 
+                                                  t('.legal_entity') => 'legal_entity',
+                                                  t('.NGO') => 'NGO',
+                                                  t('.university') => 'university',
+                                                  t('.public_organ') => 'public_organ' }
+
+  .row
+    .large-10.columns
+      .text-right
+        = link_to t('.cancel'), :back, class: 'button secondary'
+        | &nbsp;
+        = f.button :submit

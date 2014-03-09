@@ -1,0 +1,19 @@
+.row
+  .large-12.columns
+    h2 = t('.organizations')
+
+    table
+      tr
+        th = t('.name')
+        th = t('.kind')
+        th = t('.created_at')
+        th
+        th
+      - for organization in @organizations.each do
+        tr
+          td = organization.name
+          th = t('.' + organization.kind)
+          td = organization.created_at
+          td = link_to  t('.edit'), edit_admin_organization_path(organization)
+          td = link_to t('.remove'), [:admin, organization], data: { confirm: t('.are_you_sure') }, method: :delete
+

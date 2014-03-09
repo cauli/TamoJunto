@@ -1,0 +1,17 @@
+en:
+  admin:
+    organizations:
+      index:
+        organizations: 'Organizations'
+        create: 'Create'
+        edit: 'Edit'
+        remove: 'Remove'
+        are_you_sure: 'Are you sure?'
+        name: 'Name'
+        kind: 'Kind'
+        individual: 'Individual'
+        legal_entity: 'Legal Entity'
+        NGO: 'Non-governamental organization'
+        university: 'University'
+        public_organ: 'Public Organ'
+        created_at: 'Created at'

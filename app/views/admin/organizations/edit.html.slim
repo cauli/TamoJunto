@@ -1,0 +1,5 @@
+- content_for :page_title, t('.edit_organization')
+.row
+  .large-12.columns
+    h2 = yield :page_title
+    = render 'form'

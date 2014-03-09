@@ -5,6 +5,7 @@
     table
       tr
         th = t('.name')
+        th = t('.organization')
         th = t('.starts_at')
         th = t('.state')
         th = t('.created_at')
@@ -13,6 +14,7 @@
       - for event in @events.each do
         tr
           td = event.name
+          td = event.organization.name
           td = l event.starts_at, format: :long
           td = t(".state_names.#{event.state}")
           td = l event.created_at, format: :short

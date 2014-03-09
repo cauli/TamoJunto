@@ -5,6 +5,7 @@ en:
         title: 'Events'
         create: 'Create'
         name: 'Name'
+        organization: 'Organization'
         starts_at: 'Starts at'
         state: 'State'
         created_at: 'Created at'

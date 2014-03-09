@@ -1,0 +1,5 @@
+en:
+  admin:
+    events:
+      edit:
+        title: 'Edit Event'

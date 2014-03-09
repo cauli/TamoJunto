@@ -210,6 +210,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    state_machine (1.2.0)
     temple (0.6.7)
     thin (1.6.1)
       daemons (>= 1.0.9)
@@ -275,6 +276,7 @@ DEPENDENCIES
   shoulda-matchers
   simple_form (~> 3.0.0)
   slim-rails
+  state_machine
   thin
   turbolinks
   uglifier

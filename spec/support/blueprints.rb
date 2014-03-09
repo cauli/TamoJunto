@@ -39,3 +39,12 @@ Document.blueprint do
   description {'Some nice description to the document'}
   file {File.open("#{Rails.root}/spec/fixtures/file.txt")}
 end
+
+Event.blueprint do
+  name        { 'Some event' }
+  description { 'Awesome event' }
+  local       { 'Hangouts' }
+  starts_at   { Date.today }
+  ends_at     { Date.today + 1.day }
+  time        { 'All day' }
+end

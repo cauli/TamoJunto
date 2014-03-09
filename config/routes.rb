@@ -11,6 +11,7 @@ TamoJunto::Application.routes.draw do
   resources :articles, only: :show
   resources :videos, only: :show
   resources :documents, only: :show
+  resources :events, only: :show
 
   namespace :admin do
     get '/', to: 'dashboard#index'

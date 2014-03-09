@@ -4,8 +4,8 @@
       h2 = @article.title
 
     .content
-      p = @article.content_html
+      p = @article.content_html.html_safe
 
     .image
       h4 IMAGE
-      = image_tag @article.image.url
+      = image_tag @article.image.url if @article.image.present?

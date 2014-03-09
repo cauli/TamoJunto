@@ -19,3 +19,4 @@
 //= require tamo_junto/tamo_junto.js
 //= require init.js
 //= require_tree ./lib
+//= require foundation-wysihtml5

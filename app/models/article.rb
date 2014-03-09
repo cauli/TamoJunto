@@ -1,6 +1,4 @@
 class Article < ActiveRecord::Base
-  include Shared::BeautifulText
-  validates :title, :content, presence: true
-  beautiful_text_for [:content]
+  validates :title, :content_html, presence: true
   dragonfly_accessor :image
 end

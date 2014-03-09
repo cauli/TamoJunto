@@ -17,8 +17,9 @@ gem 'simple_form', '~> 3.0.0'
 gem 'rails-settings-cached'
 gem 'pundit', '~> 0.2.2'
 gem 'dragonfly'
-gem 'auto_html', '~> 1.6.1'
 gem 'video_info'
+gem 'foundation-wysihtml5-rails', '~> 1.0.0'
+gem 'font-awesome-rails'
 
 # I18n
 gem 'rails-i18n'
@@ -41,7 +42,7 @@ gem 'sass-rails', '4.0.1'
 gem 'coffee-rails', '4.0.1'
 gem 'uglifier'
 gem 'turbolinks'
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.2.0.0'
 
 group :development, :test do
   gem 'rspec-rails'

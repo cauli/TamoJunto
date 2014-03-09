@@ -1,0 +1,20 @@
+.row
+  .large-12.columns
+    h2 = t('.title')
+
+    table
+      tr
+        th = t('.name')
+        th = t('.starts_at')
+        th = t('.state')
+        th = t('.created_at')
+        th
+        th
+      - for event in @events.each do
+        tr
+          td = event.name
+          td = l event.starts_at, format: :long
+          td = t(".state_names.#{event.state}")
+          td = l event.created_at, format: :short
+          td = link_to  t('.edit'), edit_admin_event_path(event)
+          td = link_to t('.remove'), [:admin, event], data: { confirm: t('.are_you_sure') }, method: :delete

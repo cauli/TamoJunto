@@ -22,8 +22,8 @@ describe Admin::OrganizationsController do
   end
 
   describe '#update' do
-    before { post :update, id: user, organization: organization_params }
-    it { expect(response).to redirect_to(admin_organization_path) }
+    before { post :update, id: organization, organization: organization_params }
+    it { expect(response).to redirect_to(admin_organizations_path) }
   end
 
   protected

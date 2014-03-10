@@ -1,6 +1,6 @@
 = simple_form_for [:admin, @organization] do |f|
   .row
-    .large-10.columns
+    .large-12.columns
       = f.input :name
       = f.input :kind, as: :select, collection: { t('organizations.individual') => 'individual', 
                                                   t('organizations.legal_entity') => 'legal_entity',
@@ -9,7 +9,7 @@
                                                   t('organizations.public_organ') => 'public_organ' }
 
   .row
-    .large-10.columns
+    .large-12.columns
       .text-right
         = link_to t('words.cancel'), :back, class: 'button secondary'
         | &nbsp;

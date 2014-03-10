@@ -34,6 +34,30 @@ describe Admin::EventsController do
     it { expect { event.reload }.to raise_error }
   end
 
+  describe '#reject' do
+    before { get :reject, id: event }
+    it { expect(response).to redirect_to(admin_events_path) }
+    it 'should be rejected' do
+      expect(event.reload.rejected?).to be_true
+    end
+  end
+
+  describe '#approve' do
+    before { get :approve, id: event }
+    it { expect(response).to redirect_to(admin_events_path) }
+    it 'should be visible' do
+      expect(event.reload.visible?).to be_true
+    end
+  end
+
+  describe '#cancel' do
+    before { get :cancel, id: event }
+    it { expect(response).to redirect_to(admin_events_path) }
+    it 'should be canceled' do
+      expect(event.reload.canceled?).to be_true
+    end
+  end
+
   protected
   def event_params
     Event.make.attributes

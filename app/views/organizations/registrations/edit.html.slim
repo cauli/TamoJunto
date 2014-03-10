@@ -9,11 +9,11 @@ h2
     - if resource.image.present?
       = image_tag resource.image.thumb('60x60#').url
     = f.input :image, as: :file
-    = f.input :kind, as: :select, collection: { t('.individual') => 'individual', 
-                                                t('.legal_entity') => 'legal_entity',
-                                                t('.NGO') => 'NGO',
-                                                t('.university') => 'university',
-                                                t('.public_organ') => 'public_organ' }
+    = f.input :kind, as: :select, collection: { t('organizations.individual') => 'individual', 
+                                                t('organizations.legal_entity') => 'legal_entity',
+                                                t('organizations.ngo') => 'NGO',
+                                                t('organizations.university') => 'university',
+                                                t('organizations.public_organ') => 'public_organ' }
     = f.input :about
     = f.input :phone
     = f.input :city

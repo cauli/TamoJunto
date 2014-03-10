@@ -2,4 +2,4 @@ en:
   admin:
     articles:
       new:
-        new_article: 'New article'
+        title: 'New article'

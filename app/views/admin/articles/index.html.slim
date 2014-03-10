@@ -1,11 +1,12 @@
+- content_for :page_title, t('.title')
 .row
   .large-12.columns
-    h2 Articles
+    h2 = yield :page_title
 
     = link_to t('.create'), new_admin_article_path, class: 'button'
     table
       tr
-        th = t('.title')
+        th = t('.article_title')
         th = t('.created_at')
         th
         th

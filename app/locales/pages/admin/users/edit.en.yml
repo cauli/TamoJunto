@@ -2,4 +2,4 @@ en:
   admin:
     users:
       edit:
-        edit_user: 'Edit user'
+        title: 'Edit user'

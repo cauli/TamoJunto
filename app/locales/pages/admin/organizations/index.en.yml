@@ -2,7 +2,7 @@ en:
   admin:
     organizations:
       index:
-        organizations: 'Organizations'
+        title: 'Organizations'
         create: 'Create'
         edit: 'Edit'
         remove: 'Remove'

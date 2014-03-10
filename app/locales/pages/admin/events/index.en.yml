@@ -17,3 +17,8 @@ en:
         edit: 'Edit'
         remove: 'Remove'
         are_you_sure: 'Are you sure?'
+        actions: 'Actions'
+        change_state:
+          approve: 'Approve'
+          cancel: 'Cancel'
+          reject: 'Reject'

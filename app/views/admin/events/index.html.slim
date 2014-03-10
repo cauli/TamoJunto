@@ -11,6 +11,7 @@
         th = t('.created_at')
         th
         th
+        th
       - for event in @events.each do
         tr
           td = event.name
@@ -18,5 +19,16 @@
           td = l event.starts_at, format: :long
           td = t(".state_names.#{event.state}")
           td = l event.created_at, format: :short
+          td
+            a.button.dropdown.tiny[data-dropdown="drop-#{event.id}"] = t('.actions')
+            ul.f-dropdown[id="drop-#{event.id}" data-dropdown-content]
+              - unless event.visible?
+                li = link_to t('.change_state.approve'), approve_admin_event_path(event)
+              - unless event.canceled?
+                li = link_to t('.change_state.cancel'), cancel_admin_event_path(event)
+              - unless event.rejected? || event.canceled?
+                li = link_to t('.change_state.reject'), reject_admin_event_path(event)
+
+
           td = link_to  t('.edit'), edit_admin_event_path(event)
           td = link_to t('.remove'), [:admin, event], data: { confirm: t('.are_you_sure') }, method: :delete

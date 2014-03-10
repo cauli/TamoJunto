@@ -3,12 +3,6 @@ en:
     users:
       index:
         title: 'Users'
-        create: 'Create'
-        edit: 'Edit'
-        remove: 'Remove'
-        are_you_sure: 'Are you sure?'
         name: 'Name'
         admin: 'Admin?'
-        is_admin: 'Yes'
-        isnt_admin: 'No'
         created_at: 'Created at'

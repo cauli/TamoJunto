@@ -3,9 +3,5 @@ en:
     documents:
       index:
         title: 'Documents'
-        create: 'Create'
-        edit: 'Edit'
-        remove: 'Remove'
-        are_you_sure: 'Are you sure?'
         document_title: 'Title'
         created_at: 'Created at'

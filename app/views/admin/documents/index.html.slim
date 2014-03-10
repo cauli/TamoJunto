@@ -3,7 +3,7 @@
   .large-12.columns
     h2 = yield :page_title
 
-    = link_to t('.create'), new_admin_document_path, class: 'button'
+    = link_to t('words.create'), new_admin_document_path, class: 'button'
     table
       tr
         th = t('.document_title')
@@ -14,6 +14,6 @@
         tr
           td = document.title
           td = document.created_at
-          td = link_to  t('.edit'), edit_admin_document_path(document)
-          td = link_to t('.remove'), [:admin, document], data: { confirm: t('.are_you_sure') }, method: :delete
+          td = link_to  t('words.edit'), edit_admin_document_path(document)
+          td = link_to t('words.remove'), [:admin, document], data: { confirm: t('words.are_you_sure') }, method: :delete
 

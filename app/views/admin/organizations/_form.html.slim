@@ -2,15 +2,15 @@
   .row
     .large-10.columns
       = f.input :name
-      = f.input :kind, as: :select, collection: { t('.individual') => 'individual', 
-                                                  t('.legal_entity') => 'legal_entity',
-                                                  t('.NGO') => 'NGO',
-                                                  t('.university') => 'university',
-                                                  t('.public_organ') => 'public_organ' }
+      = f.input :kind, as: :select, collection: { t('organizations.individual') => 'individual', 
+                                                  t('organizations.legal_entity') => 'legal_entity',
+                                                  t('organizations.NGO') => 'NGO',
+                                                  t('organizations.university') => 'university',
+                                                  t('organizations.public_organ') => 'public_organ' }
 
   .row
     .large-10.columns
       .text-right
-        = link_to t('.cancel'), :back, class: 'button secondary'
+        = link_to t('words.cancel'), :back, class: 'button secondary'
         | &nbsp;
         = f.button :submit

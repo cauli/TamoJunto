@@ -3,9 +3,5 @@ en:
     videos:
       index:
         title: 'Videos'
-        create: 'Create'
-        edit: 'Edit'
-        remove: 'Remove'
-        are_you_sure: 'Are you sure?'
         video_title: 'Title'
         created_at: 'Created at'

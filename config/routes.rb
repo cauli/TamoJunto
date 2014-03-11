@@ -17,5 +17,7 @@ TamoJunto::Application.routes.draw do
     resources :articles, except: :show
     resources :videos, except: :show
     resources :documents, except: :show
+    resources :users, except: [:new, :create, :show]
+    resources :organizations, except: [:new, :create, :show]
   end
 end

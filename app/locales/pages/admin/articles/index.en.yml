@@ -2,10 +2,6 @@ en:
   admin:
     articles:
       index:
-        articles: 'Articles'
-        create: 'Create'
-        edit: 'Edit'
-        remove: 'Remove'
-        are_you_sure: 'Are you sure?'
-        title: 'Title'
+        title: 'Articles'
+        article_title: 'Title'
         created_at: 'Created at'

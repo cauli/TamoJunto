@@ -2,10 +2,6 @@ en:
   admin:
     documents:
       index:
-        documents: 'Documents'
-        create: 'Create'
-        edit: 'Edit'
-        remove: 'Remove'
-        are_you_sure: 'Are you sure?'
-        title: 'Title'
+        title: 'Documents'
+        document_title: 'Title'
         created_at: 'Created at'

@@ -2,10 +2,6 @@ en:
   admin:
     videos:
       index:
-        videos: 'Videos'
-        create: 'Create'
-        edit: 'Edit'
-        remove: 'Remove'
-        are_you_sure: 'Are you sure?'
-        title: 'Title'
+        title: 'Videos'
+        video_title: 'Title'
         created_at: 'Created at'

@@ -2,4 +2,4 @@ en:
   admin:
     documents:
       new:
-        new_document: 'New document'
+        title: 'New document'

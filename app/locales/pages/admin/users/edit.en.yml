@@ -1,0 +1,5 @@
+en:
+  admin:
+    users:
+      edit:
+        title: 'Edit user'

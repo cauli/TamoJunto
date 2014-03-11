@@ -1,0 +1,7 @@
+en:
+  organizations:
+    individual: 'Individual'
+    legal_entity: 'Legal Entity'
+    NGO: 'Non-governamental organization'
+    university: 'University'
+    public_organ: 'Public Organ'

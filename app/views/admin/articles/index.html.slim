@@ -1,11 +1,12 @@
+- content_for :page_title, t('.title')
 .row
   .large-12.columns
-    h2 Articles
+    h2 = yield :page_title
 
-    = link_to t('.create'), new_admin_article_path, class: 'button'
+    = link_to t('words.create'), new_admin_article_path, class: 'button'
     table
       tr
-        th = t('.title')
+        th = t('.article_title')
         th = t('.created_at')
         th
         th
@@ -13,5 +14,5 @@
         tr
           td = article.title
           td = article.created_at
-          td = link_to  t('.edit'), edit_admin_article_path(article)
-          td = link_to t('.remove'), [:admin, article], data: { confirm: t('.are_you_sure') }, method: :delete
+          td = link_to  t('words.edit'), edit_admin_article_path(article)
+          td = link_to t('words.remove'), [:admin, article], data: { confirm: t('words.are_you_sure') }, method: :delete

@@ -1,0 +1,10 @@
+en:
+  words:
+    create: 'Create'
+    edit: 'Edit'
+    cancel: 'Cancel'
+    remove: 'Remove'
+    are_you_sure: 'Are you sure?'
+    _yes: 'Yes'
+    _no: 'No'
+

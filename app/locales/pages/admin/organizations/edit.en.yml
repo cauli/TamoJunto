@@ -1,0 +1,5 @@
+en:
+  admin:
+    organizations:
+      edit:
+        title: 'Edit organization'

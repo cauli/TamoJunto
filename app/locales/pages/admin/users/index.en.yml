@@ -1,0 +1,8 @@
+en:
+  admin:
+    users:
+      index:
+        title: 'Users'
+        name: 'Name'
+        admin: 'Admin?'
+        created_at: 'Created at'

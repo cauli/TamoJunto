@@ -9,11 +9,6 @@ en:
         password: "Password"
         password_confirmation: "Password confirmation"
         omniauth_description: "Complete your registration setting a password."
-        individual: 'Individual'
-        legal_entity: 'Legal Entity'
-        NGO: 'Non-governamental organization'
-        university: 'University'
-        public_organ: 'Public Organ'
     shared:
       social_links:
         sign_in_with: "Sign in with %{provider}"

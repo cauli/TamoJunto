@@ -1,0 +1,19 @@
+.row
+  .large-12.columns
+    h2 = t('.title')
+
+    table
+      tr
+        th = t('.name')
+        th = t('.admin')
+        th = t('.created_at')
+        th
+        th
+      - for user in @users.each do
+        tr
+          td = user.name
+          th = user.admin? ? t('words._yes') : t('words._no')
+          td = user.created_at
+          td = link_to  t('words.edit'), edit_admin_user_path(user)
+          td = link_to t('words.remove'), [:admin, user], data: { confirm: t('words.are_you_sure') }, method: :delete
+

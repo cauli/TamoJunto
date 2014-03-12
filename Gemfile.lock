@@ -210,11 +210,8 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-<<<<<<< HEAD
     state_machine (1.2.0)
-=======
     statistics2 (0.54)
->>>>>>> Add and install the thumbs_up gem
     temple (0.6.7)
     thin (1.6.1)
       daemons (>= 1.0.9)

@@ -19,8 +19,6 @@ gem 'pundit', '~> 0.2.2'
 gem 'dragonfly'
 gem 'video_info'
 gem 'state_machine'
-gem 'foundation-wysihtml5-rails', '~> 1.0.0'
-gem 'font-awesome-rails'
 gem 'thumbs_up'
 
 # I18n

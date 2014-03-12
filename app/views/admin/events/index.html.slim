@@ -30,5 +30,5 @@
                 li = link_to t('.change_state.reject'), reject_admin_event_path(event)
 
 
-          td = link_to  t('.edit'), edit_admin_event_path(event)
-          td = link_to t('.remove'), [:admin, event], data: { confirm: t('.are_you_sure') }, method: :delete
+          td = link_to  t('words.edit'), edit_admin_event_path(event)
+          td = link_to t('words.remove'), [:admin, event], data: { confirm: t('words.are_you_sure') }, method: :delete

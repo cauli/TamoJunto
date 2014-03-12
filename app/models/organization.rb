@@ -4,6 +4,7 @@ class Organization < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :events
   validates :name, presence: true
   validates :kind, inclusion: { in: %w{individual legal_entity NGO university public_organ}}
 

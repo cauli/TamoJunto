@@ -69,6 +69,10 @@ describe Organization do
     it{ should ensure_inclusion_of(:kind).in_array(%w[individual legal_entity NGO university public_organ])}
   end
 
+  describe 'associations' do
+    it { should have_many :events }
+  end
+
   describe "image" do
     let(:organization) { Organization.make! image: File.open("#{Rails.root}/spec/fixtures/image.png") }
     it { expect(organization.image_uid).to be_present }

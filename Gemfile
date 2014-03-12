@@ -11,15 +11,14 @@ gem 'foreigner'
 # Server
 gem 'thin'
 
-# Improvements
+# Improvements && tools
 gem 'inherited_resources', '~> 1.4.1'
 gem 'simple_form', '~> 3.0.0'
 gem 'rails-settings-cached'
 gem 'pundit', '~> 0.2.2'
 gem 'dragonfly'
 gem 'video_info'
-gem 'foundation-wysihtml5-rails', '~> 1.0.0'
-gem 'font-awesome-rails'
+gem 'state_machine'
 
 # I18n
 gem 'rails-i18n'
@@ -43,6 +42,8 @@ gem 'coffee-rails', '4.0.1'
 gem 'uglifier'
 gem 'turbolinks'
 gem 'foundation-rails', '~> 5.2.0.0'
+gem 'foundation-wysihtml5-rails', '~> 1.0.0'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'rspec-rails'

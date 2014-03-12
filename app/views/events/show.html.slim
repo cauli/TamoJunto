@@ -1,0 +1,12 @@
+.row
+  .large-12.columns
+    .title
+      h2 = @event.name
+
+    .content
+      p = @event.description
+
+    .image
+      h4 IMAGE
+      = image_tag @event.image.url if @event.image.present?
+

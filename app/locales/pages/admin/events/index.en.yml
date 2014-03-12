@@ -1,0 +1,20 @@
+en:
+  admin:
+    events:
+      index:
+        title: 'Events'
+        name: 'Name'
+        organization: 'Organization'
+        starts_at: 'Starts at'
+        state: 'State'
+        created_at: 'Created at'
+        state_names:
+          pending: 'Pending'
+          visible: 'Visible'
+          rejected: 'Rejected'
+          canceled: 'Canceled'
+        actions: 'Actions'
+        change_state:
+          approve: 'Approve'
+          cancel: 'Cancel'
+          reject: 'Reject'

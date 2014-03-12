@@ -85,4 +85,38 @@ describe User do
 
     end
   end
+
+  describe '#vote' do
+    subject(:user) { User.make! }
+
+    describe 'can vote on articles' do
+      before do
+        @article = Article.make!
+        user.vote_for(@article)
+        user.reload
+      end
+
+      its(:vote_count){ should eq 1}
+    end
+
+    describe 'can vote on documents' do
+      before do
+        @document = Document.make!
+        user.vote_for(@document)
+        user.reload
+      end
+
+      its(:vote_count){ should eq 1}
+    end
+
+    describe 'can vote on documents' do
+      before do
+        @video = Video.make!
+        user.vote_for(@video)
+        user.reload
+      end
+
+      its(:vote_count){ should eq 1}
+    end
+  end
 end

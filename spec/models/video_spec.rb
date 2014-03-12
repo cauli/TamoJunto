@@ -35,4 +35,16 @@ describe Video do
 
     its(:embed_url){ should == 'www.youtube.com/embed/xRrL7Zgi8Rg' }
   end
+
+  describe 'can be voted' do
+    subject(:video) { Video.make! }
+    let(:user) { User.make! }
+
+    before do
+      user.vote_for(video)
+      video.reload
+    end
+
+    its(:votes_count) { should eq 1}
+  end
 end

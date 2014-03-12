@@ -25,4 +25,16 @@ describe Document do
       it{ expect(@document.errors.messages).to eq ({:file => ["You can't upload that kind of file"]}) }
     end
   end
+
+  describe 'can be voted' do
+    subject(:document) { Document.make! }
+    let(:user) { User.make! }
+
+    before do
+      user.vote_for(document)
+      document.reload
+    end
+
+    its(:votes_count) { should eq 1}
+  end
 end

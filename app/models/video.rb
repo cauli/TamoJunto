@@ -4,6 +4,8 @@ class Video < ActiveRecord::Base
 
   before_save :update_video_info
 
+  acts_as_voteable
+
   protected
   def update_video_info
     video_info = VideoInfo.new(url)

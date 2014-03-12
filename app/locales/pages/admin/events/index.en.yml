@@ -3,7 +3,6 @@ en:
     events:
       index:
         title: 'Events'
-        create: 'Create'
         name: 'Name'
         organization: 'Organization'
         starts_at: 'Starts at'

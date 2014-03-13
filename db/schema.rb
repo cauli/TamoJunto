@@ -86,6 +86,20 @@ ActiveRecord::Schema.define(version: 20140312221827) do
   add_index "organizations", ["email"], name: "index_organizations_on_email", unique: true, using: :btree
   add_index "organizations", ["reset_password_token"], name: "index_organizations_on_reset_password_token", unique: true, using: :btree
 
+  create_table "services", force: true do |t|
+    t.integer  "organization_id"
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_uid"
+    t.text     "local"
+    t.string   "external_link"
+    t.float    "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "services", ["organization_id"], name: "index_services_on_organization_id", using: :btree
+
   create_table "settings", force: true do |t|
     t.string   "var",                   null: false
     t.text     "value"

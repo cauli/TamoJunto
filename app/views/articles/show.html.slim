@@ -2,6 +2,10 @@
   .large-12.columns
     .title
       h2 = @article.title
+      p.votes
+        = link_to 'down', downvote_article_path
+        = " #{@article.score} "
+        = link_to 'up', upvote_article_path
 
     .content
       p = @article.content_html.html_safe

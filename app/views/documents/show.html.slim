@@ -2,6 +2,10 @@
   .large-12.columns
     .title
       h2 = @document.title
+      p.votes
+        = link_to 'down', downvote_document_path
+        = " #{@document.score} "
+        = link_to 'up', upvote_document_path
 
     .content
       p = @document.description

@@ -21,13 +21,11 @@ header.contain-to-grid.sticky
         - if user_signed_in?
           li.has-dropdown
             span.user-actions
-              = link_to '#', class: 'user-actions' do
+              = link_to current_user, class: 'user-actions' do
                 = image_tag current_user.avatar_url('18x18#'), size: "18x18", class: 'profile-picture', alt: ''
                 |  Olá, #{ current_user.name }!
             ul.dropdown
               li = link_to t('.edit_profile'), edit_user_registration_path(current_user), class: 'user-profile' 
-              li = link_to t('.upvotes'), upvotes_path
-              li = link_to t('.downvotes'), downvotes_path
                   
           li = link_to t('.sign-out'), destroy_user_session_path, method: :delete, class: 'sign-out button'
         - elsif organization_signed_in?

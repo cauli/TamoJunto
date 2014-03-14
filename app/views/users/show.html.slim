@@ -2,8 +2,14 @@
 .profile
   .row
     .large-2.columns
-      = image_tag @user.avatar_url(200)
+      = image_tag @user.avatar_url('200x200#')
     .large-10.columns
       h2 = t('.profile') + ' ' + @user.name
-
+  .row
+    .large-6.columns
+      h2 = t('.upvotes')
+      = render 'upvotes'
+    .large-6.columns
+      h2= t('.downvotes')
+      = render 'downvotes'
 

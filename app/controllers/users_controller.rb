@@ -3,15 +3,15 @@ class UsersController < ApplicationController
   actions :show
   before_filter :authenticate_user!, only: [:upvotes, :downvotes]
 
-  def upvotes
-    @articles = current_user.upvoted_articles
-    @documents = current_user.upvoted_documents
-    @videos = current_user.upvoted_videos
-  end
+  def show
+    @user = User.find(params[:id])
+    @upvoted_articles = @user.upvoted_articles
+    @upvoted_documents = @user.upvoted_documents
+    @upvoted_videos = @user.upvoted_videos
 
-  def downvotes
-    @articles = current_user.downvoted_articles
-    @documents = current_user.downvoted_documents
-    @videos = current_user.downvoted_videos
+    @downvoted_articles = @user.downvoted_articles
+    @downvoted_documents = @user.downvoted_documents
+    @downvoted_videos = @user.downvoted_videos
+    show!
   end
 end

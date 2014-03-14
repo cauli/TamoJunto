@@ -2,46 +2,36 @@ require 'spec_helper'
 
 describe UsersController do
   let(:user) { User.make! }
+
+  let(:upvoted_article) { Article.make! }
+  let(:upvoted_document) { Document.make! }
+  let(:upvoted_video) { Video.make! }
+
+  let(:downvoted_article) { Article.make! }
+  let(:downvoted_document) { Document.make! }
+  let(:downvoted_video) { Video.make! }
+
   describe '#show' do
-    before { get :show, id: user.id }
+    before do
+      user.vote_for(upvoted_article)
+      user.vote_for(upvoted_document)
+      user.vote_for(upvoted_video)
+
+      user.vote_against(downvoted_article)
+      user.vote_against(downvoted_document)
+      user.vote_against(downvoted_video)
+
+      get :show, id: user.id
+    end
+
     it { expect(response).to be_success}
-  end
 
-  describe '#upvotes' do
-    let(:article) { Article.make! }
-    let(:document) { Document.make! }
-    let(:video) { Video.make! }
+    it { expect(assigns(:upvoted_articles)).to eq [upvoted_article] }
+    it { expect(assigns(:upvoted_documents)).to eq [upvoted_document] }
+    it { expect(assigns(:upvoted_videos)).to eq [upvoted_video] }
 
-    before do
-      user.vote_for(article)
-      user.vote_for(document)
-      user.vote_for(video)
-      sign_in user
-      get :upvotes
-    end
-
-    it { expect(response).to be_success }
-    it { expect(assigns(:articles)).to eq [article] }
-    it { expect(assigns(:documents)).to eq [document] }
-    it { expect(assigns(:videos)).to eq [video] }
-  end
-
-  describe '#downvotes' do
-    let(:article) { Article.make! }
-    let(:document) { Document.make! }
-    let(:video) { Video.make! }
-
-    before do
-      user.vote_against(article)
-      user.vote_against(document)
-      user.vote_against(video)
-      sign_in user
-      get :downvotes
-    end
-
-    it { expect(response).to be_success }
-    it { expect(assigns(:articles)).to eq [article] }
-    it { expect(assigns(:documents)).to eq [document] }
-    it { expect(assigns(:videos)).to eq [video] }
+    it { expect(assigns(:downvoted_articles)).to eq [downvoted_article] }
+    it { expect(assigns(:downvoted_documents)).to eq [downvoted_document] }
+    it { expect(assigns(:downvoted_videos)).to eq [downvoted_video] }
   end
 end

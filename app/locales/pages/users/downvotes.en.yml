@@ -1,0 +1,7 @@
+en:
+  users:
+    downvotes:
+      title: 'Downvotes'
+      articles: 'Articles'
+      documents: 'Documents'
+      videos: 'Videos'

@@ -1,0 +1,7 @@
+en:
+  users:
+    upvotes:
+      title: 'Upvotes'
+      articles: 'Articles'
+      documents: 'Documents'
+      videos: 'Videos'

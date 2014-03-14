@@ -3,6 +3,8 @@ module Shared::VoteableActions
   extend ActiveSupport::Concern
 
   included do
+    before_filter :authenticate_user!, only: [:upvote, :downvote]
+
     def upvote
       return unless resource.present?
       return unless user_signed_in?

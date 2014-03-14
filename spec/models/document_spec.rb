@@ -27,14 +27,8 @@ describe Document do
   end
 
   describe 'can be voted' do
-    subject(:document) { Document.make! }
-    let(:user) { User.make! }
+    let(:resource) { Document.make! }
 
-    before do
-      user.vote_for(document)
-      document.reload
-    end
-
-    its(:votes_count) { should eq 1}
+    it_should_behave_like 'a voteable model'
   end
 end

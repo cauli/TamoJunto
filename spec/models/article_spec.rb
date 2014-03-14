@@ -12,14 +12,8 @@ describe Article do
   end
 
   describe 'can be voted' do
-    subject(:article) { Article.make! }
-    let(:user) { User.make! }
+    let(:resource) { Article.make! }
 
-    before do
-      user.vote_for(article)
-      article.reload
-    end
-
-    its(:votes_count) { should eq 1}
+    it_should_behave_like 'a voteable model'
   end
 end

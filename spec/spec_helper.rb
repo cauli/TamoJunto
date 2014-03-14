@@ -4,6 +4,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require File.expand_path('../controllers/concerns/shared/voteable_actions_spec.rb', __FILE__)
+require File.expand_path('../models/concerns/shared/voteable_shared_spec.rb', __FILE__)
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.

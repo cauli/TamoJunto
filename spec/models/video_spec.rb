@@ -37,14 +37,8 @@ describe Video do
   end
 
   describe 'can be voted' do
-    subject(:video) { Video.make! }
-    let(:user) { User.make! }
+    let(:resource) { Video.make! }
 
-    before do
-      user.vote_for(video)
-      video.reload
-    end
-
-    its(:votes_count) { should eq 1}
+    it_should_behave_like 'a voteable model'
   end
 end

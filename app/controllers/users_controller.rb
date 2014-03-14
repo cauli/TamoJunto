@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   inherit_resources
   actions :show
-  before_filter :authenticate_user!, only: [:upvotes, :downvotes]
 
   def show
     @user = User.find(params[:id])

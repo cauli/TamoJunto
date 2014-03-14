@@ -16,6 +16,4 @@ class User < ActiveRecord::Base
     update_attribute(:active, false)
   end
 
-
-
 end

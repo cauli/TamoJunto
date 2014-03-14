@@ -10,5 +10,13 @@ describe DocumentsController do
     it { expect(assigns(:document)).to eq document }
   end
 
+  describe 'Vote behavior' do
+    let(:resource) { Document.make! }
+    let(:user) { User.make! }
+    let(:symbol) { :document }
+
+    it_should_behave_like 'a voteable object'
+  end
+
 end
 

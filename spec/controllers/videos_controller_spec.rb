@@ -10,5 +10,13 @@ describe VideosController do
     it { expect(assigns(:video)).to eq video }
   end
 
+  describe 'Vote behavior' do
+    let(:resource) { Video.make! }
+    let(:user) { User.make! }
+    let(:symbol) { :video }
+
+    it_should_behave_like 'a voteable object'
+  end
+
 end
 

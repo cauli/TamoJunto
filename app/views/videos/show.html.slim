@@ -2,6 +2,10 @@
   .large-12.columns
     .title
       h2 = @video.title
+      p.votes
+        = link_to 'down', downvote_video_path
+        = " #{@video.score} "
+        = link_to 'up', upvote_video_path
 
     .content
       p = @video.description

@@ -35,4 +35,10 @@ describe Video do
 
     its(:embed_url){ should == 'www.youtube.com/embed/xRrL7Zgi8Rg' }
   end
+
+  describe 'can be voted' do
+    let(:resource) { Video.make! }
+
+    it_should_behave_like 'a voteable model'
+  end
 end

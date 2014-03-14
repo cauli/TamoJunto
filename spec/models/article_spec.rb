@@ -10,4 +10,10 @@ describe Article do
     let(:article) { Article.make! image: File.open("#{Rails.root}/spec/fixtures/image.png") }
     it { expect(article.image.url).to be_present }
   end
+
+  describe 'can be voted' do
+    let(:resource) { Article.make! }
+
+    it_should_behave_like 'a voteable model'
+  end
 end

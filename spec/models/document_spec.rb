@@ -25,4 +25,10 @@ describe Document do
       it{ expect(@document.errors.messages).to eq ({:file => ["You can't upload that kind of file"]}) }
     end
   end
+
+  describe 'can be voted' do
+    let(:resource) { Document.make! }
+
+    it_should_behave_like 'a voteable model'
+  end
 end

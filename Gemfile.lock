@@ -211,6 +211,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     state_machine (1.2.0)
+    statistics2 (0.54)
     temple (0.6.7)
     thin (1.6.1)
       daemons (>= 1.0.9)
@@ -219,6 +220,9 @@ GEM
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
+    thumbs_up (0.6.7)
+      activerecord
+      statistics2
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
@@ -278,6 +282,7 @@ DEPENDENCIES
   slim-rails
   state_machine
   thin
+  thumbs_up
   turbolinks
   uglifier
   video_info

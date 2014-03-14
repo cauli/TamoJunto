@@ -19,6 +19,7 @@ gem 'pundit', '~> 0.2.2'
 gem 'dragonfly'
 gem 'video_info'
 gem 'state_machine'
+gem 'thumbs_up'
 
 # I18n
 gem 'rails-i18n'

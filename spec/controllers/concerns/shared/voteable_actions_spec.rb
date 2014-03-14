@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 shared_examples 'a voteable object' do
   before do
     sign_in user

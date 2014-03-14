@@ -119,4 +119,49 @@ describe User do
       its(:vote_count){ should eq 1}
     end
   end
+
+  describe 'retrieve liked objects' do
+    subject(:user) { User.make! }
+
+    describe 'Articles' do
+      let(:upvoted) { Article.make! }
+      let(:downvoted) { Article.make! }
+      before do
+        user.vote_for(upvoted)
+        user.vote_against(downvoted)
+        user.reload
+      end
+
+      its(:upvoted_articles) { should eq [upvoted]}
+      its(:downvoted_articles) { should eq [downvoted] }
+    end
+
+    describe 'Documents' do
+      let(:upvoted) { Document.make! }
+      let(:downvoted) { Document.make! }
+
+      before do
+        user.vote_for(upvoted)
+        user.vote_against(downvoted)
+        user.reload
+      end
+
+      its(:upvoted_documents) { should eq [upvoted]}
+      its(:downvoted_documents) { should eq [downvoted] }
+    end
+
+    describe 'Videos' do
+      let(:upvoted) { Video.make! }
+      let(:downvoted) { Video.make! }
+
+      before do
+        user.vote_for(upvoted)
+        user.vote_against(downvoted)
+        user.reload
+      end
+
+      its(:upvoted_videos) { should eq [upvoted]}
+      its(:downvoted_videos) { should eq [downvoted] }
+    end
+  end
 end

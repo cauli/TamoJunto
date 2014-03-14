@@ -6,3 +6,6 @@ en:
       org-sign-up: 'Org. Sign Up'
       org-sign-in: 'Org. Sign In'
       sign-out: 'Sign out'
+      edit_profile: 'Edit profile'
+      upvotes: 'Upvotes'
+      downvotes: 'Downvotes'

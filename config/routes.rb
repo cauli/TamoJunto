@@ -20,9 +20,6 @@ TamoJunto::Application.routes.draw do
   resources :documents, only: :show, concerns: [:voteable]
   resources :events, only: :show
 
-  get 'upvotes', to: 'users#upvotes', as: 'upvotes'
-  get 'downvotes', to: 'users#downvotes', as: 'downvotes'
-
   namespace :admin do
     get '/', to: 'dashboard#index'
     resources :articles, except: :show

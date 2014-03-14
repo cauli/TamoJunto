@@ -1,4 +1,5 @@
 require 'spec_helper'
+require File.expand_path('../concerns/shared/voteable_actions_spec.rb', __FILE__)
 
 describe ArticlesController do
 
@@ -11,27 +12,11 @@ describe ArticlesController do
   end
 
   describe 'Vote behavior' do
-    let(:article) { Article.make! }
+    let(:resource) { Article.make! }
     let(:user) { User.make! }
+    let(:symbol) { :article }
 
-    before do
-      sign_in user
-      get :show, id: article
-    end
-
-    describe '#upvote' do
-      before { get :upvote, id: article }
-      it { expect(response).to redirect_to(article) }
-      it { expect(assigns(:article)).to eq article }
-      it { expect(assigns(:article).score).to eq 1 }
-    end
-
-    describe '#downvote' do
-      before { get :downvote, id: article }
-      it { expect(response).to redirect_to(article) }
-      it { expect(assigns(:article)).to eq article }
-      it { expect(assigns(:article).score).to eq (-1) }
-    end
+    it_should_behave_like 'a voteable object'
   end
 
 end

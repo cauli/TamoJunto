@@ -11,27 +11,11 @@ describe DocumentsController do
   end
 
   describe 'Vote behavior' do
-    let(:document) { Document.make! }
+    let(:resource) { Document.make! }
     let(:user) { User.make! }
+    let(:symbol) { :document }
 
-    before do
-      sign_in user
-      get :show, id: document
-    end
-
-    describe '#upvote' do
-      before { get :upvote, id: document }
-      it { expect(response).to redirect_to(document) }
-      it { expect(assigns(:document)).to eq document }
-      it { expect(assigns(:document).score).to eq 1 }
-    end
-
-    describe '#downvote' do
-      before { get :downvote, id: document }
-      it { expect(response).to redirect_to(document) }
-      it { expect(assigns(:document)).to eq document }
-      it { expect(assigns(:document).score).to eq (-1) }
-    end
+    it_should_behave_like 'a voteable object'
   end
 
 end

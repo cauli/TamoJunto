@@ -26,12 +26,12 @@ describe UsersController do
 
     it { expect(response).to be_success}
 
-    it { expect(assigns(:upvoted_articles)).to eq [upvoted_article] }
-    it { expect(assigns(:upvoted_documents)).to eq [upvoted_document] }
-    it { expect(assigns(:upvoted_videos)).to eq [upvoted_video] }
+    it { expect(assigns(:user).upvoted_articles).to eq [upvoted_article] }
+    it { expect(assigns(:user).upvoted_documents).to eq [upvoted_document] }
+    it { expect(assigns(:user).upvoted_videos).to eq [upvoted_video] }
 
-    it { expect(assigns(:downvoted_articles)).to eq [downvoted_article] }
-    it { expect(assigns(:downvoted_documents)).to eq [downvoted_document] }
-    it { expect(assigns(:downvoted_videos)).to eq [downvoted_video] }
+    it { expect(assigns(:user).downvoted_articles).to eq [downvoted_article] }
+    it { expect(assigns(:user).downvoted_documents).to eq [downvoted_document] }
+    it { expect(assigns(:user).downvoted_videos).to eq [downvoted_video] }
   end
 end

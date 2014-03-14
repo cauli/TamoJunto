@@ -9,21 +9,21 @@ dl.tabs data-tab=""
 .tabs-content
   .content.active#panel-upvotes-1
     ul
-      - for article in @upvoted_articles do
+      - for article in @user.upvoted_articles do
         li 
           = article.title
           | &nbsp;
           = link_to 'downvote', downvote_article_path(article)
   .content#panel-upvotes-2
     ul
-      - for document in @upvoted_documents do
+      - for document in @user.upvoted_documents do
         li 
           = document.title
           | &nbsp;
           = link_to 'downvote', downvote_document_path(document)
   .content#panel-upvotes-3
     ul
-      - for video in @upvoted_videos do
+      - for video in @user.upvoted_videos do
         li 
           = video.title
           | &nbsp;

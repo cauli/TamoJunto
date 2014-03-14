@@ -1,34 +1,36 @@
 - content_for :page_title, t('.title')
-h2 = yield :page_title
+.row
+  .large-12.columns
+    h2 = yield :page_title
 
-dl.tabs data-tab=""
-  dd.active
-    a href='#panel-1' = t('.articles')
-  dd
-    a href='#panel-2' = t('.documents')
-  dd
-    a href='#panel-3' = t('.videos')
+    dl.tabs data-tab=""
+      dd.active
+        a href='#panel-1' = t('.articles')
+      dd
+        a href='#panel-2' = t('.documents')
+      dd
+        a href='#panel-3' = t('.videos')
 
-.tabs-content
-  .content.active#panel-1
-    ul
-      - for article in @articles do
-        li 
-          = article.title
-          | &nbsp;
-          = link_to 'upvote', upvote_article_path(article)
-  .content#panel-2
-    ul
-      - for document in @documents do
-        li 
-          = document.title
-          | &nbsp;
-          = link_to 'upvote', upvote_document_path(document)
-  .content#panel-3
-    ul
-      - for video in @videos do
-        li 
-          = video.title
-          | &nbsp;
-          = link_to 'upvote', upvote_video_path(video)
+    .tabs-content
+      .content.active#panel-1
+        ul
+          - for article in @articles do
+            li 
+              = article.title
+              | &nbsp;
+              = link_to 'upvote', upvote_article_path(article)
+      .content#panel-2
+        ul
+          - for document in @documents do
+            li 
+              = document.title
+              | &nbsp;
+              = link_to 'upvote', upvote_document_path(document)
+      .content#panel-3
+        ul
+          - for video in @videos do
+            li 
+              = video.title
+              | &nbsp;
+              = link_to 'upvote', upvote_video_path(video)
 

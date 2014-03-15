@@ -2,6 +2,7 @@ class CreateServices < ActiveRecord::Migration
   def change
     create_table :services do |t|
       t.references :organization, index: true
+      t.string :state
       t.string :name
       t.text :description
       t.string :image_uid

@@ -7,6 +7,10 @@ en:
         organization: 'Organization'
         state: 'State'
         created_at: 'Created at'
+        state_names:
+          pending: 'Pending'
+          visible: 'Visible'
+          rejected: 'Rejected'
         actions: 'Actions'
         change_state:
           approve: 'Approve'

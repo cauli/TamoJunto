@@ -18,6 +18,13 @@
           td = t(".state_names.#{service.state}")
           td = l service.created_at, format: :short
           td
+            a.button.dropdown.tiny[data-dropdown="drop-#{service.id}"] = t('.actions')
+            ul.f-dropdown[id="drop-#{service.id}" data-dropdown-content]
+              - unless service.visible?
+                li = link_to t('.change_state.approve'), approve_admin_service_path(service)
+              - unless service.rejected?
+                li = link_to t('.change_state.reject'), reject_admin_service_path(service)
+
           td = link_to  t('words.edit'), edit_admin_service_path(service)
           td = link_to t('words.remove'), [:admin, service], data: { confirm: t('words.are_you_sure') }, method: :delete
 

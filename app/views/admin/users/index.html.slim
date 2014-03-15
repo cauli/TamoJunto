@@ -9,7 +9,7 @@
         th = t('.created_at')
         th
         th
-      - for user in @users.each do
+      - for user in @users do
         tr
           td = user.name
           th = user.admin? ? t('words._yes') : t('words._no')

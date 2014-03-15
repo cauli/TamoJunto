@@ -9,7 +9,7 @@
         th = t('.created_at')
         th
         th
-      - for organization in @organizations.each do
+      - for organization in @organizations do
         tr
           td = organization.name
           th = t('.' + organization.kind)

@@ -47,3 +47,10 @@ Event.blueprint do
   ends_at      { Date.today + 1.day }
   time         { 'All day' }
 end
+
+Service.blueprint do
+  organization { Organization.make! }
+  name { 'Some name' }
+  description { 'Some description' }
+  local { 'Some local' }
+end

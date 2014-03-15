@@ -20,6 +20,6 @@ class Admin::EventsController < Admin::BaseController
 
   protected
   def permitted_params
-    params.permit(event: [:name, :image, :description, :local, :starts_at, :ends_at, :time, :organization_id, :external_link, :value])
+    params.permit(event: [:name, :image, :description, :local, :starts_at, :ends_at, :time, :organization_id, :external_link, :value, :tag_list])
   end
 end

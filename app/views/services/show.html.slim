@@ -1,0 +1,13 @@
+.row
+  .large-12.columns
+    .title
+      h2 = @service.name
+
+    .content
+      p = @service.description
+
+    .image
+      h4 IMAGE
+      = image_tag @service.image.url if @service.image.present?
+
+

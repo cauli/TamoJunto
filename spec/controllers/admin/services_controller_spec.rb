@@ -33,6 +33,22 @@ describe Admin::ServicesController do
     it { expect { service.reload }.to raise_error }
   end
 
+  describe '#reject' do
+    before { get :reject, id: service }
+    it { expect(response).to redirect_to(admin_services_path) }
+    it 'should be rejected' do
+      expect(service.reload.rejected?).to be_true
+    end
+  end
+
+  describe '#approve' do
+    before { get :approve, id: service }
+    it { expect(response).to redirect_to(admin_services_path) }
+    it 'should be visible' do
+      expect(service.reload.visible?).to be_true
+    end
+  end
+
   protected
   def service_params
     Service.make.attributes

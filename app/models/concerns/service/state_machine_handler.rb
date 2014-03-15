@@ -8,11 +8,11 @@ module Service::StateMachineHandler
       state :rejected, value: 'rejected'
 
       event :reject do
-        transition [:pending] => :rejected
+        transition [:pending, :visible] => :rejected
       end
 
       event :approve do
-        transition [:pending] => :visible
+        transition [:pending, :rejected] => :visible
       end
     end
   end

@@ -34,6 +34,11 @@ TamoJunto::Application.routes.draw do
         get :cancel
       end
     end
-    resources :services, except: [:new, :create, :show]
+    resources :services, except: [:new, :create, :show] do
+      member do
+        get :reject
+        get :approve
+      end
+    end
   end
 end

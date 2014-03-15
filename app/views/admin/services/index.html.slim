@@ -1,0 +1,23 @@
+.row
+  .large-12.columns
+    h2 = t('.title')
+
+    table
+      tr
+        th = t('.name')
+        th = t('.organization')
+        th = t('.state')
+        th = t('.created_at')
+        th
+        th
+        th
+      - for service in @services.each do
+        tr
+          td = service.name
+          td = service.organization.name
+          td = t(".state_names.#{service.state}")
+          td = l service.created_at, format: :short
+          td
+          td = link_to  t('words.edit'), edit_admin_service_path(service)
+          td = link_to t('words.remove'), [:admin, service], data: { confirm: t('words.are_you_sure') }, method: :delete
+

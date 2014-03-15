@@ -1,0 +1,5 @@
+en:
+  admin:
+    services:
+      edit:
+        title: 'Edit Service'

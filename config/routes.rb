@@ -19,6 +19,7 @@ TamoJunto::Application.routes.draw do
   resources :videos, only: :show, concerns: [:voteable]
   resources :documents, only: :show, concerns: [:voteable]
   resources :events, only: :show
+  resources :services, only: :show
 
   namespace :admin do
     get '/', to: 'dashboard#index'
@@ -32,6 +33,12 @@ TamoJunto::Application.routes.draw do
         get :reject
         get :approve
         get :cancel
+      end
+    end
+    resources :services, except: [:new, :create, :show] do
+      member do
+        get :reject
+        get :approve
       end
     end
   end

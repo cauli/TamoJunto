@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140312221827) do
+ActiveRecord::Schema.define(version: 20140313201927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,21 @@ ActiveRecord::Schema.define(version: 20140312221827) do
   add_index "organizations", ["email"], name: "index_organizations_on_email", unique: true, using: :btree
   add_index "organizations", ["reset_password_token"], name: "index_organizations_on_reset_password_token", unique: true, using: :btree
 
+  create_table "services", force: true do |t|
+    t.integer  "organization_id"
+    t.string   "state"
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_uid"
+    t.text     "local"
+    t.string   "external_link"
+    t.float    "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "services", ["organization_id"], name: "index_services_on_organization_id", using: :btree
+
   create_table "settings", force: true do |t|
     t.string   "var",                   null: false
     t.text     "value"
@@ -96,6 +111,24 @@ ActiveRecord::Schema.define(version: 20140312221827) do
   end
 
   add_index "settings", ["thing_type", "thing_id", "var"], name: "index_settings_on_thing_type_and_thing_id_and_var", unique: true, using: :btree
+
+  create_table "taggings", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+
+  create_table "tags", force: true do |t|
+    t.string "name"
+  end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"

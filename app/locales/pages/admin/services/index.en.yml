@@ -1,0 +1,17 @@
+en:
+  admin:
+    services:
+      index:
+        title: 'Services'
+        name: 'Name'
+        organization: 'Organization'
+        state: 'State'
+        created_at: 'Created at'
+        state_names:
+          pending: 'Pending'
+          visible: 'Visible'
+          rejected: 'Rejected'
+        actions: 'Actions'
+        change_state:
+          approve: 'Approve'
+          reject: 'Reject'

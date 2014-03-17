@@ -17,6 +17,6 @@ class Admin::ServicesController < Admin::BaseController
   def permitted_params
     params.permit(service: [:name, :image, :description,
                             :local, :external_link,
-                            :value, :organization_id])
+                            :value, :organization_id, :tag_list])
   end
 end

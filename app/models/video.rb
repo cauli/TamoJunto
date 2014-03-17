@@ -4,6 +4,7 @@ class Video < ActiveRecord::Base
 
   validates :title, :url, presence: true
   validates_format_of :url, with: /(https?\:\/\/|)(youtu(\.be|be\.com)|vimeo).*+/, message: I18n.t('video.url_regex_validation')
+  acts_as_taggable
 
   before_save :update_video_info
 

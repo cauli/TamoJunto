@@ -7,7 +7,9 @@
       = f.input :file, as: :file
       - if @document.file.present?
         p = link_to @document.file.name, @document.file.url
-
+    .large-8.columns.end
+      .tags-path[data-url=admin_tags_path(format: :json)]
+        = f.input :tag_list, as: :string, input_html: { class: 'tags-input-autocomplete' }
   .row
     .large-8.columns
       .text-right

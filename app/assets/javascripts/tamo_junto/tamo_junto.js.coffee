@@ -16,4 +16,9 @@ window.TamoJunto =
   init: ->
     $(document).foundation()
 
+    $('.tags-input-autocomplete').tagsInput
+      autocomplete_url: $('.tags-path').data('url')
+      width: '100%'
+      height: '75px'
+
   modules: -> []

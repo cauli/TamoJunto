@@ -1,12 +1,15 @@
 = simple_form_for [:admin, @video] do |f|
   .row
-    .large-10.columns
+    .large-12.columns
       = f.input :url
       = f.input :title
       = f.input :description
 
+    .large-12.columns
+      .tags-path[data-url=admin_tags_path(format: :json)]
+        = f.input :tag_list, as: :string, input_html: { class: 'tags-input-autocomplete' }
   .row
-    .large-10.columns
+    .large-12.columns
       .text-right
         = link_to t('words.cancel'), :back, class: 'button secondary'
         | &nbsp;

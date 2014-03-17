@@ -1,0 +1,11 @@
+en:
+  admin:
+    tags:
+      index:
+        title: 'Tags'
+        name: 'Tag name'
+        count: 'Times used'
+        remove: 'Remove'
+        are_you_sure: 'Are you sure?'
+      destroy:
+        success: 'Tag successfully destroyed!'

@@ -20,6 +20,7 @@ gem 'dragonfly'
 gem 'video_info'
 gem 'state_machine'
 gem 'thumbs_up'
+gem 'acts-as-taggable-on', '~> 3.1.0.rc1'
 
 # I18n
 gem 'rails-i18n'

@@ -1,0 +1,7 @@
+en:
+  users:
+    show:
+      profile: 'Profile:'
+      upvotes: 'Upvotes'
+      downvotes: 'Downvotes'
+

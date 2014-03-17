@@ -1,0 +1,31 @@
+dl.tabs data-tab=""
+  dd.active
+    a href='#panel-upvotes-1' = t('.articles')
+  dd
+    a href='#panel-upvotes-2' = t('.documents')
+  dd
+    a href='#panel-upvotes-3' = t('.videos')
+
+.tabs-content
+  .content.active#panel-upvotes-1
+    ul
+      - for article in @user.upvoted_articles do
+        li 
+          = article.title
+          | &nbsp;
+          = link_to 'downvote', downvote_article_path(article)
+  .content#panel-upvotes-2
+    ul
+      - for document in @user.upvoted_documents do
+        li 
+          = document.title
+          | &nbsp;
+          = link_to 'downvote', downvote_document_path(document)
+  .content#panel-upvotes-3
+    ul
+      - for video in @user.upvoted_videos do
+        li 
+          = video.title
+          | &nbsp;
+          = link_to 'downvote', downvote_video_path(video)
+

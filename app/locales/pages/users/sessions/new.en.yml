@@ -2,8 +2,14 @@ en:
   users:
     sessions:
       new:
-        sign_in: 'Sign in'
+        sign_in: 'Entre com a sua conta'
         sign_in_with: "Sign in with %{provider}"
+        dont_have_account: "Ainda não tem conta?" 
+        create_your_account: "Crie aqui"
+        organization_account: "Você é uma empresa que nos apoia?"
+        go_organization_log_in: "Entre por aqui"
+        forgot_password: "Esqueceu sua senha?"
+
     shared:
       social_links:
         sign_in_with: "Sign in with %{provider}"

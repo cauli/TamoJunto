@@ -1,11 +1,26 @@
-.sign_in_box
-  h2 = t(".sign_in")
-  br/
-  = render "users/shared/social_links"
-  = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-    .form-inputs
-      = f.input :email, :required => false, :autofocus => true
-      = f.input :password, :required => false, :hint => false
-      = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
-      = f.button :submit, t(".sign_in")
-    = render "users/shared/links"
+.row
+  .large-5.large-centered.columns
+    .sign_in_box
+      h2 = t(".sign_in")
+      p.text-center 
+        = t(".dont_have_account") 
+        = link_to t(".create_your_account"), new_user_registration_path
+      p.text-center 
+        = t(".organization_account") 
+        = link_to t(".go_organization_log_in"), new_organization_session_path     
+      
+      .large-11.columns.large-centered
+      = render "users/shared/social_links"
+      .large-11.columns.large-centered
+      = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        .form-inputs
+          = f.input :email, :required => false, :autofocus => true
+          = f.input :password, :required => false, :hint => false
+          = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
+          .large-9.columns.large-centered
+            = f.button :submit, t(".sign_in"), :class => "expand"
+        .small  
+          = link_to t(".forgot_password"), new_user_password_path
+
+
+  

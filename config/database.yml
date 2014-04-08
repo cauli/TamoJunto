@@ -1,27 +1,27 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: TamoJunto_development
+  database: tamojunto_development
   pool: 5
-  #username: postgres
+  #username: barbarawolffdick
   #password:
   host: localhost
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: TamoJunto_test
+  database: tamojunto_test
   pool: 5
-  #username: postgres
-  #password:
+  #username: barbarawolffdick
+  #password: password
   min_messages: WARNING
   host: localhost
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: TamoJunto_production
+  database: tamojunto_production
   pool: 5
-  username: postgres
-  password:
+  #username: postgres
+  #password:
   host: localhost

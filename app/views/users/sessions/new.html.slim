@@ -1,18 +1,27 @@
 = render "layouts/header_clean"
 
 .row
-  .large-5.large-centered.columns
-    .sign_in_box
-      h2 = t(".sign_in")
-      p.text-center 
-        = t(".dont_have_account") 
-        = link_to t(".create_your_account"), new_user_registration_path
-      p.text-center 
-        = t(".organization_account") 
-        = link_to t(".go_organization_log_in"), new_organization_session_path     
-      
-      .large-11.columns.large-centered
-      = render "users/shared/social_links"
+  .large-6.large-centered.columns
+    .box
+      .top
+        h2.text-center = t(".sign_in")
+        p.text-center 
+          = t(".dont_have_account") 
+          = link_to t(".create_your_account"), new_user_registration_path
+        p.text-center.top
+          = t(".organization_account") 
+          = link_to t(".go_organization_log_in"), new_organization_session_path     
+
+
+
+      .large-12.columns.large-centered.facebook.button.radius
+        
+        = render "users/shared/social_links"
+
+      .divider
+        p
+          = t(".or")
+
       .large-11.columns.large-centered
       = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
         .form-inputs

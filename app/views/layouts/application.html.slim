@@ -7,6 +7,8 @@ doctype html
 /[if (gt IE 9)|!(IE)]
   |<html lang='en'>
 
+
+
 head
   title = page_title app_name: 'Tamo Junto'
   = stylesheet_link_tag 'application'
@@ -14,6 +16,7 @@ head
   = yield(:meta_tags)
   = csrf_meta_tag
   = javascript_include_tag 'application'
+  link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,800,600' rel="stylesheet" type="text/css" 
 body
   = initjs_tag app_name: 'TamoJunto'
   = render 'layouts/header'

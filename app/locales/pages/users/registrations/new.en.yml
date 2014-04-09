@@ -2,7 +2,7 @@ en:
   users:
     registrations:
       new:
-        sign_up: "Sign Up"
+        sign_up: "Criar uma conta"
         sign_in: "Sign In"
         name: "Name"
         email: "Email"
@@ -10,6 +10,13 @@ en:
         password_confirmation: "Password confirmation"
         omniauth_description: "Complete your registration setting a password."
         sign_in_with: "Sign in with %{provider}"
+        have_account: "Já tem uma conta? "
+        sign_in_here: "Entre aqui"
+        organization_create_account: "Você é uma empresa que nos apoia? "
+        sign_up_organization: "Crie sua conta"
+        forgot_password: "Esqueceu sua senha?"
+        or: "ou"
+
     shared:
       social_links:
         sign_in_with: "Sign in with %{provider}"

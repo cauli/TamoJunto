@@ -4,12 +4,12 @@ en:
       new:
         sign_up: "Criar uma conta"
         sign_in: "Sign In"
-        name: "Name"
+        name: "Nome"
         email: "Email"
-        password: "Password"
-        password_confirmation: "Password confirmation"
-        omniauth_description: "Complete your registration setting a password."
-        sign_in_with: "Sign in with %{provider}"
+        password: "Senha"
+        password_confirmation: "Confirme sua senha"
+        omniauth_description: "Complete seu cadastro escolhendo uma senha"
+        sign_in_with: "Crie sua conta com o %{provider}"
         have_account: "Já tem uma conta? "
         sign_in_here: "Entre aqui"
         organization_create_account: "Você é uma empresa que nos apoia? "
@@ -19,7 +19,7 @@ en:
 
     shared:
       social_links:
-        sign_in_with: "Sign in with %{provider}"
+        sign_in_with: "Crie sua conta com o %{provider}"
       links:
         sign_in: "Sign in"
         sign_up: "Sign up"

@@ -1,10 +1,24 @@
-.sign_in_box
-  h2 = t(".sign_in")
-  br/
-  = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-    .form-inputs
-      = f.input :email, :required => false, :autofocus => true
-      = f.input :password, :required => false, :hint => false
-      = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
-      = f.button :submit, t(".sign_in")
-    = render "devise/shared/links"
+= render "layouts/header_clean"
+
+.row
+  .large-6.large-centered.columns
+    .box
+      .top
+        h2.text-center = t(".sign_in")
+        p.text-center 
+          = t(".dont_have_account") 
+          = link_to t(".create_your_account"), new_organization_registration_path
+        p.text-center.top
+          = t(".user_account") 
+          = link_to t(".go_user_log_in"), new_organization_session_path     
+
+
+	  = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+	    .form-inputs
+	      = f.input :email, :required => false, :autofocus => true
+	      = f.input :password, :required => false, :hint => false
+	      = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
+	      = f.button :submit, t(".sign_in"), :class => "expand radius"
+        .small  
+          = link_to t(".forgot_password"), new_organization_password_path, :class => "forgot_password"
+	 

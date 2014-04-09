@@ -1,14 +1,18 @@
 en:
   organizations:
     registrations:
-      new:
-        sign_up: "Sign Up"
+      new: 
+        sign_up: "Criar uma conta para minha organização"
         sign_in: "Sign In"
-        name: "Name"
+        name: "Nome"
         email: "Email"
-        password: "Password"
+        password: "Senha"
         password_confirmation: "Password confirmation"
         omniauth_description: "Complete your registration setting a password."
+        have_account: "Sua organização já tem uma conta? "
+        sign_in_user: "Entre aqui"
+        creat_account: "Você tem um perfil pessoal? "
+        sign_up_user: "Entre aqui"
     shared:
       social_links:
         sign_in_with: "Sign in with %{provider}"

@@ -12,10 +12,10 @@ en:
         sign_in_with: "Crie sua conta com o %{provider}"
         have_account: "Já tem uma conta? "
         sign_in_here: "Entre aqui"
-        organization_create_account: "Você é uma empresa que nos apoia? "
-        sign_up_organization: "Crie sua conta"
+        create_account: "Você é uma empresa que nos apoia? "
+        sign_up_organization: "Entre aqui"
         forgot_password: "Esqueceu sua senha?"
-        or: "ou"
+        or: "ou" 
 
     shared:
       social_links:

@@ -12,7 +12,7 @@ en:
 
     shared:
       social_links:
-        sign_in_with: "Sign in with %{provider}"
+        sign_in_with: "Entre na sua conta com o %{provider}"
       links:
         sign_in: "Sign in"
         sign_up: "Sign up"

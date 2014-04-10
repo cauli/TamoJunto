@@ -2,10 +2,10 @@ en:
   layouts:
     header:
       sign-up: 'Sign up'
-      sign-in: 'Sign in'
+      sign-in: 'Sou um empreendedor'
       org-sign-up: 'Org. Sign Up'
-      org-sign-in: 'Org. Sign In'
-      sign-out: 'Sign out'
-      edit_profile: 'Edit profile'
+      org-sign-in: 'Sou uma orgnização'
+      sign-out: 'Sair'
+      edit_profile: 'Editar o perfil'
       upvotes: 'Upvotes'
       downvotes: 'Downvotes'

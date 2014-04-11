@@ -12,7 +12,7 @@
           = t(".create_account") 
           = link_to t(".sign_up_organization"), new_organization_session_path        
 
-      .large-12.columns.large-centered.facebook.button.radius
+      .large-12.columns.large-centered
         .omniauth
           - if resource.authorizations.any?
             .avatar= image_tag resource.avatar_url

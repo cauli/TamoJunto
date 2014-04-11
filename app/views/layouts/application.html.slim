@@ -16,7 +16,8 @@ head
   = yield(:meta_tags)
   = csrf_meta_tag
   = javascript_include_tag 'application'
-  link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,800,600' rel="stylesheet" type="text/css" 
+  = stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,800,600"
+
 body
   = initjs_tag app_name: 'TamoJunto'
   = render 'layouts/header'

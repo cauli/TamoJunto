@@ -9,7 +9,7 @@ module User::Authorizable
         if auth = session[:omniauth]
           user.email = auth.info.email if auth.info.email.present?
           user.name = auth.info.name
-          user.remote_image_url = auth.info.image
+          #user.remote_image_url = auth.info.image
           user.authorizations.build(provider: auth.provider, uid: auth.uid)
         end
       end

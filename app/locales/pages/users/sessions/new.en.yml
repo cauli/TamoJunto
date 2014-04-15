@@ -10,7 +10,7 @@ en:
         go_organization_log_in: "Entre por aqui"
         forgot_password: "Esqueceu sua senha? "
         or: " ou "
-        icon-title: "  Empreendedor"
+        icon_title: "  Empreendedor"
 
     shared:
       social_links:

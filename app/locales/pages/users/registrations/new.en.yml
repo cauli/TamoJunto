@@ -16,6 +16,7 @@ en:
         sign_up_organization: "Entre aqui"
         forgot_password: "Esqueceu sua senha?"
         or: "ou" 
+        icon_title: "  Empreendedor"
 
     shared:
       social_links:

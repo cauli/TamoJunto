@@ -36,9 +36,9 @@ header.contain-to-grid.sticky
           li = link_to t('.sign-out'), destroy_organization_session_path, method: :delete, class: 'sign-out button'
         - else
 
-          li = link_to t('.sign-in'), new_user_session_path, class: 'sign-in button margin-button'
+          li = link_to t('.sign-in'), new_user_session_path, class: 'sign-in button secondary'
           li &nbsp;
 
           li &nbsp;
-          li = link_to t('layouts.header..org-sign-in'), new_organization_session_path, class: 'sign-in button  secondary-button'
+          li = link_to t('layouts.header..org-sign-in'), new_organization_session_path, class: 'sign-in button  secondary border-button'
 

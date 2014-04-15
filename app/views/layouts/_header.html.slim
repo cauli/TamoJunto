@@ -3,7 +3,7 @@ header.contain-to-grid.sticky
     ul.title-area
       li.name
         h1
-         = link_to '#TamoJunto', root_path
+         = link_to 'Tamo Junto', root_path
 
       / Mobile thing
       li.toggle-topbar.menu-icon
@@ -40,5 +40,5 @@ header.contain-to-grid.sticky
           li &nbsp;
 
           li &nbsp;
-          li = link_to t('layouts.header..org-sign-in'), new_organization_session_path, class: 'sign-in button  secondary border-button'
+          li = link_to t('layouts.header.org-sign-in'), new_organization_session_path, class: 'sign-in button secondary border-button'
 

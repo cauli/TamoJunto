@@ -2,7 +2,7 @@ pt-BR:
   organizations:
     registrations:
       new:
-        sign_up: "Criar uma conta para minha organização"
+        sign_up: "Criar uma conta como apoiador"
         sign_in: "Sign In"
         name: "Nome"
         email: "Email"

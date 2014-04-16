@@ -24,3 +24,15 @@ pt-BR:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
 
+    labels:
+      user:
+        name: 'Nome'
+        password: 'Senha'
+        password_confirmation: 'Confirme a senha'
+        remember_me: 'Lembrar de min'
+      organization:
+        name: 'Nome'
+        password: 'Senha'
+        password_confirmation: 'Confirme a senha'
+        remember_me: 'Lembrar de min'
+        kind: 'Tipo de apoiador'

@@ -38,6 +38,6 @@
             = f.input :password, :required => true, :hint => false
           = f.input :password_confirmation, :required => true, :hint => false
 
-          = f.button :submit, t(".sign_up")
+          = f.button :submit, t(".sign_up"), class: 'expand'
           .small  
             = link_to t(".forgot_password"), new_user_password_path, :class => "forgot_password"

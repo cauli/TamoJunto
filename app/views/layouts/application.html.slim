@@ -20,7 +20,7 @@ head
 
 body
   = initjs_tag app_name: 'TamoJunto'
-  = render 'layouts/header' unless devise_controller?
+  = render 'layouts/header'
   = render 'layouts/flash', flash: flash if flash.present?
   - if admin?
     section.admin

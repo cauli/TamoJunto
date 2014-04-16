@@ -52,10 +52,10 @@ $body-font-weight: normal
 // $default-float: left
 
 // Default colors
-$primary-color: #3B1348
-$secondary-color: #2CBAA6
+$primary-color: #2CBAA6
+$secondary-color: #3B1348
 $alert-color: #F5871F
-$success-color: #43AC6A
+$success-color: $primary-color
 $warning-color: #F08A24
 $info-color: #E11D46
 $border-color: #ddd
@@ -1131,7 +1131,7 @@ $button-font-weight: 600
 // $include-html-top-bar-classes: $include-html-classes
 
 // Background color for the top bar
-$topbar-bg-color: $primary-color
+$topbar-bg-color: $secondary-color
 // $topbar-bg: $topbar-bg-color
 
 // Height and margin
@@ -1145,7 +1145,7 @@ $topbar-height: +rem-calc(90px)
 // Style the top bar dropdown elements
 $topbar-dropdown-bg: transparent
 // $topbar-dropdown-link-color: #fff
-// $topbar-dropdown-link-bg: #333
+$topbar-dropdown-link-bg: $secondary-color
 // $topbar-dropdown-link-weight: normal
 // $topbar-dropdown-toggle-size: 5px
 // $topbar-dropdown-toggle-color: #fff
@@ -1153,13 +1153,13 @@ $topbar-dropdown-bg: transparent
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff
-// $topbar-link-color-hover: #fff
+$topbar-link-color-hover: white
 // $topbar-link-color-active: #fff
 // $topbar-link-color-active-hover: #fff
 // $topbar-link-weight: normal
 // $topbar-link-font-size: rem-calc(13)
 // $topbar-link-hover-lightness: -10% // Darken by 10%
-// $topbar-link-bg-hover: #272727
+$topbar-link-bg-hover: $primary-color
 // $topbar-link-bg-active: $primary-color
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%)
 // $topbar-link-font-family: $body-font-family

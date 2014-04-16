@@ -19,21 +19,5 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  registrations:
-    reactivated: 'Account reactivated'
-  layouts:
-    header:
-      org-sign-up: 'Org. Sign Up'
-      org-sign-ip: 'Org. Sign In'
-  organizations:
-    registrations:
-      edit:
-        are_you_sure: 'Are you sure?'
-        update: 'Update'
-        individual: 'Individual'
-        legal_entity: 'Legal Entity'
-        NGO: 'Non-governamental organization'
-        university: 'University'
-        public_organ: 'Public Organ'
+pt-BR:
+  hello: "Olá Mundo!"

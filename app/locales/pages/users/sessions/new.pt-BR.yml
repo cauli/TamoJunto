@@ -1,10 +1,10 @@
-en:
+pt-BR:
   users:
     sessions:
       new:
         sign_in: 'Entre com a sua conta'
         sign_in_with: "Entre na sua conta pelo %{provider}"
-        dont_have_account: "Ainda não tem conta? " 
+        dont_have_account: "Ainda não tem conta? "
         create_your_account: "Crie aqui"
         organization_account: "Você é uma empresa que nos apoia? "
         go_organization_log_in: "Entre por aqui"

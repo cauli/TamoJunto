@@ -1,7 +1,7 @@
-en:
+pt-BR:
   organizations:
     registrations:
-      new: 
+      new:
         sign_up: "Criar uma conta para minha organização"
         sign_in: "Sign In"
         name: "Nome"

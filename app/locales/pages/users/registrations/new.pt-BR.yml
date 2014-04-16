@@ -1,4 +1,4 @@
-en:
+pt-BR:
   users:
     registrations:
       new:
@@ -15,7 +15,7 @@ en:
         create_account: "Você é uma empresa que nos apoia? "
         sign_up_organization: "Entre aqui"
         forgot_password: "Esqueceu sua senha?"
-        or: "ou" 
+        or: "ou"
         icon_title: "  Empreendedor"
 
     shared:

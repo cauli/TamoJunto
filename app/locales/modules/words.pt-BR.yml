@@ -1,10 +1,10 @@
-en:
+pt-BR:
   words:
-    create: 'Create'
-    edit: 'Edit'
-    cancel: 'Cancel'
-    remove: 'Remove'
-    are_you_sure: 'Are you sure?'
-    _yes: 'Yes'
-    _no: 'No'
+    create: 'Criar'
+    edit: 'Editar'
+    cancel: 'Canceelar'
+    remove: 'Remover'
+    are_you_sure: 'Você tem certeza?'
+    _yes: 'Sim'
+    _no: 'Não'
 

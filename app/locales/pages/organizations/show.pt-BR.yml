@@ -1,12 +1,12 @@
 pt-BR:
   organizations:
     show:
-      city: 'City'
-      phone: 'Phone'
-      about: 'About'
-      organization: 'Organization'
+      city: 'Cidade'
+      phone: 'Telefone'
+      about: 'Sobre'
+      organization: 'Organização'
       individual: 'Individual'
-      legal_entity: 'Legal Entity'
-      NGO: 'Non-governamental organization'
-      university: 'University'
-      public_organ: 'Public Organ'
+      legal_entity: 'Entidade Legal'
+      NGO: 'Organização não-governamental'
+      university: 'Instituição de Ensino'
+      public_organ: 'Orgão Público'

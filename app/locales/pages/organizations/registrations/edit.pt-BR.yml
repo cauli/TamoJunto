@@ -13,10 +13,10 @@ pt-BR:
         update: "Update"
         are_you_sure: "Are you sure?"
         individual: 'Individual'
-        legal_entity: 'Legal Entity'
-        NGO: 'Non-governamental organization'
-        university: 'University'
-        public_organ: 'Public Organ'
+        legal_entity: 'Entidade Legal'
+        NGO: 'Organização Não-governamental'
+        university: 'Instituição de Ensino'
+        public_organ: 'Orgão Público'
     shared:
       social_links:
         sign_in_with: "Sign in with %{provider}"

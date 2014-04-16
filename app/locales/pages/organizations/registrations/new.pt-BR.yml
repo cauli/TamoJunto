@@ -9,7 +9,7 @@ pt-BR:
         password: "Senha"
         password_confirmation: "Password confirmation"
         omniauth_description: "Complete your registration setting a password."
-        have_account: "Sua organização já tem uma conta? "
+        have_account: "É um apoiador e já tem uma conta? "
         sign_in_user: "Entre aqui"
         creat_account: "Você tem um perfil pessoal? "
         sign_up_user: "Entre aqui"

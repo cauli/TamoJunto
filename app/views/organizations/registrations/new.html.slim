@@ -18,16 +18,14 @@
         = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
           = f.error_notification
           .form-inputs
-            - unless resource.name.present? and not resource.errors.include? :name
-              = f.input :name, :required => true, :autofocus => true
+            = f.input :name, :required => true, :autofocus => true
             = f.input :kind, as: :select, collection: { t('organizations.individual') => 'individual', 
                                                         t('organizations.legal_entity') => 'legal_entity',
                                                         t('organizations.NGO') => 'NGO',
                                                         t('organizations.university') => 'university',
                                                         t('organizations.public_organ') => 'public_organ' }
-            - unless resource.email.present? and not resource.errors.include? :email
-              = f.input :email, :required => true
+            = f.input :email, :required => true
             = f.input :password, :required => true, :hint => false
-          = f.input :password_confirmation, :required => true, :hint => false
+            = f.input :password_confirmation, :required => true, :hint => false
 
           = f.button :submit, t(".sign_up"), :class => "expand radius"

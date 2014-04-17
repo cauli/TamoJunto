@@ -27,7 +27,7 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 
 # Authentication
-gem 'devise', '~> 3.2.2'
+gem 'devise', '~> 3.2.4'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
@@ -61,6 +61,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'letter_opener'
 end
 
 group :production do

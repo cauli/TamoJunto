@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Admin::ThemesController do
-  let(:user) {User.make! admin: true }
+  let(:user) { User.make! admin: true }
   let(:theme) { Theme.make! }
 
   before do
@@ -39,6 +39,7 @@ describe Admin::ThemesController do
 
   protected
   def theme_params
-    { "title" => 'Some nice theme', "description" => 'Some nice theme description' }
+    { "title"       => 'Some nice theme',
+      'description' => 'Some nice theme description' }
   end
 end

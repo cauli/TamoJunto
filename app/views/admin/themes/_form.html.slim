@@ -1,0 +1,11 @@
+= simple_form_for [:admin, @theme] do |f|
+  .row
+    .large-12.columns
+      = f.input :title
+      = f.input :description
+  .row
+    .large-12.columns
+      .text-right
+        = link_to t('words.cancel'), :back, class: 'button secondary'
+        | &nbsp;
+        = f.button :submit

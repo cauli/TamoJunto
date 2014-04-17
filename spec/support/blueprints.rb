@@ -58,3 +58,8 @@ end
 ActsAsTaggableOn::Tag.blueprint do
   name { 'test' }
 end
+
+Theme.blueprint do
+  title { 'Nice title' }
+  description { 'Some nice theme description' }
+end

@@ -1,0 +1,5 @@
+pt-BR:
+  admin:
+    themes:
+      new:
+        title: 'New theme'

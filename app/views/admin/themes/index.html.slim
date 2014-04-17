@@ -1,0 +1,19 @@
+- content_for :page_title, t('.title')
+.row
+  .large-12.columns
+    h2 = yield :page_title
+
+    = link_to t('words.create'), new_admin_theme_path, class: 'button'
+    table
+      tr
+        th = t('.theme_title')
+        th = t('.created_at')
+        th
+        th
+      - for theme in @themes do
+        tr
+          td = theme.title
+          td = theme.created_at
+          td = link_to  t('words.edit'), edit_admin_theme_path(theme)
+          td = link_to t('words.remove'), [:admin, theme], data: { confirm: t('words.are_you_sure') }, method: :delete
+

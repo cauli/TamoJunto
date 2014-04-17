@@ -1,0 +1,11 @@
+pt-BR:
+  organizations:
+    passwords:
+      edit:
+        icon_title: 'Apoiadores'
+        change_your_password: "Mudar minha senha"
+        create_your_account: "Crie aqui"
+        dont_have_account: "Ainda não tem conta? "
+        change_my_password: 'Mudar senha'
+        new_password: 'Nova senha'
+        confirm_your_new_password: 'Repita a nova senha'

@@ -1,0 +1,9 @@
+pt-BR:
+  users:
+    passwords:
+      new:
+        icon_title: 'Empreendedor'
+        forgot_password: "Esqueceu sua senha? "
+        create_your_account: "Crie aqui"
+        dont_have_account: "Ainda não tem conta? "
+        send_me_reset_password_instructions: 'Enviar instruções para redefinir senha'

@@ -1,7 +1,22 @@
-h2 = t(".forgot_your_password")
-= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, :required => true
-  = f.button :submit, t(".send_me_reset_password_instructions")
-= render "devise/shared/links"
+.row
+  .large-6.large-centered.columns
+    .box
+      .large-10.columns.large-centered
+        .top
+          h3.text-center
+            i.fa.fa-user.fa-fw
+            = t(".icon_title")
+          //h4.subheader.text-center = t(".sign_in")
+          h4.text-center 
+            small
+              = t(".dont_have_account")
+              = link_to t(".create_your_account"), new_user_registration_path
+      hr
+
+      .large-10.columns.large-centered
+        h3 = t(".forgot_password")
+        = simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+          = f.error_notification
+          .form-inputs
+            = f.input :email, :required => true
+          = f.button :submit, t(".send_me_reset_password_instructions")

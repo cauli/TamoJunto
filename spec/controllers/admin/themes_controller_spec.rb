@@ -39,7 +39,7 @@ describe Admin::ThemesController do
 
   protected
   def theme_params
-    { "title"       => 'Some nice theme',
+    { 'title'       => 'Some nice theme',
       'description' => 'Some nice theme description' }
   end
 end

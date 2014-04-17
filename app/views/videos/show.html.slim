@@ -1,14 +1,38 @@
-.row
-  .large-12.columns
-    .title
-      h2 = @video.title
-      p.votes
-        = link_to 'down', downvote_video_path
-        = " #{@video.score} "
-        = link_to 'up', upvote_video_path
+.single-content
+  .row
+    .large-12.columns
+      .top
+        .title
+          h4
+            small Video
+          h2 = @video.title
 
-    .content
-      p = @video.description
+  .row
+    article
+      .large-6.columns
+        .embed
+          iframe width="560" height="315" src="//#{@video.embed_url}" frameborder="0" allowfullscreen
 
-    .embed
-      iframe width="560" height="315" src="//#{@video.embed_url}" frameborder="0" allowfullscreen
+      .large-5.columns
+        .content
+          h3 Sobre
+          p = @video.description
+
+  .row
+    aside
+      .large-4.columns
+        h5 
+          | Gostou do conteúdo?
+      .large-8.columns
+        p.votes
+          i.fa.fa-camera-retro.fa-2x
+            = link_to 'down', downvote_video_path
+          
+          i.fa.fa-camera-retro.fa-2x
+            = link_to 'up', upvote_video_path
+
+          = " #{@video.score} "
+
+
+
+

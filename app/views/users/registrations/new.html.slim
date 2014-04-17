@@ -13,31 +13,35 @@
               = link_to t(".sign_in_here"), new_user_session_path   
       hr
 
-      .large-10.columns.large-centered
-        .omniauth
-          - if resource.authorizations.any?
-            .avatar= image_tag resource.avatar_url
-            .user-name= resource.name
-            .description= t('.omniauth_description')
-          - else
-            = render "users/shared/social_links"
+      .row
+        .large-10.columns.large-centered
+          .omniauth
+            - if resource.authorizations.any?
+              .row
+                .avatar = image_tag resource.avatar_url
+                .user-name = resource.name
+              h6.omniauth-description = t('.omniauth_description')
+            - else
+              = render "users/shared/social_links"
 
-      .divider
-        p
-          = t(".or")
+        - unless resource.authorizations.any?
+          .divider
+            p
+              = t(".or")
 
-      .large-10.columns.large-centered
+      .row
+        .large-10.columns.large-centered
 
-        = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-          = f.error_notification
-          .form-inputs
-            - unless resource.name.present? and resource.authorizations.any? and not resource.errors.include? :name
-              = f.input :name, :required => true, :autofocus => true
-            - unless resource.email.present? and resource.authorizations.any? and not resource.errors.include? :email
-              = f.input :email, :required => true
-            = f.input :password, :required => true, :hint => false
-          = f.input :password_confirmation, :required => true, :hint => false
+          = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+            = f.error_notification
+            .form-inputs
+              - unless resource.name.present? and resource.authorizations.any? and not resource.errors.include? :name
+                = f.input :name, :required => true, :autofocus => true
+              - unless resource.email.present? and resource.authorizations.any? and not resource.errors.include? :email
+                = f.input :email, :required => true
+              = f.input :password, :required => true, :hint => false
+            = f.input :password_confirmation, :required => true, :hint => false
 
-          = f.button :submit, t(".sign_up"), class: 'expand'
-          .small  
-            = link_to t(".forgot_password"), new_user_password_path, :class => "forgot_password"
+            = f.button :submit, t(".sign_up"), class: 'expand'
+            .small  
+              = link_to t(".forgot_password"), new_user_password_path, :class => "forgot_password"

@@ -1,12 +1,12 @@
 pt-BR:
   layouts:
     admin_menu:
-      articles: 'Articles'
-      documents: 'Documents'
+      articles: 'Artigos'
+      documents: 'Documentos'
       videos: 'Videos'
       tags: 'Tags'
-      users: 'Users'
-      organizations: 'Organizations'
-      themes: 'Themes'
-      events: 'Events'
-      services: 'Services'
+      users: 'Usuários'
+      organizations: 'Organizações'
+      themes: 'Temas'
+      events: 'Eventos'
+      services: 'Serviços'

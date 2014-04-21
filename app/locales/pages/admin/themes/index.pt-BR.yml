@@ -2,6 +2,6 @@ pt-BR:
   admin:
     themes:
       index:
-        title: 'Themes'
-        theme_title: 'Title'
-        created_at: 'Created at'
+        title: 'Tema'
+        theme_title: 'Titulo'
+        created_at: 'Criado em'

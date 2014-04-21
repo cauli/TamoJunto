@@ -2,9 +2,7 @@ pt-BR:
   layouts:
     header:
       my-profile: 'Meu perfil'
-      sign-up: 'Sign up'
       sign-in: 'Sou um empreendedor'
-      org-sign-up: 'Org. Sign Up'
       org-sign-in: 'Sou um apoiador'
       sign-out: 'Sair'
       edit_profile: 'Editar o perfil'

@@ -2,16 +2,16 @@ pt-BR:
   admin:
     services:
       index:
-        title: 'Services'
-        name: 'Name'
-        organization: 'Organization'
-        state: 'State'
-        created_at: 'Created at'
+        title: 'Serviços'
+        name: 'Nome'
+        organization: 'Organização'
+        state: 'Estado'
+        created_at: 'Criado em'
         state_names:
-          pending: 'Pending'
-          visible: 'Visible'
-          rejected: 'Rejected'
-        actions: 'Actions'
+          pending: 'Pendente'
+          visible: 'Visivel'
+          rejected: 'Rejeitado'
+        actions: 'Ações'
         change_state:
-          approve: 'Approve'
-          reject: 'Reject'
+          approve: 'Aprovar'
+          reject: 'Rejeitar'

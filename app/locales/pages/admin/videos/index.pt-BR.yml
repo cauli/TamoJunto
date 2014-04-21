@@ -3,5 +3,5 @@ pt-BR:
     videos:
       index:
         title: 'Videos'
-        video_title: 'Title'
-        created_at: 'Created at'
+        video_title: 'Titulo'
+        created_at: 'Criado em'

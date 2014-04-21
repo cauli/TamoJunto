@@ -63,3 +63,8 @@ Theme.blueprint do
   title { 'Nice title' }
   description { 'Some nice theme description' }
 end
+
+Topic.blueprint do
+  title { 'Nice title' }
+  description { 'Some nice topic description' }
+end

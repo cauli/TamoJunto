@@ -2,6 +2,6 @@ pt-BR:
   admin:
     documents:
       index:
-        title: 'Documents'
-        document_title: 'Title'
-        created_at: 'Created at'
+        title: 'Documentos'
+        document_title: 'Titulo'
+        created_at: 'Criado em'

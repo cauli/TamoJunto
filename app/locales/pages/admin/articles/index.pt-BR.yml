@@ -2,6 +2,6 @@ pt-BR:
   admin:
     articles:
       index:
-        title: 'Articles'
-        article_title: 'Title'
-        created_at: 'Created at'
+        title: 'Artigos'
+        article_title: 'Titulo'
+        created_at: 'Criado em'

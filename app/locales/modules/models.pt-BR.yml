@@ -3,3 +3,81 @@ pt-BR:
     url_regex_validation: "URL isn't valid"
   document:
     invalid_extension: "You can't upload that kind of file"
+  activerecord:
+    models:
+      article: 'Artigo'
+      document: 'Documento'
+      event: 'Evento'
+      organization: 'Organização'
+      service: 'Serviço'
+      theme: 'Tema'
+      user: 'Usuário'
+      video: 'Video'
+      vote: 'Voto'
+    attributes:
+      article:
+        title: 'Título'
+        image: 'Imagem'
+        content_html: 'Conteúdo'
+        tag_list: 'Tags'
+      document:
+        title: 'Título'
+        description: 'Descrição'
+        file: 'Arquivo'
+        tag_list: 'Tags'
+      event:
+        name: 'Nome'
+        description: 'Descrição'
+        image: 'Imagem'
+        local: 'Local'
+        starts_at: 'Início em'
+        ends_at: 'Termino em'
+        time: 'Hora'
+        external_link: 'Link externo'
+        value: 'Valor'
+        state: 'Estado'
+        organization: 'Organização'
+        tag_list: 'Tags'
+      organization:
+        email: 'Email'
+        password: 'Senha'
+        password_confirmation: 'Confirmação de senha'
+        remembre_me: 'Manter-me conectado'
+        name: 'Nome'
+        kind: 'Tipo'
+        about: 'Sobre'
+        image: 'Imagem'
+        phone: 'Telefone'
+        city: 'Cidade'
+      service:
+        organization: 'Organização'
+        state: 'Estado'
+        name: 'Nome'
+        description: 'Descrição'
+        image: 'Imagem'
+        local: 'Local'
+        external_link: 'Link externo'
+        value: 'Valor'
+        tag_list: 'Tags'
+        tag_list_hint: 'la'
+      tag:
+        name: 'Nome'
+      theme:
+        title: 'Titulo'
+        description: 'Descrição'
+      user:
+        name: 'Nome'
+        image: 'Imagem'
+        email: 'Email'
+        password: 'Senha'
+        password_confirmation: 'Confirmação de senha'
+        remember_me: 'Manter-me conectado'
+        admin: 'Admin'
+        active: 'Ativo'
+      video:
+        title: 'Título'
+        description: 'Descrição'
+        url: 'URL'
+        tag_list: 'Tags'
+
+

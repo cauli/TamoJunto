@@ -2,7 +2,7 @@ pt-BR:
   admin:
     users:
       index:
-        title: 'Users'
-        name: 'Name'
+        title: 'Usuários'
+        name: 'Nome'
         admin: 'Admin?'
-        created_at: 'Created at'
+        created_at: 'Criado em'

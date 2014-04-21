@@ -3,9 +3,9 @@ pt-BR:
     tags:
       index:
         title: 'Tags'
-        name: 'Tag name'
-        count: 'Times used'
-        remove: 'Remove'
-        are_you_sure: 'Are you sure?'
+        name: 'Nome'
+        count: 'Vezes utilizada'
+        remove: 'Remover'
+        are_you_sure: 'Você tem certeza?'
       destroy:
-        success: 'Tag successfully destroyed!'
+        success: 'Tag excluida com sucesso!'

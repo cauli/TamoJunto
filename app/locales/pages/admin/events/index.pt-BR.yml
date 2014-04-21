@@ -2,19 +2,19 @@ pt-BR:
   admin:
     events:
       index:
-        title: 'Events'
-        name: 'Name'
-        organization: 'Organization'
-        starts_at: 'Starts at'
-        state: 'State'
-        created_at: 'Created at'
+        title: 'Eventos'
+        name: 'Nome'
+        organization: 'Organização'
+        starts_at: 'Inicio em'
+        state: 'Estado'
+        created_at: 'Criado em'
         state_names:
-          pending: 'Pending'
-          visible: 'Visible'
-          rejected: 'Rejected'
-          canceled: 'Canceled'
-        actions: 'Actions'
+          pending: 'Pendente'
+          visible: 'Visível'
+          rejected: 'Rejeitado'
+          canceled: 'Cancelado'
+        actions: 'Ações'
         change_state:
-          approve: 'Approve'
-          cancel: 'Cancel'
-          reject: 'Reject'
+          approve: 'Aprovar'
+          cancel: 'Cancelar'
+          reject: 'Rejeitar'

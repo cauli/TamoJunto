@@ -5,6 +5,11 @@ class Admin::TopicsController < Admin::BaseController
 
   protected
   def permitted_params
-    params.permit(topic: [:title, :description, :tag_list, article_ids: [], document_ids: [], video_ids: []])
+    params.permit(topic: [:title,
+                          :description,
+                          :tag_list,
+                          article_ids: [],
+                          document_ids: [],
+                          video_ids: []])
   end
 end

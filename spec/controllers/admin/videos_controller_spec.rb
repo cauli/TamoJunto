@@ -41,6 +41,6 @@ describe Admin::VideosController do
 
   protected
   def video_params
-    Video.make.attributes.merge({ 'topic_ids' => [topic.id] })
+    Video.make.attributes.merge(topic_ids: [topic.id])
   end
 end

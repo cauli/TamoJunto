@@ -42,6 +42,6 @@ describe Admin::ArticlesController do
 
   protected
   def article_params
-    Article.make.attributes.merge({ topic_ids: [topic.id] })
+    Article.make.attributes.merge(topic_ids: [topic.id])
   end
 end

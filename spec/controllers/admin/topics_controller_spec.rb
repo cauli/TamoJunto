@@ -6,6 +6,7 @@ describe Admin::TopicsController do
   let(:article) { Article.make! }
   let(:document) { Document.make! }
   let(:event) { Event.make! }
+  let(:service) { Service.make! }
   let(:video) { Video.make! }
 
   before do
@@ -37,6 +38,7 @@ describe Admin::TopicsController do
     it { expect(Topic.last.articles).to eq [article] }
     it { expect(Topic.last.documents).to eq [document] }
     it { expect(Topic.last.events).to eq [event] }
+    it { expect(Topic.last.services).to eq [service] }
     it { expect(Topic.last.videos).to eq [video] }
   end
 
@@ -52,6 +54,7 @@ describe Admin::TopicsController do
       'article_ids'   => [article.id],
       'document_ids'  => [document.id],
       'event_ids'     => [event.id],
+      'service_ids'   => [service.id],
       'video_ids'     => [video.id] }
   end
 end

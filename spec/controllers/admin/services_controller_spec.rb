@@ -4,6 +4,7 @@ describe Admin::ServicesController do
 
   let(:user) { User.make! admin: true }
   let(:service) { Service.make! }
+  let(:topic) { Topic.make! }
 
   before do
     sign_in user
@@ -25,6 +26,7 @@ describe Admin::ServicesController do
   describe '#update' do
     before { post :update, id: service, service: service_params }
     it { expect(response).to redirect_to(admin_services_path) }
+    it { expect(Service.find(service.id).topics).to eq [topic] }
   end
 
   describe '#destroy' do
@@ -51,6 +53,6 @@ describe Admin::ServicesController do
 
   protected
   def service_params
-    Service.make.attributes
+    Service.make.attributes.merge(topic_ids: [topic.id])
   end
 end

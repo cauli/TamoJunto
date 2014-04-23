@@ -10,6 +10,7 @@ describe Service do
 
   describe 'associations' do
     it { should belong_to :organization }
+    it { should have_and_belong_to_many :topics }
   end
 
   describe 'tags' do

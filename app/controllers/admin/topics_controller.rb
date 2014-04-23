@@ -11,6 +11,7 @@ class Admin::TopicsController < Admin::BaseController
                           article_ids: [],
                           document_ids: [],
                           event_ids: [],
+                          service_ids: [],
                           video_ids: []])
   end
 end

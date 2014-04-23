@@ -27,6 +27,7 @@ pt-BR:
         description: 'Descrição'
         file: 'Arquivo'
         tag_list: 'Tags'
+        topics: 'Tópicos'
       event:
         name: 'Nome'
         description: 'Descrição'

@@ -5,6 +5,6 @@ class Admin::ArticlesController < Admin::BaseController
 
   protected
   def permitted_params
-    params.permit(article: [:title, :image, :content_html, :tag_list])
+    params.permit(article: [:title, :image, :content_html, :tag_list, topic_ids: []])
   end
 end

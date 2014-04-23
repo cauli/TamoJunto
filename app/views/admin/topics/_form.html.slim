@@ -14,6 +14,8 @@
       .tabs-content
         .content.active#articles
           = f.association :articles, as: :check_boxes, collection: Article.all(order: 'title')
+        .content#documents
+          = f.association :documents, as: :check_boxes, collection: Document.all(order: 'title')
   .row
     .large-12.columns
       .text-right

@@ -11,6 +11,7 @@ pt-BR:
       organization: 'Organização'
       service: 'Serviço'
       theme: 'Tema'
+      topic: 'Tópico'
       user: 'Usuário'
       video: 'Video'
       vote: 'Voto'
@@ -78,6 +79,10 @@ pt-BR:
         title: 'Título'
         description: 'Descrição'
         url: 'URL'
+        tag_list: 'Tags'
+      topic:
+        title: 'Título'
+        description: 'Descrição'
         tag_list: 'Tags'
 
 

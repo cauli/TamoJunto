@@ -4,7 +4,7 @@
 
 ## Development environment
 
-Make sure you have installed `Ruby 2.1.0`.
+Make sure you have installed `Ruby 2.1.1`.
 
 Then just checkout the code, configure dependencies and run the tests:
 

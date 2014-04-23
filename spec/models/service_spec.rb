@@ -17,4 +17,15 @@ describe Service do
     it { should respond_to :tag_list }
     it { should respond_to :tag_list= }
   end
+
+  describe 'scopes' do
+    describe '.visible' do
+      let(:pending) { Service.make! }
+      let(:visible) { Service.make! }
+
+      before { visible.approve }
+
+      it { expect(Service.visible).to eq [visible] }
+    end
+  end
 end

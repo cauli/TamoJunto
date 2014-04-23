@@ -26,6 +26,10 @@ describe Video do
     end
   end
 
+  describe 'Associations' do
+    it { should have_and_belong_to_many :topics }
+  end
+
   describe 'embed_url' do
     before do
       @video = Video.make!

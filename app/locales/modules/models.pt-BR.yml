@@ -41,6 +41,7 @@ pt-BR:
         state: 'Estado'
         organization: 'Organização'
         tag_list: 'Tags'
+        topics: 'Tópicos'
       organization:
         email: 'Email'
         password: 'Senha'
@@ -90,5 +91,7 @@ pt-BR:
         articles: 'Artigos'
         documents: 'Documentos'
         videos: 'Videos'
+        events: 'Eventos'
+        services: 'Serviços'
 
 

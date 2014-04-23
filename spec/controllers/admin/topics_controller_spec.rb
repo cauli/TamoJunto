@@ -5,6 +5,7 @@ describe Admin::TopicsController do
   let(:topic) { Topic.make! }
   let(:article) { Article.make! }
   let(:document) { Document.make! }
+  let(:event) { Event.make! }
   let(:video) { Video.make! }
 
   before do
@@ -35,6 +36,7 @@ describe Admin::TopicsController do
     it { expect(response).to redirect_to(admin_topics_path) }
     it { expect(Topic.last.articles).to eq [article] }
     it { expect(Topic.last.documents).to eq [document] }
+    it { expect(Topic.last.events).to eq [event] }
     it { expect(Topic.last.videos).to eq [video] }
   end
 
@@ -49,6 +51,7 @@ describe Admin::TopicsController do
       'description'   => 'Some nice topic description',
       'article_ids'   => [article.id],
       'document_ids'  => [document.id],
+      'event_ids'     => [event.id],
       'video_ids'     => [video.id] }
   end
 end

@@ -4,4 +4,6 @@ pt-BR:
       form:
         articles: 'Artigos'
         documents: 'Documentos'
+        events: 'Eventos'
+        services: 'Serviços'
         videos: 'Videos'

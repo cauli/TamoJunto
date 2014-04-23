@@ -10,6 +10,7 @@ class Admin::TopicsController < Admin::BaseController
                           :tag_list,
                           article_ids: [],
                           document_ids: [],
+                          event_ids: [],
                           video_ids: []])
   end
 end

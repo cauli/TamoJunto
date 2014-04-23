@@ -20,4 +20,13 @@ describe Event do
     it { should respond_to :tag_list }
     it { should respond_to :tag_list= }
   end
+
+  describe 'scopes' do
+    let(:pending) { Event.make! }
+    let(:visible) { Event.make! }
+
+    before { visible.approve }
+
+    it { expect(Event.visible).to eq [visible] }
+  end
 end

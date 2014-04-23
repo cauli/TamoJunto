@@ -1,2 +1,25 @@
-h1 Topics#show
-p Find me in app/views/topics/show.html.slim
+.topic-page
+  .row
+    .large-12.columns
+      .page-title
+        h2 = @topic.title
+
+      section.articles
+        h4 = t('.articles.title')
+        .row
+          = render Article.all
+
+      section.videos
+        h4 = t('.videos.title')
+        .row
+          = render Video.all
+
+      section.events
+        h4 = t('.events.title')
+        .row
+          = render Event.with_state('visible')
+
+      section.services
+        h4 = t('.services.title')
+        .row
+          = render Service.with_state('visible')

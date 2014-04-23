@@ -1,0 +1,5 @@
+.event.large-4.small-6.columns
+  h5 = link_to event.name, event
+  p = truncate(strip_tags(event.description), length: 140, separator:' ').gsub('&nbsp;', ' ').gsub('&amp;nbsp;', ' ')
+  .by
+    = t('.by', link: link_to(event.organization.name, event.organization)).html_safe

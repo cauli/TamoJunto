@@ -21,6 +21,7 @@ pt-BR:
         image: 'Imagem'
         content_html: 'Conteúdo'
         tag_list: 'Tags'
+        topics: 'Tópicos'
       document:
         title: 'Título'
         description: 'Descrição'
@@ -84,5 +85,8 @@ pt-BR:
         title: 'Título'
         description: 'Descrição'
         tag_list: 'Tags'
+        articles: 'Artigos'
+        documents: 'Documentos'
+        videos: 'Videos'
 
 

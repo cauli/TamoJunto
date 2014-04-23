@@ -4,6 +4,16 @@
       = f.input :title
       = f.input :description
       = f.input :tag_list
+      dl.tabs data-tab=""
+        dd.active
+          a href="#articles" = t('.articles')
+        dd
+          a href="#documents" = t('.documents')
+        dd
+          a href="#videos" = t('.videos')
+      .tabs-content
+        .content.active#articles
+          = f.association :articles, as: :check_boxes, collection: Article.all(order: 'title')
   .row
     .large-12.columns
       .text-right

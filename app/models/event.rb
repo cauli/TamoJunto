@@ -3,7 +3,13 @@ class Event < ActiveRecord::Base
 
   belongs_to :organization
   has_and_belongs_to_many :topics
-  validates :name, :description, :local, :starts_at, :ends_at, :time, :organization_id, presence: true
+  validates :name,
+            :description,
+            :local,
+            :starts_at,
+            :ends_at,
+            :time,
+            :organization_id, presence: true
 
   dragonfly_accessor :image
   acts_as_taggable

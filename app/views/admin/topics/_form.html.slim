@@ -16,6 +16,8 @@
           = f.association :articles, as: :check_boxes, collection: Article.all(order: 'title')
         .content#documents
           = f.association :documents, as: :check_boxes, collection: Document.all(order: 'title')
+        .content#videos
+          = f.association :videos, as: :check_boxes, collection: Video.all(order: 'title')
   .row
     .large-12.columns
       .text-right

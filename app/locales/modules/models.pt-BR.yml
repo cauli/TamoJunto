@@ -82,6 +82,7 @@ pt-BR:
         description: 'Descrição'
         url: 'URL'
         tag_list: 'Tags'
+        topics: 'Tópicos'
       topic:
         title: 'Título'
         description: 'Descrição'

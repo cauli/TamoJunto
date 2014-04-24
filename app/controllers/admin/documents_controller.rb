@@ -5,6 +5,10 @@ class Admin::DocumentsController < Admin::BaseController
 
   protected
   def permitted_params
-    params.permit(document: [:title, :description, :file, :tag_list])
+    params.permit(document: [:title,
+                             :description,
+                             :file,
+                             :tag_list,
+                             topic_ids: []])
   end
 end

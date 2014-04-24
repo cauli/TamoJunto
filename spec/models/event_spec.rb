@@ -13,11 +13,23 @@ describe Event do
 
   describe 'associations' do
     it { should belong_to :organization }
+    it { should have_and_belong_to_many :topics }
   end
 
   describe 'tags' do
     it { should have_many :tags }
     it { should respond_to :tag_list }
     it { should respond_to :tag_list= }
+  end
+
+  describe 'scopes' do
+    describe '.visible' do
+      let(:pending) { Event.make! }
+      let(:visible) { Event.make! }
+
+      before { visible.approve }
+
+      it { expect(Event.visible).to eq [visible] }
+    end
   end
 end

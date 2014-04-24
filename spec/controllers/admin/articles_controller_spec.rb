@@ -4,6 +4,7 @@ describe Admin::ArticlesController do
 
   let(:user) { User.make! admin: true }
   let(:article) { Article.make! }
+  let(:topic) { Topic.make! }
 
   before do
     sign_in user
@@ -31,6 +32,7 @@ describe Admin::ArticlesController do
   describe '#create' do
     before { post :create, article: article_params }
     it { expect(response).to redirect_to(admin_articles_path) }
+    it { expect(Article.last.topics).to eq [topic] }
   end
 
   describe '#update' do
@@ -40,6 +42,6 @@ describe Admin::ArticlesController do
 
   protected
   def article_params
-    Article.make.attributes
+    Article.make.attributes.merge(topic_ids: [topic.id])
   end
 end

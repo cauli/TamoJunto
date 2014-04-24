@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe Admin::VideosController do
-
   let(:user) {User.make! admin: true }
   let(:video) { Video.make! }
+  let(:topic) { Topic.make! }
 
   before do
     sign_in user
@@ -31,6 +31,7 @@ describe Admin::VideosController do
   describe '#create' do
     before { post :create, video: video_params }
     it { expect(response).to redirect_to(admin_videos_path) }
+    it { expect(Video.last.topics).to eq [topic] }
   end
 
   describe '#update' do
@@ -40,7 +41,6 @@ describe Admin::VideosController do
 
   protected
   def video_params
-    Video.make.attributes
+    Video.make.attributes.merge(topic_ids: [topic.id])
   end
-
 end

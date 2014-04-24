@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Admin::DocumentsController do
   let(:user) {User.make! admin: true }
   let(:document) { Document.make! }
+  let(:topic) { Topic.make! }
 
   before do
     sign_in user
@@ -30,6 +31,7 @@ describe Admin::DocumentsController do
   describe '#create' do
     before { post :create, document: document_params }
     it { expect(response).to redirect_to(admin_documents_path) }
+    it { expect(Document.last.topics).to eq [topic] }
   end
 
   describe '#update' do
@@ -39,6 +41,9 @@ describe Admin::DocumentsController do
 
   protected
   def document_params
-    { "title" => 'Some nice file', "description" => 'Some nice description', "file" => fixture_file_upload('file.txt', 'text/txt') }
+    { 'title'       => 'Some nice file',
+      'description' => 'Some nice description',
+      'file'        => fixture_file_upload('file.txt', 'text/txt'),
+      'topic_ids'   => [topic.id] }
   end
 end

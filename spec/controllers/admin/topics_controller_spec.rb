@@ -3,6 +3,11 @@ require 'spec_helper'
 describe Admin::TopicsController do
   let(:user) { User.make! admin: true }
   let(:topic) { Topic.make! }
+  let(:article) { Article.make! }
+  let(:document) { Document.make! }
+  let(:event) { Event.make! }
+  let(:service) { Service.make! }
+  let(:video) { Video.make! }
 
   before do
     sign_in user
@@ -30,6 +35,11 @@ describe Admin::TopicsController do
   describe '#create' do
     before { post :create, topic: topic_params }
     it { expect(response).to redirect_to(admin_topics_path) }
+    it { expect(Topic.last.articles).to eq [article] }
+    it { expect(Topic.last.documents).to eq [document] }
+    it { expect(Topic.last.events).to eq [event] }
+    it { expect(Topic.last.services).to eq [service] }
+    it { expect(Topic.last.videos).to eq [video] }
   end
 
   describe '#update' do
@@ -39,7 +49,12 @@ describe Admin::TopicsController do
 
   protected
   def topic_params
-    { 'title'       => 'Some nice topic',
-      'description' => 'Some nice topic description' }
+    { 'title'         => 'Some nice topic',
+      'description'   => 'Some nice topic description',
+      'article_ids'   => [article.id],
+      'document_ids'  => [document.id],
+      'event_ids'     => [event.id],
+      'service_ids'   => [service.id],
+      'video_ids'     => [video.id] }
   end
 end

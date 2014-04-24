@@ -4,6 +4,7 @@ describe Admin::EventsController do
 
   let(:user) { User.make! admin: true }
   let(:event) { Event.make! }
+  let(:topic) { Topic.make! }
 
   before do
     sign_in user
@@ -26,6 +27,7 @@ describe Admin::EventsController do
   describe '#update' do
     before { post :update, id: event, event: event_params }
     it { expect(response).to redirect_to(admin_events_path) }
+    it { expect(Event.find(event.id).topics).to eq [topic] }
   end
 
   describe '#destroy' do
@@ -60,7 +62,7 @@ describe Admin::EventsController do
 
   protected
   def event_params
-    Event.make.attributes
+    Event.make.attributes.merge(topic_ids: [topic.id])
   end
 end
 

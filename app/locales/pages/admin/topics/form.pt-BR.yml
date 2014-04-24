@@ -1,0 +1,9 @@
+pt-BR:
+  admin:
+    topics:
+      form:
+        articles: 'Artigos'
+        documents: 'Documentos'
+        events: 'Eventos'
+        services: 'Serviços'
+        videos: 'Videos'

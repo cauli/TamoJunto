@@ -7,6 +7,10 @@ describe Document do
     it{ should validate_presence_of :file }
   end
 
+  describe 'Associations' do
+    it { should have_and_belong_to_many :topics }
+  end
+
   describe '#file' do
     context 'valid file' do
       subject {Document.make! file:  File.open("#{Rails.root}/spec/fixtures/file.txt") }

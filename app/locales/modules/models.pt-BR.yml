@@ -21,11 +21,13 @@ pt-BR:
         image: 'Imagem'
         content_html: 'Conteúdo'
         tag_list: 'Tags'
+        topics: 'Tópicos'
       document:
         title: 'Título'
         description: 'Descrição'
         file: 'Arquivo'
         tag_list: 'Tags'
+        topics: 'Tópicos'
       event:
         name: 'Nome'
         description: 'Descrição'
@@ -39,6 +41,7 @@ pt-BR:
         state: 'Estado'
         organization: 'Organização'
         tag_list: 'Tags'
+        topics: 'Tópicos'
       organization:
         email: 'Email'
         password: 'Senha'
@@ -80,9 +83,15 @@ pt-BR:
         description: 'Descrição'
         url: 'URL'
         tag_list: 'Tags'
+        topics: 'Tópicos'
       topic:
         title: 'Título'
         description: 'Descrição'
         tag_list: 'Tags'
+        articles: 'Artigos'
+        documents: 'Documentos'
+        videos: 'Videos'
+        events: 'Eventos'
+        services: 'Serviços'
 
 

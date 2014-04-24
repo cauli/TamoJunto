@@ -8,6 +8,7 @@
     .large-12.columns
       .tags-path[data-url=admin_tags_path(format: :json)]
         = f.input :tag_list, as: :string, input_html: { class: 'tags-input-autocomplete' }
+        = f.association :topics, as: :check_boxes, collection: Topic.all(order: 'title')
   .row
     .large-12.columns
       .text-right

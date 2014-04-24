@@ -6,6 +6,10 @@ describe Article do
     it{ should validate_presence_of :content_html }
   end
 
+  describe 'Associations' do
+    it { should have_and_belong_to_many :topics }
+  end
+
   describe '#image with dragonfly' do
     let(:article) { Article.make! image: File.open("#{Rails.root}/spec/fixtures/image.png") }
     it { expect(article.image.url).to be_present }

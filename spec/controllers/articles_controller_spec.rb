@@ -1,5 +1,4 @@
 require 'spec_helper'
-require File.expand_path('../concerns/shared/voteable_actions_spec.rb', __FILE__)
 
 describe ArticlesController do
 

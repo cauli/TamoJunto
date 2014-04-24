@@ -1,8 +1,14 @@
 .topic-page
+  header.title.white
+    .row
+      .large-12.columns
+        h3
+          small Rede de contatos
+          br/
+          = @topic.title
+
   .row
     .large-12.columns
-      .page-title
-        h2 = @topic.title
 
       section.articles
         h4 = t('.articles.title')

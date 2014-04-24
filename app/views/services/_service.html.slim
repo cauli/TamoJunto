@@ -1,5 +1,5 @@
 .service.large-4.small-6.columns
-  h5 = link_to service.name, service
+  h5 = link_to service.name, service, class: 'inverse'
   p = truncate(strip_tags(service.description), length: 140, separator:' ').gsub('&nbsp;', ' ').gsub('&amp;nbsp;', ' ')
   .by
     = t('.by', link: link_to(service.organization.name, service.organization)).html_safe

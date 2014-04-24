@@ -1,0 +1,38 @@
+.topic-page
+  section
+    margin-bottom: +rem-calc(50px)
+    h4
+      margin-bottom: +rem-calc(15px)
+
+  .event
+    .date-box
+      padding: +rem-calc(5px 0)
+      margin-bottom: +rem-calc(15px)
+      background: #FFF
+      border: 1px solid $border-color
+      text-align: center
+      span
+        display: block
+        font-size: 300%
+        font-weight: bold
+      small
+        font-size: 200%
+
+  .video
+    .image
+      position: relative
+      display: block
+      .play-button
+        position: absolute
+        top: 33%
+        bottom: 0
+        left: 0
+        right: 0
+        text-align: center
+        i
+          +single-transition(all, .3s)
+          font-size: 500%
+          color: white
+      &:hover
+        i
+          color: lighten($link-inverse-color, 40%)

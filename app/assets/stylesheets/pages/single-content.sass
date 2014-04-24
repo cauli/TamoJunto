@@ -1,7 +1,10 @@
-.single-content
+.single-content 
   .top
-    background: #eee
-    height: +rem-calc(160)
+    margin-top: +rem-calc(42)
+    .icon-single-page
+      float: left
+      margin-right: +rem-calc(30)
+      margin-bottom: +rem-calc(16)
 
     h2, h4
       line-height: 1
@@ -11,16 +14,23 @@
 
     h4
       margin-bottom: 0
-      padding-top: +rem-calc(42)
+      small
+        font-weight: 400
 
   article
     margin-top: +rem-calc(20)
+    margin-top: +rem-calc(20)
 
+  .about
+    margin-top: +rem-calc(30)
     h3
       color: $primary-color
 
-  aside 
-    background-color: $primary-color
-    height: +rem-calc(50)
-    padding-top: +rem-calc(10)
-    padding-bottom: +rem-calc(10)
+    #vote-yes
+      background-color: #2cbaa6
+      padding: 10px
+      border-radius: 5px
+      text-align: center
+      text-transform: capitalize
+      color: white !important
+      padding-left: +rem-calc(10)

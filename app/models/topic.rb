@@ -6,6 +6,7 @@ class Topic < ActiveRecord::Base
   has_and_belongs_to_many :events
   has_and_belongs_to_many :services
   has_and_belongs_to_many :videos
+  has_one :question
 
   acts_as_taggable
 end

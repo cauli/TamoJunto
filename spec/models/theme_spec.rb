@@ -5,4 +5,8 @@ describe Theme do
     it { should validate_presence_of :title }
     it { should validate_presence_of :description }
   end
+
+  describe 'Associations' do
+    it { should have_many :questions }
+  end
 end

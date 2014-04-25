@@ -1,0 +1,7 @@
+pt-BR:
+  admin:
+    questions:
+      index:
+        title: 'Questão'
+        question_text: 'Pergunta'
+        created_at: 'Criado em'

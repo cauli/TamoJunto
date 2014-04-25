@@ -1,0 +1,15 @@
+= simple_form_for [:admin, @question] do |f|
+  .row
+    .large-12.columns
+      = f.input :question_text
+      = f.input :good_answer
+      = f.input :bad_answer
+      = f.association :theme
+      = f.association :topic
+
+  .row
+    .large-12.columns
+      .text-right
+        = link_to t('words.cancel'), :back, class: 'button secondary'
+        | &nbsp;
+        = f.button :submit

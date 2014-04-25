@@ -68,3 +68,11 @@ Topic.blueprint do
   title { 'Nice title' }
   description { 'Some nice topic description' }
 end
+
+Question.blueprint do
+  question_text { 'Is this a nice question?' }
+  good_answer { 'Yes' }
+  bad_answer { 'No' }
+  topic { Topic.make! }
+  theme { Theme.make! }
+end

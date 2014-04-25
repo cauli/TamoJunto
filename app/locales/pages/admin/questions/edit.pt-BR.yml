@@ -1,0 +1,5 @@
+pt-BR:
+  admin:
+    questions:
+      edit:
+        title: 'Editar questão'

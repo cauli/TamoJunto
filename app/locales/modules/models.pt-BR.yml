@@ -9,6 +9,7 @@ pt-BR:
       document: 'Documento'
       event: 'Evento'
       organization: 'Organização'
+      question: 'Questão'
       service: 'Serviço'
       theme: 'Tema'
       topic: 'Tópico'
@@ -93,5 +94,11 @@ pt-BR:
         videos: 'Videos'
         events: 'Eventos'
         services: 'Serviços'
+      question:
+        question_text: 'Pergunta'
+        good_answer: 'Resposta boa'
+        bad_answer: 'Resposta ruim'
+        topic: 'Tópico'
+        theme: 'Tema'
 
 

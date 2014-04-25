@@ -1,0 +1,5 @@
+pt-BR:
+  admin:
+    questions:
+      new:
+        title: 'Nova questão'

@@ -36,6 +36,7 @@ TamoJunto::Application.routes.draw do
     resources :organizations, except: [:new, :create, :show]
     resources :themes, except: :show
     resources :topics, except: :show
+    resources :questions, except: :show
     resources :events, except: [:new, :create, :show] do
       member do
         get :reject

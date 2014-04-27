@@ -3,7 +3,7 @@
     .row
       .large-12.columns
         h3
-          small Rede de contatos
+          small Colocar o tema aqui
           br/
           = @topic.title
 
@@ -13,19 +13,19 @@
       section.articles
         h4 = t('.articles.title')
         .row
-          = render Article.all
+          = render @topic.articles
 
       section.videos
         h4 = t('.videos.title')
         .row
-          = render Video.all
+          = render @topic.videos
 
       section.events
         h4 = t('.events.title')
         .row
-          = render Event.with_state('visible')
+          = render @topic.events.with_state('visible')
 
       section.services
         h4 = t('.services.title')
         .row
-          = render Service.with_state('visible')
+          = render @topic.services.with_state('visible')

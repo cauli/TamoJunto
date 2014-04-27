@@ -1,4 +1,4 @@
 .article.large-3.small-6.columns
   h5 = link_to article.title, article, class: 'inverse'
-  p = truncate(strip_tags(article.content_html), length: 140, separator:' ').gsub('&nbsp;', ' ').gsub('&amp;nbsp;', ' ')
+  p = truncate(article.sanitized_content, length: 140, separator:' ')
   = link_to t('.read_more'), article, class: 'read-more'

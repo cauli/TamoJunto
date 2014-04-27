@@ -26,4 +26,16 @@ describe Article do
     it { should respond_to :tag_list }
     it { should respond_to :tag_list= }
   end
+
+  describe '#sanitized_content' do
+    let(:article) { Article.make! content_html: '<b>Hello!</b>' }
+    it 'sanitizes content_html' do
+      expect(Sanitize).to receive(:clean).with('<b>Hello!</b>')
+      article.sanitized_content
+    end
+
+    it 'returns just the text' do
+      expect(article.sanitized_content).to eq('Hello!')
+    end
+  end
 end

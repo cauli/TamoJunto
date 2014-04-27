@@ -6,4 +6,8 @@ class Article < ActiveRecord::Base
 
   dragonfly_accessor :image
   acts_as_taggable
+
+  def sanitized_content
+    Sanitize.clean(content_html)
+  end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424135254) do
+ActiveRecord::Schema.define(version: 20140427163236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,20 @@ ActiveRecord::Schema.define(version: 20140424135254) do
 
   add_index "organizations", ["email"], name: "index_organizations_on_email", unique: true, using: :btree
   add_index "organizations", ["reset_password_token"], name: "index_organizations_on_reset_password_token", unique: true, using: :btree
+
+  create_table "questions", force: true do |t|
+    t.text     "question_text"
+    t.string   "good_answer"
+    t.string   "bad_answer"
+    t.integer  "topic_id"
+    t.integer  "theme_id"
+    t.integer  "row_order"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "questions", ["theme_id"], name: "index_questions_on_theme_id", using: :btree
+  add_index "questions", ["topic_id"], name: "index_questions_on_topic_id", using: :btree
 
   create_table "services", force: true do |t|
     t.integer  "organization_id"
@@ -213,6 +227,7 @@ ActiveRecord::Schema.define(version: 20140424135254) do
     t.string   "embed_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "thumbnail_url"
   end
 
   create_table "votes", force: true do |t|

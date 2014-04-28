@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Admin::ThemesController do
   let(:user) { User.make! admin: true }
   let(:theme) { Theme.make! }
+  let(:related_theme) { Theme.make! }
 
   before do
     sign_in user
@@ -35,11 +36,13 @@ describe Admin::ThemesController do
   describe '#update' do
     before { post :update, id: theme, theme: theme_params }
     it { expect(response).to redirect_to(admin_themes_path) }
+    it { expect(Theme.find(theme.id).related_themes).to eq [related_theme] }
   end
 
   protected
   def theme_params
     { 'title'       => 'Some nice theme',
-      'description' => 'Some nice theme description' }
+      'description' => 'Some nice theme description',
+      'related_theme_ids' => [related_theme.id] }
   end
 end

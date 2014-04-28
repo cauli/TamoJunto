@@ -1,0 +1,5 @@
+pt-BR:
+  user:
+    gender:
+      male: 'Masculino'
+      female: 'Feminino'

@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  validates :name, presence: true
+  validates :name, :birthdate, :gender, presence: true
 
   acts_as_voter
 

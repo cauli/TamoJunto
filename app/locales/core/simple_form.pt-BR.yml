@@ -30,6 +30,8 @@ pt-BR:
         password: 'Senha'
         password_confirmation: 'Confirme a senha'
         remember_me: 'Lembrar de min'
+        birthdate: 'Data de Nascimento'
+        gender: 'Sexo'
       organization:
         name: 'Nome'
         password: 'Senha'

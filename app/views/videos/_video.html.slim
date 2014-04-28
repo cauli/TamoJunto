@@ -1,0 +1,6 @@
+.video.large-4.small-6.columns
+  = link_to video, class: 'image' do
+    .play-button
+      i.fa.fa-play-circle-o
+    = image_tag(video.thumbnail_url)
+  h5 = link_to video.title, video, class: 'inverse'

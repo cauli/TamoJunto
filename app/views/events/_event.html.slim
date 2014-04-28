@@ -1,0 +1,13 @@
+.event.large-4.small-12.columns
+  .row
+    .large-4.small-4.columns
+      .date-box
+        span = event.starts_at.day
+        small = (t :abbr_month_names, scope: :date)[event.starts_at.month]
+
+    .large-8.small-8.columns.no-left-padding
+      h5 = link_to event.name, event, class: 'inverse'
+
+  p = truncate(event.description, length: 140, separator:' ')
+  .by
+    = t('.by', link: link_to(event.organization.name, event.organization)).html_safe

@@ -1,0 +1,11 @@
+pt-BR:
+  topics:
+    show:
+      articles:
+        title: 'Artigos'
+      videos:
+        title: 'Videos'
+      events:
+        title: 'Eventos'
+      services:
+        title: 'Serviços'

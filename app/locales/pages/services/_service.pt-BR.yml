@@ -1,0 +1,4 @@
+pt-BR:
+  services:
+    service:
+      by: 'por %{link}'

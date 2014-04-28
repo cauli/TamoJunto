@@ -1,0 +1,31 @@
+.topic-page
+  header.title.white
+    .row
+      .large-12.columns
+        h3
+          small Colocar o tema aqui
+          br/
+          = @topic.title
+
+  .row
+    .large-12.columns
+
+      section.articles
+        h4 = t('.articles.title')
+        .row
+          = render @topic.articles
+
+      section.videos
+        h4 = t('.videos.title')
+        .row
+          = render @topic.videos
+
+      section.events
+        h4 = t('.events.title')
+        .row
+          = render @topic.events.with_state('visible')
+
+      section.services
+        h4 = t('.services.title')
+        .row
+          = render @topic.services.with_state('visible')

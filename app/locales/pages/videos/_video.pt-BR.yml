@@ -1,0 +1,4 @@
+pt-BR:
+  events:
+    event:
+      by: 'por %{link}'

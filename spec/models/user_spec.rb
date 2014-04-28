@@ -63,11 +63,11 @@ describe User do
   end
 
   describe 'validations' do
-    it{ should validate_presence_of :name }
-    it{ should validate_presence_of :email }
-    it{ should validate_presence_of :password }
-    it{ should validate_presence_of :birthdate }
-    it{ should validate_presence_of :gender }
+    it { should validate_presence_of :name }
+    it { should validate_presence_of :email }
+    it { should validate_presence_of :password }
+    it { should validate_presence_of :birthdate }
+    it { should validate_presence_of :gender }
   end
 
   describe "#avatar_url" do

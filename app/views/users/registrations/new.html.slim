@@ -37,10 +37,12 @@
             .form-inputs
               - unless resource.name.present? and resource.authorizations.any? and not resource.errors.include? :name
                 = f.input :name, :required => true, :autofocus => true
+              = f.input :birthdate, start_year: Date.today.year - 70, end_year: Date.today.year - 16
+              = f.input :gender, as: :radio_buttons, collection: [[t('user.gender.male'), 'm'], [t('user.gender.female'), 'f']]
               - unless resource.email.present? and resource.authorizations.any? and not resource.errors.include? :email
                 = f.input :email, :required => true
               = f.input :password, :required => true, :hint => false
-            = f.input :password_confirmation, :required => true, :hint => false
+              = f.input :password_confirmation, :required => true, :hint => false
 
             = f.button :submit, t(".sign_up"), class: 'expand'
             .small  

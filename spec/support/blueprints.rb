@@ -5,6 +5,8 @@ User.blueprint do
   email                 { "someniceguy#{sn}@gmail.com" }
   password              { 'niceguy123' }
   password_confirmation { 'niceguy123' }
+  gender                { 'M' }
+  birthdate             { Date.today - 23.years }
 end
 
 Authorization.blueprint do

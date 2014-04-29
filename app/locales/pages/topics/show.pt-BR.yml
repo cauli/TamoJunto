@@ -9,3 +9,5 @@ pt-BR:
         title: 'Eventos'
       services:
         title: 'Serviços'
+      downloads:
+        title: 'Arquivos'

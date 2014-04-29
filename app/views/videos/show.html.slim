@@ -1,12 +1,13 @@
 .single-content
-  .row
-    .top
-      .large-12.columns
-        =image_tag ('video-icon.png'), class: 'icon-single-page'
-        .title
-          h4 
-            small Video
-          h2 = @video.title
+  .top-header-content
+    .row
+      .top
+        .large-12.columns
+          =image_tag ('video-icon.png'), class: 'icon-single-page'
+          .title
+            h4 
+              small Video
+            h2 = @video.title
 
   .row
     article
@@ -16,25 +17,24 @@
 
   .row
     .about
-      .large-12.columns
+      .large-9.columns
         h3 Sobre
         p = @video.description
-  .row
-    .vote
       .large-3.columns
-        h4 
+        h4
           | Gostou do video?
         p.votes
           = " #{@video.score} "
+          | pessoas gostaram
 
-          #vote-yes
-            i.fa.fa-thumbs-up.fa-2x
-            = link_to 'Sim', upvote_video_path
+          .large-12.large-centered.columns
+            .button.vote-yes
+              = image_tag ("thumbup.png"), class: 'button-icon'
+              = link_to 'Sim', upvote_video_path
 
-          #vote-no
-            i.fa.fa-thumbs-down.fa-2x
-            = link_to 'Não', downvote_video_path
-
-          
+            .button.vote-no
+              = image_tag ("thumbdown.png"), class: 'button-icon'
+              = link_to 'Não', downvote_video_path
+        
 
 

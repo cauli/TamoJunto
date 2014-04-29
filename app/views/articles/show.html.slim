@@ -1,27 +1,26 @@
 .single-content
-  .row
-    .top
-      .large-12.columns
-        =image_tag ('article-icon.png'), class: 'icon-single-page'
-        .title
-          h4
-            small Artigo
-          h2 = @article.title
-          p 
-            | por 
-            a Bárbara Wolff Dick 
+  .top-header-content
+    .row
+      .top
+        .large-12.columns
+          =image_tag ('article-icon.png'), class: 'icon-single-page'
+          .title
+            h4
+              small Artigo
+            h2 = @article.title
+            p 
+              | por 
+              a Bárbara Wolff Dick 
 
-            | no dia 20/04/2014
+              | no dia 20/04/2014
 
           
   .row
     article
+      .image
+        = image_tag @article.image.url if @article.image.present?
       .large-9.columns
         p = @article.content_html.html_safe
-
-      //.image
-        h4 IMAGE
-        = image_tag @article.image.url if @article.image.present?
       .about
         .large-3.columns
           h4

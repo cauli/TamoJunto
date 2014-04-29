@@ -28,7 +28,8 @@ class EventsController < ApplicationController
 
   def destroy
     authorize resource
-    destroy!
+    resource.cancel!
+    redirect_to event_path(resource), notice: t('.notice')
   end
 
   protected

@@ -1,5 +1,6 @@
 pt-BR:
   events:
     form:
-      destroy: 'Excluir este evento'
+      destroy: 'Cancelar este evento'
       destroy_hint: 'Você não poderá desfazer esta operação.'
+      canceled: 'Este evento foi cancelado.'

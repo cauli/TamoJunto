@@ -20,10 +20,15 @@
   .row
     .large-7.columns
       - if @event.persisted?
-        = link_to @event, data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button alert' do
-          i.fa.fa-trash-o
-          = t('.destroy')
-        span = t('.destroy_hint')
+        - if @event.canceled?
+          .panel.callout.radius
+            = t('.canceled')
+
+        - else
+          = link_to @event, data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button alert' do
+            i.fa.fa-trash-o
+            = t('.destroy')
+          span = t('.destroy_hint')
     .large-5.columns
       .text-right
         = link_to t('words.cancel'), :back, class: 'button secondary'

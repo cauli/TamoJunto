@@ -1,0 +1,4 @@
+pt-BR:
+  events:
+    destroy:
+      notice: 'Evento cancelado com sucesso.'

@@ -1,15 +1,30 @@
-.row
-  .large-12.columns
-    .title
-      h2 = @article.title
-      p.votes
-        = link_to 'down', downvote_article_path
-        = " #{@article.score} "
-        = link_to 'up', upvote_article_path
+.single-content
+  .row
+    .top
+      .large-12.columns
+        =image_tag ('article-icon.png'), class: 'icon-single-page'
+        .title
+          h4
+            small Artigo
+          h2 = @article.title
+          p 
+            | por 
+            a Bárbara Wolff Dick 
 
-    .content
-      p = @article.content_html.html_safe
+            | no dia 20/04/2014
 
-    .image
-      h4 IMAGE
-      = image_tag @article.image.url if @article.image.present?
+          
+  .row
+    article
+      .large-9.columns
+        p = @article.content_html.html_safe
+
+      //.image
+        h4 IMAGE
+        = image_tag @article.image.url if @article.image.present?
+
+      .large-3.columns
+        p.votes
+            = link_to 'down', downvote_article_path
+            = " #{@article.score} "
+            = link_to 'up', upvote_article_path

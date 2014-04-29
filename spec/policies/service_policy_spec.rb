@@ -34,4 +34,3 @@ describe ServicePolicy do
     it_should_behave_like 'create permissions'
   end
 end
-

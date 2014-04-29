@@ -11,7 +11,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(permitted_params[:event].merge(organization: current_organization))
+    @event = Event.new(permitted_params[:event].
+                       merge(organization: current_organization))
     authorize @event
     create!
   end

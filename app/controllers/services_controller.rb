@@ -11,7 +11,8 @@ class ServicesController < ApplicationController
   end
 
   def create
-    @service = Service.new(permitted_params[:service].merge(organization: current_organization))
+    @service = Service.new(permitted_params[:service].
+                           merge(organization: current_organization))
     authorize @service
     create!
   end

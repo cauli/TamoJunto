@@ -25,12 +25,34 @@
     margin-top: +rem-calc(30)
     h3
       color: $primary-color
+    h4
+      color: $secondary-color
+      text-align: center
 
-    #vote-yes
-      background-color: #2cbaa6
+    a
+      color: white
+      font-size: +rem-calc(18)
+
+    p.votes
+      font-size: +rem-calc(18)
+      text-align: center
+      font-color: $secondary-color
+      font-weight: 400
+
+    .vote-yes, .vote-no
       padding: 10px
       border-radius: 5px
       text-align: center
       text-transform: capitalize
       color: white !important
       padding-left: +rem-calc(10)
+      img
+        margin-right: +rem-calc(10)
+
+    .vote-no
+      background-color: $alert-color
+    .vote-yes
+      background-color: $primary-color
+      margin-right: +rem-calc(8)
+      
+      

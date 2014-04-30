@@ -1,0 +1,28 @@
+= simple_form_for @service do |f|
+  .row
+    .large-10.columns
+      = f.input :name
+      = f.input :description, as: :text
+    .large-2.columns
+      = f.input :image, as: :file
+      - if @service.image.present?
+        = image_tag @service.image.thumb('150x').url
+    .large-12.columns
+      = f.input :local
+      = f.input :external_link
+      = f.input :value
+    .large-12.columns
+      .tags-path[data-url=admin_tags_path(format: :json)]
+        = f.input :tag_list, as: :string, input_html: { class: 'tags-input-autocomplete' }
+  .row
+    .large-7.columns
+      - if @service.persisted?
+        = link_to @service, data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button alert' do
+          i.fa.fa-trash-o
+          = t('.destroy')
+        span = t('.destroy_hint')
+    .large-5.columns
+      .text-right
+        = link_to t('words.cancel'), :back, class: 'button secondary'
+        | &nbsp;
+        = f.button :submit

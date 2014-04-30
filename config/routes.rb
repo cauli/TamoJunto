@@ -24,8 +24,8 @@ TamoJunto::Application.routes.draw do
   resources :articles, only: :show, concerns: [:voteable]
   resources :videos, only: :show, concerns: [:voteable]
   resources :documents, only: :show, concerns: [:voteable]
-  resources :events, only: :show
-  resources :services, only: :show
+  resources :events, except: :index
+  resources :services, except: :index
   resources :topics, only: :show
 
   namespace :admin do

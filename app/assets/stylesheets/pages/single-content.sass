@@ -23,6 +23,8 @@
 
   .about
     margin-top: +rem-calc(30)
+    margin-bottom: +rem-calc(30)
+    overflow: hidden
     h3
       color: $primary-color
     h4
@@ -39,7 +41,8 @@
       font-color: $secondary-color
       font-weight: 400
 
-    .vote-yes, .vote-no
+    .vote-yes, 
+    .vote-no
       padding: 10px
       border-radius: 5px
       text-align: center
@@ -54,5 +57,31 @@
     .vote-yes
       background-color: $primary-color
       margin-right: +rem-calc(8)
+
+  .info-field
+    border: 1px solid $secondary-color
+    border-radius: +rem-calc(5)
+    margin-bottom: +rem-calc(25)
+    overflow: hidden
+
+    h5
+      font-size: +rem-calc(24)
+      margin: +rem-calc(10)
+      float: left
+
+    p
+      font-size: 24px
+      float: left
+      margin-top: +rem-calc(6)
+      margin-bottom: +rem-calc(8)
+    
+    h6
+      float: left
+      margin-top: 21px
+      margin-right: 10px
+
+    #dia, 
+    #hora
+      float: left
       
       

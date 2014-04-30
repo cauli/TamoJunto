@@ -8,7 +8,6 @@
             h4 
               small Evento
             h2 = @event.name
-
   .row
     .about
       .large-4.columns
@@ -19,46 +18,47 @@
         .content
           p = @event.description
           p = @event.tag_list
-  .row
-    .small-12.columns
-      .info-field 
-        .small-2.columns
-          h5 Por
-        .small-10.columns
-          p = @event.organization_id
-    
-    .small-12.columns
-      .info-field
-        .small-2.columns 
-          h5 Onde
-        .small-10.columns
-          address
-            p = @event.local
+  
+  .event-about
+    .row
+      .small-12.columns
+        .info-field 
+          .small-2.columns
+            h5 Por
+          .small-10.columns
+            p = @event.organization_id
       
-    .small-12.columns
-      .info-field
-        .small-2.columns
-          h5 Quando
-        .small-10.columns
-          .small-12.columns
-            h6 Hora
-            p#hora = @event.time
-          .small-12.columns
-            h6 Dia
-            p#dia = @event.starts_at
+      .small-12.columns
+        .info-field
+          .small-2.columns 
+            h5 Onde
+          .small-10.columns
+            address
+              p = @event.local
+        
+      .small-12.columns
+        .info-field
+          .small-2.columns
+            h5 Quando
+          .small-10.columns
+            .small-12.columns.no-left-padding
+              h6 Hora
+              p#hora = @event.time
+            .small-12.columns.no-left-padding
+              h6 Dia
+              p#dia = @event.starts_at
 
-    .small-12.columns
-      .info-field
-        .small-2.columns
-          h5 Quanto
-        .small-10.columns
-          p = @event.value
+      .small-12.columns
+        .info-field
+          .small-2.columns
+            h5 Quanto
+          .small-10.columns
+            p = @event.value
 
-  .row  
-    .small-5.small-centered.columns
-      .button.expand
-        = @event.external_link
-      
+    .row  
+      .small-5.small-centered.columns
+        = link_to 'Quero me inscrever', @event.external_link, class: 'button expand'
+        
         
 
 

@@ -21,7 +21,7 @@
         = image_tag @article.image.url if @article.image.present?
       .large-9.columns
         p = @article.content_html.html_safe
-      .about
+      aside
         .large-3.columns
           h4
             | Gostou do artigo?

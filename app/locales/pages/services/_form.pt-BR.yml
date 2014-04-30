@@ -1,0 +1,5 @@
+pt-BR:
+  services:
+    form:
+      destroy: 'Excluir este serviço'
+      destroy_hint: 'Você não poderá desfazer esta operação.'

@@ -2,7 +2,8 @@
 .profile
   .row
     .large-2.columns
-      = image_tag @organization.image.thumb('400x400#').url
+      - if @organization.image.present?
+        = image_tag @organization.image.thumb('400x400#').url
     .large-10.columns
       h2 = t('.organization') + ' ' + @organization.name
   .row

@@ -9,42 +9,47 @@
 
   .row
     .large-12.columns
-
+ 
       section.articles
         .row
-          .large-1.columns
-            =image_tag ('article-icon.png')
-          h3 = t('.articles.title')
+          .title
+            .large-1.columns
+              =image_tag ('article-icon.png')
+            h3 = t('.articles.title')
         .row
           = render @topic.articles
 
       section.videos
         .row
-          .large-1.columns
-            =image_tag ('video-icon.png')
-          h3 = t('.videos.title')
+          .title
+            .large-1.columns
+              =image_tag ('video-icon.png')
+            h3 = t('.videos.title')
         .row
           = render @topic.videos
 
       section.events
         .row
-          .large-1.columns        
-            =image_tag ('event-icon.png')
-          h3 = t('.events.title')
+          .title
+            .large-1.columns        
+              =image_tag ('event-icon.png')
+            h3 = t('.events.title')
         .row
           = render @topic.events.with_state('visible')
 
       section.services
         .row
-          .large-1.columns
-            =image_tag ('service-icon.png')
-          h3 = t('.services.title')
+          .title
+            .large-1.columns
+              =image_tag ('service-icon.png')
+            h3 = t('.services.title')
         .row
           = render @topic.services.with_state('visible')
 
       section.downloads
         .row
-          .large-1.columns
-            =image_tag ('download-icon.png')
-          h3 = t('.downloads.title')
+          .title
+            .large-1.columns
+              =image_tag ('download-icon.png')
+            h3 = t('.downloads.title')
         .row

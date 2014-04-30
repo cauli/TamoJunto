@@ -1,14 +1,23 @@
-.row
-  .large-12.columns
-    .title
-      h2 = @document.title
-      p.votes
-        = link_to 'down', downvote_document_path
-        = " #{@document.score} "
-        = link_to 'up', upvote_document_path
+.single-content
+  header.title
+    .row
+      .top
+        .large-12.columns
+          =image_tag ('download-icon.png'), class: 'icon-single-page'
+          .title
+            h4 
+              small Arquivos
+            h2 = @document.title
 
     .content
       p = @document.description
 
     .file
       p = link_to @document.file_name, @document.file.url
+
+      p.votes
+        = link_to 'down', downvote_document_path
+        = " #{@document.score} "
+        = link_to 'up', upvote_document_path
+
+

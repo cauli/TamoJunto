@@ -35,3 +35,5 @@
               .button.vote-no
                 = image_tag ("thumbdown.png"), class: 'button-icon'
                 = link_to 'Não', downvote_article_path
+
+          = render 'shared/voted_by', resource: @article

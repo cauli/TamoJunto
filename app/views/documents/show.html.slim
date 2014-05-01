@@ -20,4 +20,4 @@
         = " #{@document.score} "
         = link_to 'up', upvote_document_path
 
-
+      = render 'shared/voted_by', resource: @document

@@ -1,5 +1,4 @@
 module Shared::BeautifulText
-
   extend ActiveSupport::Concern
 
   included do
@@ -16,5 +15,4 @@ module Shared::BeautifulText
       end
     end
   end
-
 end

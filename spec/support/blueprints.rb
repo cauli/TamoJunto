@@ -16,9 +16,8 @@ Authorization.blueprint do
 end
 
 Article.blueprint do
-  title         { 'Some article' }
-  title {'Some article'}
-  content {'Lorem Ipson'}
+  title   { 'Some article' }
+  content { 'Lorem Ipson' }
 end
 
 Organization.blueprint do

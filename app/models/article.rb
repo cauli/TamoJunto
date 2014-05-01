@@ -5,7 +5,7 @@ class Article < ActiveRecord::Base
   has_and_belongs_to_many :topics
   validates :title, :content, presence: true
 
-  include Shared::BeautifulText
+  beautiful_text_for [:content]
   dragonfly_accessor :image
   acts_as_taggable
 

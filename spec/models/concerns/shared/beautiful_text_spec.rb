@@ -13,6 +13,21 @@ describe Shared::BeautifulText do
     article.content_html
   end
 
+  it 'should receive google_map' do
+    expect_any_instance_of(AutoHtml::Builder).to receive(:google_map)
+    article.content_html
+  end
+
+  it 'should receive image' do
+    expect_any_instance_of(AutoHtml::Builder).to receive(:image)
+    article.content_html
+  end
+
+  it 'should receive twitter' do
+    expect_any_instance_of(AutoHtml::Builder).to receive(:twitter)
+    article.content_html
+  end
+
   it 'should receive youtube' do
     expect_any_instance_of(AutoHtml::Builder).to receive(:youtube).with(width: 640, height: 390)
     article.content_html
@@ -32,4 +47,5 @@ describe Shared::BeautifulText do
     expect_any_instance_of(AutoHtml::Builder).to receive(:redcarpet).with(markdown_options: { filter_html: true, no_links: true })
     article.content_html
   end
+
 end

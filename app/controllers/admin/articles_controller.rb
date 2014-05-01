@@ -7,7 +7,7 @@ class Admin::ArticlesController < Admin::BaseController
   def permitted_params
     params.permit(article: [:title,
                             :image,
-                            :content_html,
+                            :content,
                             :tag_list,
                             topic_ids: []])
   end

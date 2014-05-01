@@ -33,9 +33,9 @@ describe Article do
   end
 
   describe '#sanitized_content' do
-    let(:article) { Article.make! content_html: '<b>Hello!</b>' }
+    let(:article) { Article.make! content: '**Hello!**' }
     it 'sanitizes content_html' do
-      expect(Sanitize).to receive(:clean).with('<b>Hello!</b>')
+      expect(Sanitize).to receive(:clean).with("<p><strong>Hello!</strong></p>\n")
       article.sanitized_content
     end
 

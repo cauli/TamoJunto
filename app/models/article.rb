@@ -10,6 +10,6 @@ class Article < ActiveRecord::Base
   acts_as_taggable
 
   def sanitized_content
-    Sanitize.clean(content_html)
+    Sanitize.clean(content_html).try(:strip!)
   end
 end

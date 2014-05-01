@@ -1,0 +1,4 @@
+.document.large-3.small-6.columns
+  h5 = link_to document.title, document, class: 'inverse'
+  p = truncate(document.description, length: 100, separator:' ')
+  = link_to t('.see_more'), document, class: 'read-more'

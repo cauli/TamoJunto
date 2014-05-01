@@ -1,9 +1,11 @@
 class Article < ActiveRecord::Base
+  include Shared::BeautifulText
   include Shared::Voteable
 
   has_and_belongs_to_many :topics
   validates :title, :content, presence: true
 
+  include Shared::BeautifulText
   dragonfly_accessor :image
   acts_as_taggable
 

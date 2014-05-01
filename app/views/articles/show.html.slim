@@ -13,14 +13,12 @@
               a Bárbara Wolff Dick 
 
               | no dia 20/04/2014
-
-          
   .row
     article
       .image
         = image_tag @article.image.url if @article.image.present?
       .large-9.columns
-        p = @article.content_html.html_safe
+        p = @article.content_html
       aside
         .large-3.columns
           h4
@@ -37,4 +35,3 @@
               .button.vote-no
                 = image_tag ("thumbdown.png"), class: 'button-icon'
                 = link_to 'Não', downvote_article_path
-                 

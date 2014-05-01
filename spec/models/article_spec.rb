@@ -2,12 +2,17 @@ require 'spec_helper'
 
 describe Article do
   describe 'validations' do
-    it{ should validate_presence_of :title }
-    it{ should validate_presence_of :content_html }
+    it { should validate_presence_of :title }
+    it { should validate_presence_of :content }
   end
 
   describe 'Associations' do
     it { should have_and_belong_to_many :topics }
+  end
+
+  describe 'auto_html and beautiful text' do
+    subject { Article.make! }
+    it { expect(subject.content_html).not_to be_nil }
   end
 
   describe '#image with dragonfly' do
@@ -28,9 +33,9 @@ describe Article do
   end
 
   describe '#sanitized_content' do
-    let(:article) { Article.make! content_html: '<b>Hello!</b>' }
+    let(:article) { Article.make! content: '**Hello!**' }
     it 'sanitizes content_html' do
-      expect(Sanitize).to receive(:clean).with('<b>Hello!</b>')
+      expect(Sanitize).to receive(:clean).with("<p><strong>Hello!</strong></p>\n")
       article.sanitized_content
     end
 

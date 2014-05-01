@@ -46,7 +46,6 @@ gem 'coffee-rails', '4.0.1'
 gem 'uglifier'
 gem 'turbolinks'
 gem 'foundation-rails', '~> 5.2.2.0'
-gem 'foundation-wysihtml5-rails', '~> 1.0.0'
 gem 'font-awesome-rails'
 
 group :development, :test do

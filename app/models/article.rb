@@ -3,7 +3,8 @@ class Article < ActiveRecord::Base
   include Shared::Voteable
 
   has_and_belongs_to_many :topics
-  validates :title, :content, presence: true
+  belongs_to :user
+  validates :title, :content, :user, presence: true
 
   beautiful_text_for [:content]
   dragonfly_accessor :image

@@ -8,6 +8,7 @@ describe Article do
 
   describe 'Associations' do
     it { should have_and_belong_to_many :topics }
+    it { should belong_to :user }
   end
 
   describe 'auto_html and beautiful text' do

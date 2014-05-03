@@ -62,6 +62,10 @@ describe User do
     end
   end
 
+  describe 'associations' do
+    it { should have_many :articles }
+  end
+
   describe 'validations' do
     it { should validate_presence_of :name }
     it { should validate_presence_of :email }

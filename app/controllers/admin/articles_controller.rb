@@ -3,6 +3,11 @@ class Admin::ArticlesController < Admin::BaseController
   actions :all, except: :show
   respond_to :html
 
+  def create
+    @article = Article.new(permitted_params[:article].merge(user: current_user))
+    create!
+  end
+
   protected
   def permitted_params
     params.permit(article: [:title,

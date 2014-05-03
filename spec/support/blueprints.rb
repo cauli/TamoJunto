@@ -16,6 +16,7 @@ Authorization.blueprint do
 end
 
 Article.blueprint do
+  user    { User.make! }
   title   { 'Some article' }
   content { 'Lorem Ipson' }
 end

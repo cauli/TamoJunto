@@ -3,21 +3,17 @@
     .row
       .top
         .large-12.columns
-          =image_tag ('article-icon.png'), class: 'icon-single-page'
+          = image_tag ('article-icon.png'), class: 'icon-single-page'
           .title
             h4
-              small Artigo
+              small = t('.title')
             h2 = @article.title
-            p 
-              | por 
-              a Bárbara Wolff Dick 
-
-              | no dia 20/04/2014
+            p = t('.by_html', user: link_to(@article.user.name, @article.user), date: l(@article.created_at, format: :long))
   .row
     article
-      .image
-        = image_tag @article.image.url if @article.image.present?
       .large-9.columns
+        .image
+          = image_tag @article.image.url if @article.image.present?
         p = @article.content_html
       aside
         .large-3.columns

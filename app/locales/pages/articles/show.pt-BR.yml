@@ -1,3 +1,5 @@
 pt-BR:
   articles:
     show:
+      title: 'Artigo'
+      by_html: 'por %{user} no dia %{date}'

@@ -15,9 +15,5 @@
     .file
       p = link_to @document.file_name, @document.file.url
 
-      p.votes
-        = link_to 'down', downvote_document_path
-        = " #{@document.score} "
-        = link_to 'up', upvote_document_path
-
+      = render 'shared/vote', resource: @document
       = render 'shared/voted_by', resource: @document

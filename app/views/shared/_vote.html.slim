@@ -1,0 +1,13 @@
+h4
+  = t('.title')
+p.votes
+  = " #{resource.score} "
+  = t('.total_liked')
+  .large-12.large-centered.columns
+    = link_to [:upvote, resource], class: 'button vote-yes' do
+      = image_tag ('thumbup.png'), class: 'button-icon'
+      = t('words._yes')
+
+    = link_to [:downvote, resource], class: 'button vote-no' do
+      = image_tag ('thumbdown.png'), class: 'button-icon'
+      = t('words._no')

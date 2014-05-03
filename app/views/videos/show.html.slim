@@ -21,19 +21,5 @@
         h3 Sobre
         p = @video.description
       .large-3.columns
-        h4
-          | Gostou do video?
-        p.votes
-          = " #{@video.score} "
-          | pessoas gostaram
-
-          .large-12.large-centered.columns
-            .button.vote-yes
-              = image_tag ("thumbup.png"), class: 'button-icon'
-              = link_to 'Sim', upvote_video_path
-
-            .button.vote-no
-              = image_tag ("thumbdown.png"), class: 'button-icon'
-              = link_to 'Não', downvote_video_path
-
-          = render 'shared/voted_by', resource: @video
+        = render 'shared/vote', resource: @video
+        = render 'shared/voted_by', resource: @video

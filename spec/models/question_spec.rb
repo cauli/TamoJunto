@@ -13,6 +13,6 @@ describe Question do
     it { should belong_to :theme }
     it { should belong_to :related_theme }
     it { should belong_to :topic }
-    it { should have_and_belong_to_many :diagnostics}
+    it { should have_and_belong_to_many :diagnostics }
   end
 end

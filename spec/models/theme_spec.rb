@@ -8,6 +8,6 @@ describe Theme do
 
   describe 'Associations' do
     it { should have_many :questions }
-    it { should have_and_belong_to_many :related_themes }
+    it { should have_many :related_questions }
   end
 end

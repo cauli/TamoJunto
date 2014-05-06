@@ -78,4 +78,5 @@ Question.blueprint do
   bad_answer { 'No' }
   topic { Topic.make! }
   theme { Theme.make! }
+  related_theme { Theme.make! }
 end

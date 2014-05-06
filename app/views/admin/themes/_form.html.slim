@@ -3,7 +3,6 @@
     .large-12.columns
       = f.input :title
       = f.input :description
-      = f.association :related_themes, as: :check_boxes, collection: Theme.where.not(id: @theme.id)
   .row
     .large-12.columns
       .text-right

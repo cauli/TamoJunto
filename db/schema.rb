@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503161422) do
+ActiveRecord::Schema.define(version: 20140506200244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -126,14 +126,6 @@ ActiveRecord::Schema.define(version: 20140503161422) do
 
   add_index "questions", ["theme_id"], name: "index_questions_on_theme_id", using: :btree
   add_index "questions", ["topic_id"], name: "index_questions_on_topic_id", using: :btree
-
-  create_table "related_themes", force: true do |t|
-    t.integer "theme_id"
-    t.integer "related_theme_id"
-  end
-
-  add_index "related_themes", ["related_theme_id", "theme_id"], name: "index_related_themes_on_related_theme_id_and_theme_id", unique: true, using: :btree
-  add_index "related_themes", ["theme_id", "related_theme_id"], name: "index_related_themes_on_theme_id_and_related_theme_id", unique: true, using: :btree
 
   create_table "services", force: true do |t|
     t.integer  "organization_id"

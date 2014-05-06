@@ -80,3 +80,7 @@ Question.blueprint do
   theme { Theme.make! }
   related_theme { Theme.make! }
 end
+
+Diagnostic.blueprint do
+  user { User.make! }
+end

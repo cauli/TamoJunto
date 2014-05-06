@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   has_many :articles
+  has_many :diagnostics
   validates :name, :birthdate, :gender, presence: true
 
   acts_as_voter

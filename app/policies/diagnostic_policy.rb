@@ -1,4 +1,4 @@
-class EventPolicy < ApplicationPolicy
+class DiagnosticPolicy < ApplicationPolicy
   def create?
     user.present?
   end
@@ -7,15 +7,15 @@ class EventPolicy < ApplicationPolicy
     user.present?
   end
 
-  def destroy?
-    user.present?
-  end
-
   def index?
     user.present?
   end
 
   def show?
+    user.present?
+  end
+
+  def questions?
     user.present?
   end
 

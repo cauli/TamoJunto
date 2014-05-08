@@ -14,12 +14,12 @@ class DiagnosticsController < ApplicationController
     @diagnostic = Diagnostic.new(permitted_params[:diagnostic].
                        merge(user: current_user))
     authorize @diagnostic
-    create!
+    create! { diagnostic_questions_path(@diagnostic) }
   end
 
-  def questions?
+  def questions
+    @diagnostic = Diagnostic.find(params[:diagnostic_id])
     authorize resource
-    edit!
   end
 
   def update

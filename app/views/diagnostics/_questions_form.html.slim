@@ -1,0 +1,14 @@
+= simple_form_for @diagnostic do |f|
+  .row
+    .large-12.columns
+      - @diagnostic.themes.each do |t|
+        = t.title
+        = f.association :questions, as: :check_boxes, collection: t.questions.map { |q| [q.text]}
+  .row
+    .large-12.columns
+      .text-right
+        = link_to t('words.cancel'), :back, class: 'button secondary'
+        | &nbsp;
+        = f.button :submit
+
+

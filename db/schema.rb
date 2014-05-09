@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140506211550) do
+ActiveRecord::Schema.define(version: 20140509165233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: true do |t|
+    t.integer  "diagnostic_id"
+    t.integer  "question_id"
+    t.boolean  "option"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["diagnostic_id"], name: "index_answers_on_diagnostic_id", using: :btree
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -53,14 +64,6 @@ ActiveRecord::Schema.define(version: 20140506211550) do
   end
 
   add_index "diagnostics", ["user_id"], name: "index_diagnostics_on_user_id", using: :btree
-
-  create_table "diagnostics_questions", force: true do |t|
-    t.integer "diagnostic_id"
-    t.integer "question_id"
-  end
-
-  add_index "diagnostics_questions", ["diagnostic_id"], name: "index_diagnostics_questions_on_diagnostic_id", using: :btree
-  add_index "diagnostics_questions", ["question_id"], name: "index_diagnostics_questions_on_question_id", using: :btree
 
   create_table "diagnostics_themes", force: true do |t|
     t.integer "diagnostic_id"

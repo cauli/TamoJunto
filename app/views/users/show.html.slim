@@ -1,15 +1,24 @@
 - content_for :page_title, "#{t('.profile')} #{@user.name}"
-.profile
-  .row
-    .large-2.columns
-      = image_tag @user.avatar_url('200x200#')
-    .large-10.columns
-      h2 = t('.profile') + ' ' + @user.name
-  .row
-    .large-6.columns
-      h2 = t('.upvotes')
-      = render 'upvotes'
-    .large-6.columns
-      h2= t('.downvotes')
-      = render 'downvotes'
+.user-page.single-content
+  header.title
+    .row
+      .large-2.columns
+        .avatar = image_tag @user.avatar_url('150x150#')
+      .large-10.columns
+        h2 = @user.name
+        dl.user-tabs data-tab=""
+          dd.active
+            a href='#panel-upvotes' = t('.upvotes')
+          - if @user == current_user
+            dd
+              a href='#panel-diagnostic' = t('.diagnostic')
 
+  .row
+    .large-12.columns
+      .tabs-content
+        .content.active#panel-upvotes
+          = render 'upvotes'
+
+        - if @user == current_user
+          .content#panel-diagnostic
+            | Lorem ipsum dolor sit ame, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

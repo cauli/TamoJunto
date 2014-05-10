@@ -51,11 +51,11 @@
             = render @topic.services.with_state('visible')
 
       - if @topic.documents.any?
-        section.downloads
+        section.documents
           .row
             .title
               .large-1.columns
                 =image_tag ('download-icon.png')
               h3 = t('.downloads.title')
-          .row
+          ol
             = render @topic.documents

@@ -1,7 +1,9 @@
 pt-BR:
   users:
     upvotes:
-      title: 'Upvotes'
-      articles: 'Articles'
-      documents: 'Documents'
-      videos: 'Videos'
+      articles:
+        title: 'Artigos'
+      videos:
+        title: 'Videos'
+      downloads:
+        title: 'Arquivos'

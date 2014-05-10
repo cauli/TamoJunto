@@ -1,31 +1,31 @@
-dl.tabs data-tab=""
-  dd.active
-    a href='#panel-upvotes-1' = t('.articles')
-  dd
-    a href='#panel-upvotes-2' = t('.documents')
-  dd
-    a href='#panel-upvotes-3' = t('.videos')
+.row.content-list
+  .large-12.columns
+    - if @user.upvoted_videos.any?
+      section.videos
+        .row
+          .title
+            .large-1.columns
+              =image_tag ('video-icon.png')
+            h3 = t('.videos.title')
+        .row
+          = render @user.upvoted_videos
 
-.tabs-content
-  .content.active#panel-upvotes-1
-    ul
-      - for article in @user.upvoted_articles do
-        li 
-          = article.title
-          | &nbsp;
-          = link_to 'downvote', downvote_article_path(article)
-  .content#panel-upvotes-2
-    ul
-      - for document in @user.upvoted_documents do
-        li 
-          = document.title
-          | &nbsp;
-          = link_to 'downvote', downvote_document_path(document)
-  .content#panel-upvotes-3
-    ul
-      - for video in @user.upvoted_videos do
-        li 
-          = video.title
-          | &nbsp;
-          = link_to 'downvote', downvote_video_path(video)
+    - if @user.upvoted_articles.any?
+      section.articles
+        .row
+          .title
+            .large-1.columns
+              =image_tag ('article-icon.png')
+            h3 = t('.articles.title')
+        .row
+          = render @user.upvoted_articles
 
+    - if @user.upvoted_documents.any?
+      section.documents
+        .row
+          .title
+            .large-1.columns
+              =image_tag ('download-icon.png')
+            h3 = t('.downloads.title')
+        ol
+          = render @user.upvoted_documents

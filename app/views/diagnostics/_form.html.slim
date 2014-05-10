@@ -1,11 +1,20 @@
 = simple_form_for @diagnostic do |f|
   .row
-    .large-12.columns
-      = f.association :themes, as: :check_boxes, collection: Theme.all
+    .large-10.columns.js-themes-select
+      h3 = t('.themes')
+      .themes-inputs
+        .row
+          = f.association :themes, as: :check_boxes, collection: Theme.all, label: false do |builder|
+            - if builder.object.any?
+              - for theme in builder.object
+                .large-6.columns
+                  = f.label "theme_ids_#{theme.id}" do
+                    = theme.title
+                    .hide
+                      = f.check_box :theme_ids, {id: "diagnostic_theme_ids_#{theme.id}"}, theme.id, false
   .row
     .large-12.columns
       .text-right
         = link_to t('words.cancel'), :back, class: 'button secondary'
         | &nbsp;
-        = f.button :submit
-
+        = f.button :submit, t('.continue')

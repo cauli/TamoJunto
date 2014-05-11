@@ -1,0 +1,5 @@
+pt-BR:
+  admin:
+    dashboard:
+      index:
+        title: 'Bem-vindo a seção de administração'

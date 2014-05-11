@@ -12,7 +12,7 @@
         = f.input :tag_list, as: :string, input_html: { class: 'tags-input-autocomplete' }
         = f.association :topics, as: :check_boxes, collection: Topic.all(order: 'title')
   .row
-    .large-10.columns
+    .large-12.columns
       .text-right
         = link_to t('words.cancel'), :back, class: 'button secondary'
         | &nbsp;

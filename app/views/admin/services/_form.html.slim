@@ -8,16 +8,16 @@
       - if @service.image.present?
         = image_tag @service.image.thumb('150x').url
     .large-12.columns
+      = f.input :value
       = f.association :organization
       = f.input :local
       = f.input :external_link
-      = f.input :value
     .large-12.columns
       .tags-path[data-url=admin_tags_path(format: :json)]
         = f.input :tag_list, as: :string, input_html: { class: 'tags-input-autocomplete' }
         = f.association :topics, as: :check_boxes, collection: Topic.all(order: 'title')
   .row
-    .large-10.columns
+    .large-12.columns
       .text-right
         = link_to t('words.cancel'), :back, class: 'button secondary'
         | &nbsp;

@@ -1,13 +1,37 @@
 section.admin
   .main-menu
-    background: #FAFAFA
+    background: #f4f4f4
     padding: 0
-    margin-top: +rem-calc(15px)
     li:hover
-      background: #F3F5F5
+      background: #f9f9f9
     li
-      a
-        padding: +rem-calc(5px 10px)
+      padding: +rem-calc(5px 10px)
+
+      &.heading
+        text-transform: uppercase
+        padding-top: +rem-calc(15px)
+        font-size: 90%
+        color: $secondary-color
+        &:hover
+          background: #f4f4f4
+
+      &.divider
+        margin-bottom: 0
+        padding: 0
 
   table
     width: 100%
+    th
+      &.edit
+        width: +rem-calc(105px)
+      &.remove
+        width: +rem-calc(120px)
+
+  .button.fa:before
+    padding-right: +rem-calc(5px)
+
+  header.title
+    padding: +rem-calc(30px)
+    margin-bottom: +rem-calc(30px)
+    h2
+      color: $secondary-color

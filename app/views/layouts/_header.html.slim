@@ -14,28 +14,35 @@ header.contain-to-grid.sticky
       / Left Nav Section
       ul.left
         li#new_idea
-        li
+        li = link_to t('.search'), '#'
+        li = link_to t('.diagnostics'), '#'
 
       / Right Nav Section
       ul.right
         - if user_signed_in?
+          - user_name = current_user.name
+          - image = current_user.avatar_url('50x50#')
+          - profile_url = user_path(current_user)
+          - edit_profile_url = edit_user_registration_path(current_user)
+          - logout_url = destroy_user_session_path
+        - elsif organization_signed_in?
+          - user_name = current_organization.name
+          - image = current_organization.avatar_url('50x50#')
+          - profile_url = organization_path(current_organization)
+          - edit_profile_url = edit_organization_registration_path(current_organization)
+          - logout_url = destroy_organization_session_path
+
+        - if user_signed_in? || organization_signed_in?
           li.has-dropdown
             a[href="#"]
-              = image_tag current_user.avatar_url('18x18#'), size: "18x18", class: 'profile-picture', alt: ''
-              |  Olá, #{ current_user.name }!
+              .avatar = image_tag image, size: "50x50", class: 'profile-picture', alt: ''
+              |  Olá, #{ user_name }!
             ul.dropdown
-              li = link_to t('.my-profile'), current_user
-              li = link_to t('.edit_profile'), edit_user_registration_path(current_user), class: 'user-profile' 
+              li = link_to t('.my-profile'), profile_url
+              li = link_to t('.edit_profile'), edit_profile_url, class: 'user-profile' 
                   
-          li = link_to t('.sign-out'), destroy_user_session_path, method: :delete, class: 'sign-out button border-button'
-        - elsif organization_signed_in?
-          li
-            span.user-actions
-              = link_to edit_organization_registration_path(current_organization), class: 'user-profile' do
-                |  Olá, #{ current_organization.name }!
-          li = link_to t('.sign-out'), destroy_organization_session_path, method: :delete, class: 'sign-out button'
+          li = link_to t('.sign-out'), logout_url, method: :delete, class: 'sign-out button border-button'
         - else
-
           li = link_to t('.sign-in'), new_user_session_path, class: 'sign-in button'
           li &nbsp;
 

@@ -1,10 +1,10 @@
 pt-BR:
   layouts:
     header:
+      search: 'Buscar conteúdo'
+      diagnostics: 'Responder questionário'
       my-profile: 'Meu perfil'
       sign-in: 'Sou um empreendedor'
       org-sign-in: 'Sou um apoiador'
       sign-out: 'Sair'
       edit_profile: 'Editar o perfil'
-      upvotes: 'Upvotes'
-      downvotes: 'Downvotes'

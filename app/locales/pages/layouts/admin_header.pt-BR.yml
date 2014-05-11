@@ -1,6 +1,9 @@
 pt-BR:
   layouts:
     admin_menu:
+      content: 'Conteúdo'
+      diagnostic: 'Diagnóstico'
+      others: 'Outros'
       articles: 'Artigos'
       documents: 'Documentos'
       videos: 'Videos'

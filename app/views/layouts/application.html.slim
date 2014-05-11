@@ -24,8 +24,10 @@ body
   = render 'layouts/flash', flash: flash if flash.present?
   - if admin?
     section.admin
-      = render 'layouts/admin_menu'
-      = yield
+      .row
+        aside.large-2.columns= render 'layouts/admin_menu'
+        .large-10.columns
+          = yield
   - else
     = yield
   = render 'layouts/footer'

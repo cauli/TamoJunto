@@ -1,15 +1,15 @@
 .row
   .large-12.columns
-    h2 = t('.title')
+    header.title
+      h2 = t('.title')
 
     table
       tr
         th = t('.name')
         th = t('.organization')
         th = t('.starts_at')
-        th = t('.state')
         th = t('.created_at')
-        th
+        th = t('.state')
         th
         th
       - for event in @events do
@@ -17,10 +17,9 @@
           td = event.name
           td = event.organization.name
           td = l event.starts_at, format: :long
-          td = t(".state_names.#{event.state}")
           td = l event.created_at, format: :short
           td
-            a.button.dropdown.tiny[data-dropdown="drop-#{event.id}"] = t('.actions')
+            a.button.dropdown.tiny[data-dropdown="drop-#{event.id}"] = t(".state_names.#{event.state}")
             ul.f-dropdown[id="drop-#{event.id}" data-dropdown-content]
               - unless event.visible?
                 li = link_to t('.change_state.approve'), approve_admin_event_path(event)
@@ -30,5 +29,5 @@
                 li = link_to t('.change_state.reject'), reject_admin_event_path(event)
 
 
-          td = link_to  t('words.edit'), edit_admin_event_path(event)
-          td = link_to t('words.remove'), [:admin, event], data: { confirm: t('words.are_you_sure') }, method: :delete
+          td = link_to '', edit_admin_event_path(event), class: 'button tiny fa fa-edit'
+          td = link_to '', [:admin, event], data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button tiny alert fa fa-trash-o'

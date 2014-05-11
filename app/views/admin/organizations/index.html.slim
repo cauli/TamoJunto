@@ -1,19 +1,20 @@
 .row
   .large-12.columns
-    h2 = t('.title')
+    header.title
+      h2 = t('.title')
 
     table
       tr
         th = t('.name')
         th = t('.kind')
         th = t('.created_at')
-        th
-        th
+        th.edit
+        th.remove
       - for organization in @organizations do
         tr
           td = organization.name
           th = t('.' + organization.kind)
-          td = organization.created_at
-          td = link_to  t('.edit'), edit_admin_organization_path(organization)
-          td = link_to t('.remove'), [:admin, organization], data: { confirm: t('.are_you_sure') }, method: :delete
+          td = l organization.created_at, format: :short
+          td = link_to  t('.edit'), edit_admin_organization_path(organization), class: 'button tiny fa fa-edit'
+          td = link_to t('.remove'), [:admin, organization], data: { confirm: t('.are_you_sure') }, method: :delete, class: 'button tiny alert fa fa-trash-o'
 

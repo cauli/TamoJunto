@@ -1,5 +1,6 @@
 - content_for :page_title, t('.title')
 .row
   .large-12.columns
-    h2 = yield :page_title
+    header.title
+      h2 = yield :page_title
     = render 'form'

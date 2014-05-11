@@ -2,6 +2,6 @@ pt-BR:
   admin:
     questions:
       index:
-        title: 'Questão'
+        title: 'Questões'
         question_text: 'Pergunta'
         created_at: 'Criado em'

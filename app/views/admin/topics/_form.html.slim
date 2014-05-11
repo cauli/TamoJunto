@@ -3,7 +3,8 @@
     .large-12.columns
       = f.input :title
       = f.input :description
-      = f.input :tag_list
+      .tags-path[data-url=admin_tags_path(format: :json)]
+        = f.input :tag_list, as: :string, input_html: { class: 'tags-input-autocomplete' }
       dl.tabs data-tab=""
         dd.active
           a href="#articles" = t('.articles')

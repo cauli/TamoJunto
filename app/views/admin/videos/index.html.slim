@@ -1,19 +1,21 @@
 - content_for :page_title, t('.title')
 .row
   .large-12.columns
-    h2 = yield :page_title
-
-    = link_to t('words.create'), new_admin_video_path, class: 'button'
+    header.title
+      h2
+        = yield :page_title
+        .pull-right
+          = link_to t('words.create'), new_admin_video_path, class: 'button'
     table
       tr
         th = t('.video_title')
         th = t('.created_at')
-        th
-        th
+        th.edit
+        th.remove
       - for video in @videos do
         tr
           td = video.title
-          td = video.created_at
-          td = link_to  t('words.edit'), edit_admin_video_path(video)
-          td = link_to t('words.remove'), [:admin, video], data: { confirm: t('words.are_you_sure') }, method: :delete
+          td = l video.created_at, format: :short
+          td = link_to  t('words.edit'), edit_admin_video_path(video), class: 'button tiny fa fa-edit'
+          td = link_to t('words.remove'), [:admin, video], data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button tiny alert fa fa-trash-o'
 

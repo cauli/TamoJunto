@@ -1,14 +1,19 @@
-.row
-  .large-12.columns
-    dl.tabs.main-menu
-      dd = link_to t('.articles'), admin_articles_path
-      dd = link_to t('.documents'), admin_documents_path
-      dd = link_to t('.videos'), admin_videos_path
-      dd = link_to t('.users'), admin_users_path
-      dd = link_to t('.organizations'), admin_organizations_path
-      dd = link_to t('.events'), admin_events_path
-      dd = link_to t('.services'), admin_services_path
-      dd = link_to t('.themes'), admin_themes_path
-      dd = link_to t('.topics'), admin_topics_path
-      dd = link_to t('.questions'), admin_questions_path
-      dd = link_to t('.tags'), admin_tags_path
+ul.side-nav.main-menu
+  li.heading = t('.content')
+  li = link_to t('.articles'), admin_articles_path
+  li = link_to t('.videos'), admin_videos_path
+  li = link_to t('.documents'), admin_documents_path
+  li = link_to t('.events'), admin_events_path
+  li = link_to t('.services'), admin_services_path
+  li = link_to t('.tags'), admin_tags_path
+  li.divider
+
+  li.heading = t('.diagnostic')
+  li = link_to t('.themes'), admin_themes_path
+  li = link_to t('.questions'), admin_questions_path
+  li = link_to t('.topics'), admin_topics_path
+  li.divider
+
+  li.heading = t('.others')
+  li = link_to t('.users'), admin_users_path
+  li = link_to t('.organizations'), admin_organizations_path

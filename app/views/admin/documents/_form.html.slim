@@ -4,15 +4,15 @@
       = f.input :title
       = f.input :description
     .large-4.columns
-      = f.input :file, as: :file
+      = f.input :file, as: :file, required: !@document.persisted?
       - if @document.file.present?
         p = link_to @document.file.name, @document.file.url
-    .large-8.columns.end
+    .large-12.columns.end
       .tags-path[data-url=admin_tags_path(format: :json)]
         = f.input :tag_list, as: :string, input_html: { class: 'tags-input-autocomplete' }
         = f.association :topics, as: :check_boxes, collection: Topic.all(order: 'title')
   .row
-    .large-8.columns
+    .large-12.columns
       .text-right
         = link_to t('words.cancel'), :back, class: 'button secondary'
         | &nbsp;

@@ -9,15 +9,50 @@
               small Serviço
             h2 = @service.name
 
-    .row
+  .row
+    .about
       .large-4.columns
         .image
-          h4 IMAGE
           = image_tag @service.image.url if @service.image.present?
 
-      .large-9.columns
+      .large-8.columns
+        h3 Sobre
         .content
           p = @service.description
+          / p = @service.tag_list
+
+  
+  .content-about
+    .row
+      .small-12.columns
+        .info-field 
+          .small-2.columns
+            h5 Por
+          .small-10.columns
+            p = @service.organization_id
+
+      .small-12.columns
+        .info-field
+          .small-2.columns 
+            h5 Onde
+          .small-10.columns
+            address
+              p = @service.local
+
+      .small-12.columns
+        .info-field
+          .small-2.columns
+            h5 Quanto
+          .small-10.columns
+            p = @service.value
+      
+      / .small-12.columns
+      /   .info-field
+      /     .small-2.columns 
+      /       h5 Onde
+      /     .small-10.columns
+      /       address
+      /         p = @event.local
 
 
 

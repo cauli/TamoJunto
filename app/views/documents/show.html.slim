@@ -9,11 +9,13 @@
               small Arquivos
             h2 = @document.title
 
-    .content
-      p = @document.description
+  .row
+    .small-12.columns
+      .content
+        p = @document.description
 
-    .file
-      p = link_to @document.file_name, @document.file.url
+      .file
+        p = link_to @document.file_name, @document.file.url
 
-      = render 'shared/vote', resource: @document
-      = render 'shared/voted_by', resource: @document
+        = render 'shared/vote', resource: @document
+        = render 'shared/voted_by', resource: @document

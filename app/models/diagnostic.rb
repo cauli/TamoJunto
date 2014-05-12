@@ -6,4 +6,10 @@ class Diagnostic < ActiveRecord::Base
   accepts_nested_attributes_for :answers
 
   validates :user_id, presence: true
+
+  def topics
+    themes.map do |t|
+      answers.by_theme(t).try(:bad).try(:first).try(:question).try(:topic)
+    end
+  end
 end

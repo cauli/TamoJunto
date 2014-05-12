@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   helper_method :admin?
   include Pundit
 
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   protected
   def admin?
     false
@@ -60,6 +62,13 @@ class ApplicationController < ActionController::Base
       end
     end
     root_path
+  end
+
+  private
+
+  def user_not_authorized
+    flash[:error] = t('controllers.not_authorized')
+    redirect_to(request.referrer || root_path)
   end
 end
 

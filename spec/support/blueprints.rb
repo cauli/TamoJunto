@@ -78,4 +78,16 @@ Question.blueprint do
   bad_answer { 'No' }
   topic { Topic.make! }
   theme { Theme.make! }
+  related_theme { Theme.make! }
+end
+
+Diagnostic.blueprint do
+  user { User.make! }
+  themes { [Theme.make!, Theme.make!] }
+end
+
+Answer.blueprint do
+  question { Question.make! }
+  option { [true, false].sample }
+  diagnostic { Diagnostic.make! }
 end

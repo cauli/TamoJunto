@@ -1,0 +1,20 @@
+= simple_form_for @diagnostic do |f|
+  .row
+    .large-12.columns
+      - @diagnostic.themes.each do |t|
+        h3 = t('.theme') + t.title
+        - t.questions.each do |q|
+          h5 = q.question_text
+          = f.simple_fields_for :answers do |a|
+              = a.input :question_id, as: :hidden, input_html: { value: q.id }
+              = a.input :option, as: :radio_buttons, required: true, 
+                label: false, collection: [[q.good_answer, true], 
+                                           [q.bad_answer, false]]
+  .row
+    .large-12.columns
+      .text-right
+        = link_to t('words.cancel'), :back, class: 'button secondary'
+        | &nbsp;
+        = f.button :submit, t('.continue')
+
+

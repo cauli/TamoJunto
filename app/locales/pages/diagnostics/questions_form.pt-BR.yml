@@ -1,0 +1,5 @@
+pt-BR:
+  diagnostics:
+    questions_form:
+      theme: 'Tema: '
+      continue: 'Continuar'

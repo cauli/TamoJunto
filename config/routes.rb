@@ -27,6 +27,10 @@ TamoJunto::Application.routes.draw do
   resources :events, except: :index
   resources :services, except: :index
   resources :topics, only: :show
+  resources :diagnostics, except: [:edit, :destroy] do
+    get :questions
+    resources :answers
+  end
 
   namespace :admin do
     get '/', to: 'dashboard#index'

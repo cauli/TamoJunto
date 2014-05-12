@@ -5,6 +5,6 @@ class Admin::ThemesController < Admin::BaseController
 
   protected
   def permitted_params
-    params.permit(theme: [:title, :description, related_theme_ids: []])
+    params.permit(theme: [:title, :description])
   end
 end

@@ -1,0 +1,5 @@
+pt-BR:
+  diagnostics:
+    form:
+      themes: 'Escolha dois temas'
+      continue: 'Continuar'

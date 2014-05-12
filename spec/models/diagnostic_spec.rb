@@ -1,0 +1,13 @@
+require 'spec_helper'
+
+describe Diagnostic do
+  describe 'Associations' do
+    it { should belong_to :user }
+    it { should have_many :answers }
+    it { should have_and_belong_to_many :themes }
+  end
+
+  describe 'Validations' do
+    it { should validate_presence_of :user_id }
+  end
+end

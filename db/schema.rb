@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503161422) do
+ActiveRecord::Schema.define(version: 20140509165233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: true do |t|
+    t.integer  "diagnostic_id"
+    t.integer  "question_id"
+    t.boolean  "option"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["diagnostic_id"], name: "index_answers_on_diagnostic_id", using: :btree
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -45,6 +56,22 @@ ActiveRecord::Schema.define(version: 20140503161422) do
   end
 
   add_index "authorizations", ["user_id"], name: "index_authorizations_on_user_id", using: :btree
+
+  create_table "diagnostics", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "diagnostics", ["user_id"], name: "index_diagnostics_on_user_id", using: :btree
+
+  create_table "diagnostics_themes", force: true do |t|
+    t.integer "diagnostic_id"
+    t.integer "theme_id"
+  end
+
+  add_index "diagnostics_themes", ["diagnostic_id"], name: "index_diagnostics_themes_on_diagnostic_id", using: :btree
+  add_index "diagnostics_themes", ["theme_id"], name: "index_diagnostics_themes_on_theme_id", using: :btree
 
   create_table "documents", force: true do |t|
     t.string   "title"
@@ -122,18 +149,11 @@ ActiveRecord::Schema.define(version: 20140503161422) do
     t.integer  "row_order"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "related_theme_id"
   end
 
   add_index "questions", ["theme_id"], name: "index_questions_on_theme_id", using: :btree
   add_index "questions", ["topic_id"], name: "index_questions_on_topic_id", using: :btree
-
-  create_table "related_themes", force: true do |t|
-    t.integer "theme_id"
-    t.integer "related_theme_id"
-  end
-
-  add_index "related_themes", ["related_theme_id", "theme_id"], name: "index_related_themes_on_related_theme_id_and_theme_id", unique: true, using: :btree
-  add_index "related_themes", ["theme_id", "related_theme_id"], name: "index_related_themes_on_theme_id_and_related_theme_id", unique: true, using: :btree
 
   create_table "services", force: true do |t|
     t.integer  "organization_id"

@@ -1,0 +1,17 @@
+.new-diagnostic-page
+  .themes-inputs
+    padding-top: +rem-calc(25px)
+    counter-reset: theme-ids
+
+    label
+      color: $primary-color
+      font-size: 140%
+      padding-bottom: +rem-calc(15px)
+      counter-increment: theme-ids
+      &.checked
+        color: $alert-color
+      &:before
+        content: counter(theme-ids)
+        padding-right: +rem-calc(7px)
+        font-size: 60%
+        vertical-align: top

@@ -19,19 +19,20 @@ class DiagnosticsController < ApplicationController
 
   def questions
     @diagnostic = Diagnostic.find(params[:diagnostic_id])
+    @diagnostic.answers.build
     authorize resource
   end
 
   def update
     authorize resource
-    update!
+    update! { root_path }
   end
 
 
   protected
   def permitted_params
     params.permit(diagnostic: [:user_id,
-                               question_ids: [],
+                               answers_attributes: [:question_id, :option],
                                theme_ids: []])
   end
 

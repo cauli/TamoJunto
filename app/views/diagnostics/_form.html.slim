@@ -11,7 +11,7 @@
                   = f.label "theme_ids_#{theme.id}" do
                     = theme.title
                     .hide
-                      = f.check_box :theme_ids, {id: "diagnostic_theme_ids_#{theme.id}"}, theme.id, false
+                      = check_box_tag 'diagnostic[theme_ids][]', theme.id, false, {id: "diagnostic_theme_ids_#{theme.id}"}
   .row
     .large-12.columns
       .text-right

@@ -29,6 +29,7 @@ TamoJunto::Application.routes.draw do
   resources :topics, only: :show
   resources :diagnostics, except: [:edit, :destroy] do
     get :questions
+    resources :answers
   end
 
   namespace :admin do

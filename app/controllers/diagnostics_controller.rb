@@ -28,8 +28,10 @@ class DiagnosticsController < ApplicationController
     authorize resource
     update! do |success, failure|
       success.html { redirect_to diagnostic_path(resource) }
-      failure.html { redirect_to diagnostic_questions_path(resource),
-                     notice: t('controllers.diagnostics.questions_required')}
+      failure.html do
+        redirect_to diagnostic_questions_path(resource),
+                    notice: t('controllers.diagnostics.questions_required')
+      end
     end
   end
 
@@ -40,6 +42,7 @@ class DiagnosticsController < ApplicationController
   end
 
   protected
+
   def permitted_params
     params.permit(diagnostic: [:user_id,
                                answers_attributes: [:question_id, :option],

@@ -5,6 +5,6 @@ class Question < ActiveRecord::Base
   has_and_belongs_to_many :diagnostics
   has_many :questions
 
-  validates :theme_id, :related_theme_id,:topic_id, :question_text,
+  validates :theme_id, :related_theme_id, :topic_id, :question_text,
             :good_answer, :bad_answer, presence: true
 end

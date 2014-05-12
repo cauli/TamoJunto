@@ -1,8 +1,10 @@
 - content_for :page_title, t('.title')
-.row
-  .large-12.columns
-    h2 = yield :page_title
-    = render 'questions_form'
-
-
+.questions-page
+  header.title
+    .row
+      .large-12.columns
+        h2 = yield :page_title
+  .row
+    .large12
+      = render 'questions_form'
 

@@ -3,3 +3,5 @@ pt-BR:
     reactivated: 'Conta reativada'
   diagnostics:
     questions_required: 'É necessário preencher todas as perguntas'
+  controllers:
+    not_authorized: 'Você não tem permissão para acessar esta página'

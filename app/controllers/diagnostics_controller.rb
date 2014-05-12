@@ -21,13 +21,22 @@ class DiagnosticsController < ApplicationController
     @diagnostic = Diagnostic.find(params[:diagnostic_id])
     @diagnostic.answers.build
     authorize resource
+    respond_with @diagnostic
   end
 
   def update
     authorize resource
-    update! { root_path }
+    update! do |success, failure|
+      success.html { redirect_to diagnostic_path(resource) }
+      failure.html { redirect_to diagnostic_questions_path(resource),
+                     notice: t('controllers.diagnostics.questions_required')}
+    end
   end
 
+  def show
+    authorize resource
+    show!
+  end
 
   protected
   def permitted_params

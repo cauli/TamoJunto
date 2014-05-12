@@ -1,3 +1,5 @@
 pt-BR:
   registrations:
-    reactivated: 'Account reactivated'
+    reactivated: 'Conta reativada'
+  diagnostics:
+    questions_required: 'É necessário preencher todas as perguntas'

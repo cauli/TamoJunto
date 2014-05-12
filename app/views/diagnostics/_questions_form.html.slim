@@ -7,7 +7,8 @@
           h3 = q.question_text
           = f.simple_fields_for :answers do |a|
               = a.input :question_id, as: :hidden, input_html: { value: q.id }
-              = a.input :option, collection: [[q.good_answer, true], [q.bad_answer, false]], as: :radio_buttons
+              = a.input :option, collection: [[q.good_answer, true], [q.bad_answer, false]], 
+                as: :radio_buttons, required: true, label: false
   .row
     .large-12.columns
       .text-right

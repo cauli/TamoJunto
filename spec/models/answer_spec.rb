@@ -9,6 +9,5 @@ describe Answer do
   describe 'Validations' do
     it { should validate_presence_of :question_id }
     it { should validate_presence_of :diagnostic_id }
-    it { should validate_presence_of :option }
   end
 end

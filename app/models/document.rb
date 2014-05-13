@@ -12,7 +12,7 @@ class Document < ActiveRecord::Base
     if search
       where('title LIKE ?', "%#{search}%") + (tagged_with(search))
     else
-      find(:all)
+      all
     end
   end
 end

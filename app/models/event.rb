@@ -20,7 +20,7 @@ class Event < ActiveRecord::Base
     if search
       where('name LIKE ?', "%#{search}%") + (tagged_with(search))
     else
-      find(:all)
+      all
     end
   end
 end

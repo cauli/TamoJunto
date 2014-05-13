@@ -9,6 +9,6 @@ class Admin::OrganizationsController < Admin::BaseController
   end
 
   def permitted_params
-    params.permit(organization: [:name, :kind])
+    params.permit(organization: Organization.attribute_names.map(&:to_sym))
   end
 end

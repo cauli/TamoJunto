@@ -9,6 +9,6 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def permitted_params
-    params.permit(user: [:name, :admin])
+    params.permit(user: Organization.attribute_names.map(&:to_sym))
   end
 end

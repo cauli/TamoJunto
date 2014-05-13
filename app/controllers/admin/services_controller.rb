@@ -14,6 +14,10 @@ class Admin::ServicesController < Admin::BaseController
   end
 
   protected
+  def collection
+    @services ||= end_of_association_chain.page(params[:page])
+  end
+
   def permitted_params
     params.permit(service: [:name, :image, :description,
                             :local, :external_link,

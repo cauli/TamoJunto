@@ -4,6 +4,10 @@ class Admin::TopicsController < Admin::BaseController
   respond_to :html
 
   protected
+  def collection
+    @topics ||= end_of_association_chain.page(params[:page])
+  end
+
   def permitted_params
     params.permit(topic: [:title,
                           :description,

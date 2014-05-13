@@ -19,3 +19,5 @@
           td = link_to  t('words.edit'), edit_admin_video_path(video), class: 'button tiny fa fa-edit'
           td = link_to t('words.remove'), [:admin, video], data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button tiny alert fa fa-trash-o'
 
+    .text-center
+      = paginate collection

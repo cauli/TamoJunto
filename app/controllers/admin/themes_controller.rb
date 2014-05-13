@@ -4,6 +4,10 @@ class Admin::ThemesController < Admin::BaseController
   respond_to :html
 
   protected
+  def collection
+    @themes ||= end_of_association_chain.page(params[:page])
+  end
+
   def permitted_params
     params.permit(theme: [:title, :description])
   end

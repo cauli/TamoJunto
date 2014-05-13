@@ -19,6 +19,10 @@ class Admin::EventsController < Admin::BaseController
   end
 
   protected
+  def collection
+    @events ||= end_of_association_chain.page(params[:page])
+  end
+
   def permitted_params
     params.permit(event: [:name,
                           :image,

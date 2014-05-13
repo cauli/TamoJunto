@@ -9,6 +9,10 @@ class Admin::ArticlesController < Admin::BaseController
   end
 
   protected
+  def collection
+    @articles ||= end_of_association_chain.page(params[:page])
+  end
+
   def permitted_params
     params.permit(article: [:title,
                             :image,

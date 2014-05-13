@@ -4,6 +4,10 @@ class Admin::QuestionsController < Admin::BaseController
   respond_to :html
 
   protected
+  def collection
+    @questions ||= end_of_association_chain.page(params[:page])
+  end
+
   def permitted_params
     params.permit(question: [:topic_id, :theme_id,
                              :question_text,

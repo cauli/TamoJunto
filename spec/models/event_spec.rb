@@ -24,12 +24,22 @@ describe Event do
 
   describe 'scopes' do
     describe '.visible' do
-      let(:pending) { Event.make! }
-      let(:visible) { Event.make! }
+      context 'when event is not finished yet' do
+        let(:pending) { Event.make! ends_at: Time.now + 1.day }
+        let(:visible) { Event.make! ends_at: Time.now + 1.day }
 
-      before { visible.approve }
+        before { visible.approve }
 
-      it { expect(Event.visible).to eq [visible] }
+        it { expect(Event.visible).to eq [visible] }
+      end
+
+      context 'when event is finished yet' do
+        let(:visible) { Event.make! ends_at: Time.now - 1.day }
+
+        before { visible.approve }
+
+        it { expect(Event.visible).to eq [] }
+      end
     end
   end
 end

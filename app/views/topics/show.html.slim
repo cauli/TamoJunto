@@ -30,7 +30,7 @@
           .row
             = render @topic.videos
 
-      - if @topic.events.any?
+      - if @topic.events.visible.any?
         section.events
           .row
             .title
@@ -38,7 +38,7 @@
                 =image_tag ('event-icon.png')
               h3 = t('.events.title')
           .row
-            = render @topic.events.with_state('visible')
+            = render @topic.events.visible
 
       - if @topic.services.any?
         section.services

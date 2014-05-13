@@ -1,19 +1,21 @@
 - content_for :page_title, "#{t('.organization')} #{@organization.name}"
-.profile
-  .row
-    .large-2.columns
-      - if @organization.image.present?
-        = image_tag @organization.image.thumb('400x400#').url
-    .large-10.columns
-      h2 = t('.organization') + ' ' + @organization.name
-  .row
-    .large12.columns
-      p #{t('.city')}: #{@organization.city}
-      p #{t('.phone')}: #{@organization.phone}
-      p = t('.' + @organization.kind)
+.org-page.profile
+  header.title
+    .row
+      .large-2.columns
+        - if @organization.image.present?
+          .avatar = image_tag @organization.image.thumb('400x400#').url
+      .large-10.columns
+        h2 = @organization.name
+        .info
+          p = t('.' + @organization.kind)
+          p = @organization.city
+          p = @organization.phone
+      
   .row
     .large-12.columns
       h2 = t('.about')
       p = @organization.about
+
 
 

@@ -3,11 +3,12 @@ pt-BR:
     registrations:
       edit:
         provider: "Provider"
+        connect_my_social_account: "Conectar meu perfil a uma rede social"
         connect_disconnect: "Connect/Disconect"
         unhappy: "Não está satisfeito?"
         cancel_my_account: "Cancelar minha conta"
         edit_devise_resource: "Editar meu perfil"
-        connect_your_provider: "Connect your %{provider_name}"
+        connect_your_provider: "Conectar ao Facebook"
         disconnect_from_provider: "Desconectar de %{provider_name}"
         back: "Voltar"
         update: "Atualizar meu perfil"

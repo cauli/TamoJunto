@@ -1,0 +1,30 @@
+h2 Search#index
+
+= simple_form_for :search, url: search_path do |f|
+  = f.input :query, as: :search
+  = f.submit
+
+h3 Articles
+ul
+  - @articles.each do |article|
+    li = link_to article.title, article
+
+h3 Documents
+ul
+  - @documents.each do |document|
+    li = link_to document.title, document
+
+h3 Events
+ul
+  - @events.each do |event|
+    li = link_to event.name, event
+
+h3 Services
+ul
+  - @services.each do |service|
+    li = link_to service.name, service
+
+h3 Videos
+ul
+  - @videos.each do |video|
+    li = link_to video.title, video

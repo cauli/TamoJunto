@@ -12,6 +12,9 @@ TamoJunto::Application.routes.draw do
 
   root :to => "home#index"
 
+  get :search, to: 'search#index', as: :search
+  post :search, to: 'search#index'
+
   concern :voteable do
     member do
       get :upvote

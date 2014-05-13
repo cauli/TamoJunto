@@ -10,4 +10,4 @@ before_script:
   - "bundle exec rake db:migrate"
 
 script:
-  - "bundle exec rspec spec"
+  - "CODECLIMATE_REPO_TOKEN=aa10698b99abe3598494654bfd2f146bb7fb9a74056129cc9acceafc4cb08726 bundle exec rspec spec"

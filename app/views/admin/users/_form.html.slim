@@ -1,8 +1,18 @@
 = simple_form_for [:admin, @user] do |f|
   .row
-    .large-12.columns
+    .large-10.columns
       = f.input :name
+    .large-2.columns
+      br/
+      br/
+      br/
       = f.input :admin
+    .large-12.columns
+      = f.input :email
+      = f.input :birthdate, start_year: Date.today.year - 70, end_year: Date.today.year - 16
+      = f.input :gender, as: :radio_buttons, collection: [[t('user.gender.male'), 'm'], [t('user.gender.female'), 'f']]
+      = f.input :password, autocomplete: :off, required: false
+      = f.input :password_confirmation, required: false
 
   .row
     .large-12.columns

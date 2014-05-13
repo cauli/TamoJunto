@@ -19,3 +19,6 @@
           td = l article.created_at, format: :short
           td = link_to t('words.edit'), edit_admin_article_path(article), class: 'button tiny fa fa-edit'
           td = link_to t('words.remove'), [:admin, article], data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button tiny alert fa fa-trash-o'
+
+    .text-center
+      = paginate collection

@@ -23,6 +23,7 @@ gem 'thumbs_up'
 gem 'acts-as-taggable-on', '~> 3.1.0.rc1'
 gem 'sanitize'
 gem 'auto_html', '~> 1.6.1'
+gem 'kaminari'
 
 # I18n
 gem 'rails-i18n'
@@ -63,6 +64,10 @@ group :development do
   gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'letter_opener'
+end
+
+group :test do
+  gem 'codeclimate-test-reporter', require: false
 end
 
 group :production do

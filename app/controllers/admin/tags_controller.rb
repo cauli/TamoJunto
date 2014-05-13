@@ -2,7 +2,7 @@ class Admin::TagsController < Admin::BaseController
   def index
     respond_to do |format|
       format.html do
-        @tags = ActsAsTaggableOn::Tag.all
+        @tags = ActsAsTaggableOn::Tag.page(params[:page])
       end
 
       format.json do

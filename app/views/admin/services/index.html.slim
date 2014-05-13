@@ -27,3 +27,5 @@
           td = link_to '', edit_admin_service_path(service), class: 'button tiny fa fa-edit'
           td = link_to '', [:admin, service], data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button tiny alert fa fa-trash-o'
 
+    .text-center
+      = paginate collection

@@ -10,12 +10,19 @@
             h2 = @document.title
 
   .row
-    .small-12.columns
-      .content
-        p = @document.description
+    article
+      .small-9.columns
+        .content
+          h3 Sobre
+          p = @document.description
 
-      .file
-        p = link_to @document.file_name, @document.file.url
+        .file
+          h5 Arquivo
+          ul
+            li = link_to @document.file_name, @document.file.url
 
-        = render 'shared/vote', resource: @document
-        = render 'shared/voted_by', resource: @document
+      aside    
+        .small-3.columns
+          = render 'shared/vote', resource: @document
+          = render 'shared/voted_by', resource: @document
+

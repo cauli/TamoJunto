@@ -65,6 +65,10 @@ group :development do
   gem 'letter_opener'
 end
 
+group :test do
+  gem 'codeclimate-test-reporter', require: false
+end
+
 group :production do
   gem 'rails_12factor'
 end

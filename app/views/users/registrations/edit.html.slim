@@ -1,19 +1,25 @@
 .edit-page
-  .row
-    .small-8.columns 
-      h2#test
-        | #{t(".edit_devise_resource", resource_name: resource_name.to_s.humanize)}
+  header.title
+    .row
+      .small-8.columns
+        h2
+          | #{t(".edit_devise_resource", resource_name: resource_name.to_s.humanize)}
 
   .row
     .small-8.columns
       = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
         = f.error_notification
         .form-inputs
-          = f.input :name, :required => true, :autofocus => true
-          = f.input :email, :required => true
-          - if resource.image.present?
-            = image_tag resource.image.thumb('60x60#').url
-          = f.input :image, as: :file
+          .row
+            .large-8.columns
+              = f.input :name, :required => true, :autofocus => true
+              = f.input :email, :required => true
+            .large-4.columns
+              = f.input :image, as: :file
+              - if resource.image.present?
+                = image_tag resource.image.thumb('100x100#').url
+          = f.input :birthdate, start_year: Date.today.year - 70, end_year: Date.today.year - 16
+          = f.input :gender, as: :radio_buttons, collection: [[t('user.gender.male'), 'm'], [t('user.gender.female'), 'f']]
           = f.input :password, :autocomplete => "off", :required => false
           = f.input :password_confirmation, :required => false
           = f.input :current_password, :required => true

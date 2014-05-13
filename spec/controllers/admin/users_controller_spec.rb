@@ -12,7 +12,7 @@ describe Admin::UsersController do
   describe '#index' do
     before { get :index }
     it { expect(response).to be_success }
-    it { expect(assigns(:users)).to eq [logged_user, user] }
+    it { expect(assigns(:users)).to eq [user, logged_user] }
   end
 
   describe '#edit' do

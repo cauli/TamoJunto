@@ -5,7 +5,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   protected
   def collection
-    @questions ||= end_of_association_chain.page(params[:page])
+    @questions ||= end_of_association_chain.page(params[:page]).order('created_at desc')
   end
 
   def permitted_params

@@ -10,7 +10,7 @@ class Admin::ArticlesController < Admin::BaseController
 
   protected
   def collection
-    @articles ||= end_of_association_chain.page(params[:page])
+    @articles ||= end_of_association_chain.page(params[:page]).order('created_at desc')
   end
 
   def permitted_params

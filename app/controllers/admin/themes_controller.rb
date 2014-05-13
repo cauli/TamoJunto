@@ -5,7 +5,7 @@ class Admin::ThemesController < Admin::BaseController
 
   protected
   def collection
-    @themes ||= end_of_association_chain.page(params[:page])
+    @themes ||= end_of_association_chain.page(params[:page]).order('created_at desc')
   end
 
   def permitted_params

@@ -5,7 +5,7 @@ class Admin::VideosController < Admin::BaseController
 
   protected
   def collection
-    @videos ||= end_of_association_chain.page(params[:page])
+    @videos ||= end_of_association_chain.page(params[:page]).order('created_at desc')
   end
 
   def permitted_params

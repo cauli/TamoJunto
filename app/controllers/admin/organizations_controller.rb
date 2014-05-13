@@ -5,7 +5,7 @@ class Admin::OrganizationsController < Admin::BaseController
 
   protected
   def collection
-    @organizations ||= end_of_association_chain.page(params[:page])
+    @organizations ||= end_of_association_chain.page(params[:page]).order('created_at desc')
   end
 
   def permitted_params

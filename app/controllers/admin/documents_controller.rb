@@ -5,7 +5,7 @@ class Admin::DocumentsController < Admin::BaseController
 
   protected
   def collection
-    @documents ||= end_of_association_chain.page(params[:page])
+    @documents ||= end_of_association_chain.page(params[:page]).order('created_at desc')
   end
 
   def permitted_params

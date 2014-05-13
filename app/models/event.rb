@@ -15,4 +15,12 @@ class Event < ActiveRecord::Base
   acts_as_taggable
 
   scope :visible, ->{ where(state: 'visible').where('ends_at > ?', Time.now) }
+
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%") + (tagged_with(search))
+    else
+      find(:all)
+    end
+  end
 end

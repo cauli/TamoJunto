@@ -9,4 +9,12 @@ class Service < ActiveRecord::Base
   acts_as_taggable
 
   scope :visible, ->{ where(state: 'visible') }
+
+  def self.search(search)
+    if search
+      where('name LIKE ?', "%#{search}%") + (tagged_with(search))
+    else
+      find(:all)
+    end
+  end
 end

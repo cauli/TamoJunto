@@ -7,4 +7,12 @@ class Document < ActiveRecord::Base
 
   dragonfly_accessor :file
   acts_as_taggable
+
+  def self.search(search)
+    if search
+      where('title LIKE ?', "%#{search}%") + (tagged_with(search))
+    else
+      find(:all)
+    end
+  end
 end

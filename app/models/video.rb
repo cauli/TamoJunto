@@ -8,6 +8,14 @@ class Video < ActiveRecord::Base
 
   before_save :update_video_info, :update_thumbnail_url
 
+  def self.search(search)
+    if search
+      where('title LIKE ?', "%#{search}%") + (tagged_with(search))
+    else
+      find(:all)
+    end
+  end
+
   protected
   def update_video_info
     self.embed_url = video_info.embed_url

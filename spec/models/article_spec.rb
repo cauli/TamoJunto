@@ -44,4 +44,16 @@ describe Article do
       expect(article.sanitized_content).to eq('Hello!')
     end
   end
+
+  describe "#search" do
+    before do
+      @article = Article.make! title: 'Test', tag_list: '1, 3, 4'
+      @second_article = Article.make! title: 'Test 2', tag_list: '1, 3, 4'
+      @third_article = Article.make! title: 'Test 3', tag_list: '2, 3, 4'
+    end
+
+
+    it { expect(Article.search('2')).to include(@second_article) }
+    it { expect(Article.search('2')).to include(@third_article) }
+  end
 end

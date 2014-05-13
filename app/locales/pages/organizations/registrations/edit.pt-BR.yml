@@ -4,14 +4,14 @@ pt-BR:
       edit:
         provider: "Provider"
         connect_disconnect: "Connect/Disconect"
-        unhappy: "Unhappy?"
-        cancel_my_account: "Cancel my account"
-        edit_devise_resource: "Edit %{resource_name}"
+        unhappy: "Não está satisfeito?"
+        cancel_my_account: "Cancelar minha conta"
+        edit_devise_resource: "Editar meu perfil"
         connect_your_provider: "Connect your %{provider_name}"
         disconnect_from_provider: "Disconnect from %{provider_name}"
         back: "Back"
         update: "Update"
-        are_you_sure: "Are you sure?"
+        are_you_sure: "Tem certeza?"
         individual: 'Individual'
         legal_entity: 'Entidade Legal'
         NGO: 'Organização Não-governamental'

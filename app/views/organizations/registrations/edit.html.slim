@@ -1,43 +1,52 @@
-h2
-  | #{t(".edit_devise_resource", resource_name: resource_name.to_s.humanize)}
+.edit-page
+  header.title
+    .row
+      .small-8.columns
+        h2
+          | #{t(".edit_devise_resource", resource_name: resource_name.to_s.humanize)}
+  
+  .row
+    .small-8.columns
+      = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+        = f.error_notification
+        .form-inputs
+          .row
+            .large-8.columns
+              = f.input :name, :required => true, :autofocus => true
+              = f.input :email, :required => true
+            .large-4.columns
+              - if resource.image.present?
+                = image_tag resource.image.thumb('60x60#').url
+              = f.input :image, as: :file
+          = f.input :kind, as: :select, collection: { t('organizations.individual') => 'individual', 
+                                                      t('organizations.legal_entity') => 'legal_entity',
+                                                      t('organizations.ngo') => 'NGO',
+                                                      t('organizations.university') => 'university',
+                                                      t('organizations.public_organ') => 'public_organ' }
+          = f.input :about
+          = f.input :phone
+          = f.input :city
+          = f.input :password, :autocomplete => "off", :required => false
+          = f.input :password_confirmation, :required => false
+          = f.input :current_password, :required => true
+        = f.button :submit, t(".update")
+    .small-4.columns
+      - if devise_mapping.omniauthable?
+        table.table
+          thead
+            tr
+              th = t(".provider")
+              td = t(".connect_disconnect")
+          tbody
+            - resource_class.omniauth_providers.each do |provider_name|
+              tr
+                td= provider_name.to_s.titleize
+                td
+                  - provider = current_user.authorizations.provider(provider_name).first
+                  = link_to t(".connect_your_provider", provider_name: provider_name.to_s.titleize), omniauth_authorize_path(resource_name, provider_name) unless provider.present?
+                  = link_to t(".disconnect_from_provider", provider_name: provider_name.to_s.titleize), authorization_path(provider), method: :delete if provider.present?
 
-= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :name, :required => true, :autofocus => true
-    = f.input :email, :required => true
-    - if resource.image.present?
-      = image_tag resource.image.thumb('60x60#').url
-    = f.input :image, as: :file
-    = f.input :kind, as: :select, collection: { t('organizations.individual') => 'individual', 
-                                                t('organizations.legal_entity') => 'legal_entity',
-                                                t('organizations.ngo') => 'NGO',
-                                                t('organizations.university') => 'university',
-                                                t('organizations.public_organ') => 'public_organ' }
-    = f.input :about
-    = f.input :phone
-    = f.input :city
-    = f.input :password, :autocomplete => "off", :required => false
-    = f.input :password_confirmation, :required => false
-    = f.input :current_password, :required => true
-  = f.button :submit, t(".update")
-
-- if devise_mapping.omniauthable?
-  table.table
-    thead
-      tr
-        th = t(".provider")
-        td = t(".connect_disconnect")
-    tbody
-      - resource_class.omniauth_providers.each do |provider_name|
-        tr
-          td= provider_name.to_s.titleize
-          td
-            - provider = current_user.authorizations.provider(provider_name).first
-            = link_to t(".connect_your_provider", provider_name: provider_name.to_s.titleize), omniauth_authorize_path(resource_name, provider_name) unless provider.present?
-            = link_to t(".disconnect_from_provider", provider_name: provider_name.to_s.titleize), authorization_path(provider), method: :delete if provider.present?
-
-h3 = t(".cancel_my_account")
-p
-  | #{t(".unhappy")} #{link_to t(".cancel_my_account"), registration_path(resource_name), :data => { :confirm => t(".are_you_sure") }, :method => :delete}.
-= link_to t(".back"), :back
+      h3 = t(".cancel_my_account")
+      p
+        | #{t(".unhappy")} #{link_to t(".cancel_my_account"), registration_path(resource_name), :data => { :confirm => t(".are_you_sure") }, :method => :delete}.
+      //= link_to t(".back"), :back

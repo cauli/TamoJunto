@@ -2,7 +2,7 @@
   .row
     .large-10.columns.js-themes-select
       h3 = t('.themes')
-      .themes-inputs
+      .themes-inputs 
         .row
           = f.association :themes, as: :check_boxes, collection: Theme.all, label: false do |builder|
             - if builder.object.any?

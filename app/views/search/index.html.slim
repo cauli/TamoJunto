@@ -1,30 +1,71 @@
-h2 Search#index
+.search-page
+  header.title
+    .row
+      .large-12.columns
+        h2
+          = t('.title')
 
-= simple_form_for :search, url: search_path do |f|
-  = f.input :query, as: :search
-  = f.submit
+        = simple_form_for :search, url: search_path do |f|
+          .row
+            .large-6.columns.search-wrapper
+              i.fa.fa-search
+              = f.input :query, as: :search, label: false, input_html: { value: params[:search].try(:[], :query) }
+            .large-6.columns
+              = f.button :submit, t('.submit')
 
-h3 Articles
-ul
-  - @articles.each do |article|
-    li = link_to article.title, article
+  .row.content-list
+    .large-12.columns
 
-h3 Documents
-ul
-  - @documents.each do |document|
-    li = link_to document.title, document
+      - if @articles.any? || @videos.any? || @events.any? || @services.any? || @documents.any?
 
-h3 Events
-ul
-  - @events.each do |event|
-    li = link_to event.name, event
+        h3.results = t('.result', query: params[:search].try(:[], :query))
 
-h3 Services
-ul
-  - @services.each do |service|
-    li = link_to service.name, service
+        - if @articles.any?
+          section.articles
+            .row
+              .title
+                .large-1.columns
+                  =image_tag ('article-icon.png')
+                h3 = t('.articles.title')
+            .row
+              = render @articles
 
-h3 Videos
-ul
-  - @videos.each do |video|
-    li = link_to video.title, video
+        - if @videos.any?
+          section.videos
+            .row
+              .title
+                .large-1.columns
+                  =image_tag ('video-icon.png')
+                h3 = t('.videos.title')
+            .row
+              = render @videos
+
+        - if @events.any?
+          section.events
+            .row
+              .title
+                .large-1.columns        
+                  =image_tag ('event-icon.png')
+                h3 = t('.events.title')
+            .row
+              = render @events
+
+        - if @services.any?
+          section.services
+            .row
+              .title
+                .large-1.columns
+                  =image_tag ('service-icon.png')
+                h3 = t('.services.title')
+            .row
+              = render @services
+
+        - if @documents.any?
+          section.documents
+            .row
+              .title
+                .large-1.columns
+                  =image_tag ('download-icon.png')
+                h3 = t('.downloads.title')
+            ol
+              = render @documents

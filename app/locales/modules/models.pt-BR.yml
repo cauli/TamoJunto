@@ -101,6 +101,7 @@ pt-BR:
         bad_answer: 'Resposta ruim'
         topic: 'Tópico'
         theme: 'Tema'
+        related_themes: 'Temas relacionados'
       diagnostic:
         themes: 'Temas'
 

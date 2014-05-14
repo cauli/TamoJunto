@@ -5,7 +5,7 @@
       = f.input :good_answer
       = f.input :bad_answer
       = f.association :theme
-      = f.association :related_theme
+      = f.association :related_themes, as: :check_boxes, collection: Theme.all
       = f.association :topic
 
   .row

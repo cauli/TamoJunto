@@ -51,4 +51,16 @@ describe Video do
     it { should respond_to :tag_list }
     it { should respond_to :tag_list= }
   end
+
+  describe '#search' do
+    before do
+      @video = Video.make! title: 'Test', tag_list: '1, 3, 4'
+      @second_video = Video.make! title: 'Test 2', tag_list: '1, 3, 4'
+      @third_video = Video.make! title: 'Test 3', tag_list: '2, 3, 4'
+    end
+
+    it { expect(Video.search('2')).to include(@second_video) }
+    it { expect(Video.search('2')).to include(@third_video) }
+    it { expect(Video.search('2')).not_to include(@video) }
+  end
 end

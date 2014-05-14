@@ -1,12 +1,23 @@
 class Video < ActiveRecord::Base
   include Shared::Voteable
+  include PgSearch
 
   has_and_belongs_to_many :topics
   validates :title, :url, presence: true
   validates_format_of :url, with: /(https?\:\/\/|)(youtu(\.be|be\.com)|vimeo).*+/, message: I18n.t('video.url_regex_validation')
   acts_as_taggable
 
+  pg_search_scope :search_by_title, :against => :title
+
   before_save :update_video_info, :update_thumbnail_url
+
+  def self.search(search)
+    if search
+      (search_by_title(search) + tagged_with(search)).uniq
+    else
+      none
+    end
+  end
 
   protected
   def update_video_info

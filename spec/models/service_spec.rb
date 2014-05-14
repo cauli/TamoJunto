@@ -29,4 +29,22 @@ describe Service do
       it { expect(Service.visible).to eq [visible] }
     end
   end
+
+  describe '#search' do
+    before do
+      @service = Service.make! name: 'Test',
+                               tag_list: '1, 3, 4',
+                               state: 'visible'
+      @second_service = Service.make! name: 'Test 2',
+                                      tag_list: '1, 3, 4',
+                                      state: 'visible'
+      @third_service = Service.make! name: 'Test 3',
+                                     tag_list: '2, 3, 4',
+                                     state: 'visible'
+    end
+
+    it { expect(Service.search('2')).to include(@second_service) }
+    it { expect(Service.search('2')).to include(@third_service) }
+    it { expect(Service.search('2')).not_to include(@service) }
+  end
 end

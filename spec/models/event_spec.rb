@@ -42,4 +42,22 @@ describe Event do
       end
     end
   end
+
+  describe '#search' do
+    before do
+      @event = Event.make! name: 'Test',
+                           tag_list: '1, 3, 4',
+                           state: 'visible'
+      @second_event = Event.make! name: 'Test 2',
+                                  tag_list: '1, 3, 4',
+                                  state: 'visible'
+      @third_event = Event.make! name: 'Test 3',
+                                 tag_list: '2, 3, 4',
+                                 state: 'visible'
+    end
+
+    it { expect(Event.search('2')).to include(@second_event) }
+    it { expect(Event.search('2')).to include(@third_event) }
+    it { expect(Event.search('2')).not_to include(@event) }
+  end
 end

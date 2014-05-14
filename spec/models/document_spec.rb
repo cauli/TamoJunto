@@ -42,13 +42,12 @@ describe Document do
     it { should respond_to :tag_list= }
   end
 
-  describe "#search" do
+  describe '#search' do
     before do
       @document = Document.make! title: 'Test', tag_list: '1, 3, 4'
       @second_document = Document.make! title: 'Test 2', tag_list: '1, 3, 4'
       @third_document = Document.make! title: 'Test 3', tag_list: '2, 3, 4'
     end
-
 
     it { expect(Document.search('2')).to include(@second_document) }
     it { expect(Document.search('2')).to include(@third_document) }

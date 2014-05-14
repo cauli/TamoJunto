@@ -43,13 +43,12 @@ describe Event do
     end
   end
 
-  describe "#search" do
+  describe '#search' do
     before do
       @event = Event.make! name: 'Test', tag_list: '1, 3, 4'
       @second_event = Event.make! name: 'Test 2', tag_list: '1, 3, 4'
       @third_event = Event.make! name: 'Test 3', tag_list: '2, 3, 4'
     end
-
 
     it { expect(Event.search('2')).to include(@second_event) }
     it { expect(Event.search('2')).to include(@third_event) }

@@ -30,13 +30,12 @@ describe Service do
     end
   end
 
-  describe "#search" do
+  describe '#search' do
     before do
       @service = Service.make! name: 'Test', tag_list: '1, 3, 4'
       @second_service = Service.make! name: 'Test 2', tag_list: '1, 3, 4'
       @third_service = Service.make! name: 'Test 3', tag_list: '2, 3, 4'
     end
-
 
     it { expect(Service.search('2')).to include(@second_service) }
     it { expect(Service.search('2')).to include(@third_service) }

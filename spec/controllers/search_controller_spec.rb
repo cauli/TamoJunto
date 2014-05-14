@@ -21,7 +21,7 @@ describe SearchController do
   end
 
   describe '#search' do
-    before{ post :index, search: { query: 'search' } }
+    before { post :index, search: { query: 'search' } }
     it { expect(response).to be_success }
     it { expect(response).to render_template('search/index') }
     it { expect(assigns(:articles)).to eq [@article] }
@@ -31,6 +31,3 @@ describe SearchController do
     it { expect(assigns(:videos)).to eq [@video] }
   end
 end
-
-
-

@@ -304,8 +304,8 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   pg
-  postgres-copy
   pg_search
+  postgres-copy
   pry
   pundit (~> 0.2.2)
   quiet_assets

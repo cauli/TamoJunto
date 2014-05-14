@@ -16,7 +16,7 @@
   .row.content-list
     .large-12.columns
 
-      - if @articles.any? || @videos.any? || @events.any? || @services.any? || @documents.any?
+      - if @articles.any? || @videos.any? || @events.any? || @services.any? || @documents.any? || @topics.any?
 
         h3.results = t('.result', query: params[:search].try(:[], :query))
 
@@ -69,3 +69,13 @@
                 h3 = t('.downloads.title')
             ol
               = render @documents
+
+        - if @topics.any?
+          section.documents
+            .row
+              .title
+                .large-1.columns
+                  =image_tag ('download-icon.png')
+                h3 = t('.topics.title')
+            ol
+              = render @topics

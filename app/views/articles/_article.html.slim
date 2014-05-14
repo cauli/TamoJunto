@@ -1,6 +1,8 @@
 .article.large-3.small-6.columns
-  //= image_tag @article.image.url if @article.image.present?
-  =image_tag ('thumbtopic.jpg'), class: 'img-thumb-3columns'
+  - if article.image.present?
+    = image_tag article.image.thumb('251x').url
+  - else
+    = image_tag ('article-place.png'), class: 'img-thumb-3columns'
   h5 = link_to article.title, article, class: 'inverse'
   p = truncate(article.sanitized_content, length: 100, separator:' ')
   = link_to t('.read_more'), article, class: 'read-more'

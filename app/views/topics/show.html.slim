@@ -3,7 +3,7 @@
     .row
       .large-12.columns
         h2
-          small Colocar o tema aqui
+          small = @topic.try(:question).try(:theme).try(:title)
           br/
           = @topic.title
 

@@ -1,9 +1,12 @@
 class Service < ActiveRecord::Base
   include Service::StateMachineHandler
+  include PgSearch
 
   belongs_to :organization
   has_and_belongs_to_many :topics
   validates :name, :description, :local, :organization_id, presence: true
+
+  pg_search_scope :search_by_name, :against => :name
 
   dragonfly_accessor :image
   acts_as_taggable
@@ -12,9 +15,9 @@ class Service < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('name LIKE ?', "%#{search}%") + (tagged_with(search))
+      (search_by_name(search).visible + tagged_with(search).visible).uniq
     else
-      all
+      none
     end
   end
 end

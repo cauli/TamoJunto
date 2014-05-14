@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509165233) do
+ActiveRecord::Schema.define(version: 20140514213924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -149,11 +149,18 @@ ActiveRecord::Schema.define(version: 20140509165233) do
     t.integer  "row_order"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "related_theme_id"
   end
 
   add_index "questions", ["theme_id"], name: "index_questions_on_theme_id", using: :btree
   add_index "questions", ["topic_id"], name: "index_questions_on_topic_id", using: :btree
+
+  create_table "questions_themes", force: true do |t|
+    t.integer "question_id"
+    t.integer "theme_id"
+  end
+
+  add_index "questions_themes", ["question_id"], name: "index_questions_themes_on_question_id", using: :btree
+  add_index "questions_themes", ["theme_id"], name: "index_questions_themes_on_theme_id", using: :btree
 
   create_table "services", force: true do |t|
     t.integer  "organization_id"

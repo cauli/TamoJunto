@@ -78,7 +78,7 @@ Question.blueprint do
   bad_answer { 'No' }
   topic { Topic.make! }
   theme { Theme.make! }
-  related_theme { Theme.make! }
+  related_themes { [Theme.make!, Theme.make!] }
 end
 
 Diagnostic.blueprint do

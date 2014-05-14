@@ -11,7 +11,7 @@ describe Question do
 
   describe 'Associations' do
     it { should belong_to :theme }
-    it { should belong_to :related_theme }
+    it { should have_and_belong_to_many :related_themes }
     it { should belong_to :topic }
   end
 end

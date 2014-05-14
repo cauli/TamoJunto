@@ -33,7 +33,9 @@ class ApplicationController < ActionController::Base
                                                                      :location,
                                                                      :password,
                                                                      :current_password,
-                                                                     :password_confirmation) }
+                                                                     :password_confirmation,
+                                                                     :gender,
+                                                                     :birthdate) }
     elsif resource_class == Organization
       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name,
                                                               :email,

@@ -144,6 +144,10 @@ GEM
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
     pg (0.17.1)
+    pg_search (0.7.3)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     polyglot (0.3.3)
     postgres-copy (0.8.0)
       activerecord (~> 4.0)
@@ -301,6 +305,7 @@ DEPENDENCIES
   omniauth-facebook
   pg
   postgres-copy
+  pg_search
   pry
   pundit (~> 0.2.2)
   quiet_assets

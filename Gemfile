@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.0'
 
 gem 'rails', '4.0.2'
 
@@ -25,6 +25,7 @@ gem 'acts-as-taggable-on', '~> 3.1.0.rc1'
 gem 'sanitize'
 gem 'auto_html', '~> 1.6.1'
 gem 'kaminari'
+gem 'pg_search'
 
 # I18n
 gem 'rails-i18n'

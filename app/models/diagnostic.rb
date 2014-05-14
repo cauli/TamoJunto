@@ -8,8 +8,18 @@ class Diagnostic < ActiveRecord::Base
   validates :user_id, presence: true
 
   def topics
-    themes.map do |t|
-      answers.by_theme(t).try(:bad).try(:first).try(:question).try(:topic)
+    selected_topics = themes.order(:id).map do |theme|
+      answers.by_theme(theme).order(:question_id).bad.map do |a|
+        a.try(:question).try(:topic)
+      end
+    end
+
+    return themes.order(:id).each_with_index.map do |theme, index|
+      if selected_topics[index].present?
+        selected_topics[index].first
+      else
+        theme.questions.order(:question_id).first.topic
+      end
     end
   end
 end

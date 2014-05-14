@@ -2,7 +2,7 @@
   .row
     .large-4.columns
       - if service.organization.image.present?
-        = image_tag service.organization.image.thumb('88x').url
+        = link_to image_tag(service.organization.image.thumb('88x').url), service
       - else
         = image_tag ('service-place.png')
     .large-8.columns

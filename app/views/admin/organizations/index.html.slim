@@ -1,8 +1,10 @@
 .row
   .large-12.columns
     header.title
-      h2 = t('.title')
-
+      h2
+        = t('.title')
+        .pull-right
+          = link_to t('.download_csv'), admin_reports_organizations_path(format: :csv), class: 'button'
     table
       tr
         th = t('.name')

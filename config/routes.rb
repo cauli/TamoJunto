@@ -56,5 +56,9 @@ TamoJunto::Application.routes.draw do
       end
     end
     resources :tags, only: [:index, :destroy]
+    namespace :reports do
+      resources :users, only: :index
+      resources :organizations, only: :index
+    end
   end
 end

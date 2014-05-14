@@ -7,6 +7,7 @@ gem 'rails', '4.0.2'
 # Database
 gem 'pg'
 gem 'foreigner'
+gem 'postgres-copy'
 
 # Server
 gem 'thin'

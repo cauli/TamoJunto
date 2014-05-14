@@ -6,3 +6,4 @@ pt-BR:
         name: 'Nome'
         admin: 'Admin?'
         created_at: 'Criado em'
+        download_csv: 'Download CSV'

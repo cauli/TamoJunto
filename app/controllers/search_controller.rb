@@ -9,4 +9,3 @@ class SearchController < ApplicationController
     @videos = Video.search(query)
   end
 end
-

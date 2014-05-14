@@ -51,5 +51,6 @@ describe Document do
 
     it { expect(Document.search('2')).to include(@second_document) }
     it { expect(Document.search('2')).to include(@third_document) }
+    it { expect(Document.search('2')).not_to include(@document) }
   end
 end

@@ -45,5 +45,6 @@ describe Service do
 
     it { expect(Service.search('2')).to include(@second_service) }
     it { expect(Service.search('2')).to include(@third_service) }
+    it { expect(Service.search('2')).not_to include(@service) }
   end
 end

@@ -58,5 +58,6 @@ describe Event do
 
     it { expect(Event.search('2')).to include(@second_event) }
     it { expect(Event.search('2')).to include(@third_event) }
+    it { expect(Event.search('2')).not_to include(@event) }
   end
 end

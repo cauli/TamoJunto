@@ -54,5 +54,6 @@ describe Article do
 
     it { expect(Article.search('2')).to include(@second_article) }
     it { expect(Article.search('2')).to include(@third_article) }
+    it { expect(Article.search('2')).not_to include(@article) }
   end
 end

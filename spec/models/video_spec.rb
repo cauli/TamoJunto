@@ -61,5 +61,6 @@ describe Video do
 
     it { expect(Video.search('2')).to include(@second_video) }
     it { expect(Video.search('2')).to include(@third_video) }
+    it { expect(Video.search('2')).not_to include(@video) }
   end
 end

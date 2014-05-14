@@ -5,6 +5,7 @@ describe SearchController do
     @article = Article.make! title: 'search'
     @document = Document.make!
     @event = Event.make! name: 'search', state: 'visible'
+    @topic = Topic.make! title: 'search'
     @service = Service.make! state: 'visible'
     @video = Video.make! title: 'search'
   end
@@ -16,6 +17,7 @@ describe SearchController do
     it { expect(assigns(:articles)).to eq [] }
     it { expect(assigns(:documents)).to eq [] }
     it { expect(assigns(:events)).to eq [] }
+    it { expect(assigns(:topics)).to eq [] }
     it { expect(assigns(:services)).to eq [] }
     it { expect(assigns(:videos)).to eq [] }
   end
@@ -27,6 +29,7 @@ describe SearchController do
     it { expect(assigns(:articles)).to eq [@article] }
     it { expect(assigns(:documents)).to eq [] }
     it { expect(assigns(:events)).to eq [@event] }
+    it { expect(assigns(:topics)).to eq [@topic] }
     it { expect(assigns(:services)).to eq [] }
     it { expect(assigns(:videos)).to eq [@video] }
   end

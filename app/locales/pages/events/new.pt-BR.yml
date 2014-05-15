@@ -1,0 +1,4 @@
+pt-BR:
+  events:
+    new:
+      title: 'Criar novo evento'

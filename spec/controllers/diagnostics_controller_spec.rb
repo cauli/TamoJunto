@@ -7,7 +7,15 @@ describe DiagnosticsController do
   before { sign_in user }
 
   describe '#show' do
-    before { get :show, id: diagnostic }
+    before do
+      @question1 = Question.make! theme: diagnostic.themes.first
+      @question2 = Question.make! theme: diagnostic.themes.last
+      Answer.make! diagnostic: diagnostic, question: @question1
+      Answer.make! diagnostic: diagnostic, question: @question2
+
+      get :show, id: diagnostic
+    end
+
     it { expect(response).to be_success }
     it { expect(response).to render_template('diagnostics/show') }
     it { expect(assigns(:diagnostic)).to eq diagnostic }

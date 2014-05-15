@@ -19,9 +19,14 @@ class DiagnosticsController < ApplicationController
 
   def questions
     @diagnostic = Diagnostic.find(params[:diagnostic_id])
-    @diagnostic.answers.build
     authorize resource
-    respond_with @diagnostic
+    if @diagnostic.answers.any?
+      redirect_to diagnostic_path(@diagnostic)
+    else
+      @diagnostic.answers.build
+      @theme_ids = @diagnostic.themes.map { |t| t.id }
+      respond_with @diagnostic
+    end
   end
 
   def update
@@ -37,7 +42,8 @@ class DiagnosticsController < ApplicationController
 
   def show
     authorize resource
-    @topics = resource.topics
+    @topics = resource.main_topics
+    @secondary_topics = resource.secondary_topics
     show!
   end
 

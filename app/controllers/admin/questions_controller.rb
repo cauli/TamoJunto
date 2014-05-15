@@ -12,6 +12,6 @@ class Admin::QuestionsController < Admin::BaseController
     params.permit(question: [:topic_id, :theme_id,
                              :question_text,
                              :good_answer, :bad_answer,
-                             :related_theme_id])
+                             related_theme_ids: []])
   end
 end

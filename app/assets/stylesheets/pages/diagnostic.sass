@@ -1,0 +1,52 @@
+.new-diagnostic-page
+  .themes-inputs
+    padding-top: +rem-calc(25px)
+    counter-reset: theme-ids
+
+.new-diagnostic-page .themes-inputs,
+.questions-page .answer-inputs
+  label
+    color: $alert-color
+    font-size: 140%
+    margin-bottom: +rem-calc(10px)
+    padding: +rem-calc(8px)
+    counter-increment: theme-ids
+    border-radius: $global-radius
+    font-weight: 500
+    float: left
+    &.checked
+      background: $alert-color
+      color: #fff
+    &:before
+      content: counter(theme-ids, lower-alpha)
+      padding-right: +rem-calc(7px)
+      font-size: 60%
+      vertical-align: top
+
+.diagnostic-page
+  .result-item
+    margin-bottom: +rem-calc(50px)
+    .theme
+      margin-bottom: +rem-calc(20px)
+    .topic
+      padding-left: +rem-calc(25px)
+      h5
+        font-weight: 400
+
+  .more-items
+    margin-top: +rem-calc(100px)
+    h5
+      color: $alert-color
+
+.questions-page
+  .item
+    margin-bottom: +rem-calc(25px)
+    .theme
+      margin-bottom: +rem-calc(20px)
+    .questions
+      padding-left: +rem-calc(25px)
+      h5
+        font-weight: 400
+  .answer-inputs
+    label
+      clear: both

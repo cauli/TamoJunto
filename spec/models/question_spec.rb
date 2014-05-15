@@ -14,4 +14,23 @@ describe Question do
     it { should have_and_belong_to_many :related_themes }
     it { should belong_to :topic }
   end
+
+  describe 'scopes' do
+    before do
+      @question1 = Question.make!
+      @question2 = Question.make!
+      @question3 = Question.make!
+    end
+    describe 'not_in_themes' do
+      it { expect(Question.not_in_themes([@question1.theme])).to include(@question2) }
+      it { expect(Question.not_in_themes([@question1.theme])).to include(@question3) }
+      it { expect(Question.not_in_themes([@question1.theme])).not_to include(@question1) }
+    end
+
+    describe 'filtered' do
+      it { expect(Question.filtered([@question1.theme], [@question2.id])).to include(@question3) }
+      it { expect(Question.filtered([@question1.theme], [@question2.id])).not_to include(@question2) }
+      it { expect(Question.filtered([@question1.theme], [@question2.id])).not_to include(@question1) }
+    end
+  end
 end

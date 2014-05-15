@@ -1,5 +1,6 @@
 pt-BR:
   diagnostics:
     questions_form:
-      theme: 'Tema: '
+      theme: 'Tema %{number}'
+      question: 'Pergunta %{number}'
       continue: 'Continuar'

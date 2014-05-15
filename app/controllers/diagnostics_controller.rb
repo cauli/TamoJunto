@@ -19,11 +19,11 @@ class DiagnosticsController < ApplicationController
 
   def questions
     @diagnostic = Diagnostic.find(params[:diagnostic_id])
+    authorize resource
     if @diagnostic.answers.any?
       redirect_to diagnostic_path(@diagnostic)
     else
       @diagnostic.answers.build
-      authorize resource
       respond_with @diagnostic
     end
   end

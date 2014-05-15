@@ -22,4 +22,11 @@ class Diagnostic < ActiveRecord::Base
       end
     end
   end
+  def selected_topics
+    @selected_topics ||= themes.order(:id).map do |theme|
+      answers.by_theme(theme).order(:question_id).bad.map do |a|
+        a.try(:question).try(:topic)
+      end
+    end
+  end
 end

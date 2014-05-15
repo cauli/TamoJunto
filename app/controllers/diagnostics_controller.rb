@@ -43,6 +43,7 @@ class DiagnosticsController < ApplicationController
   def show
     authorize resource
     @topics = resource.main_topics
+    @secondary_topics = resource.secondary_topics
     show!
   end
 

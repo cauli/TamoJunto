@@ -9,5 +9,9 @@ class Answer < ActiveRecord::Base
     includes(:question).where('questions.theme_id = ?', theme.id).references(:questions)
   end
 
+  scope :by_themes, ->(themes) do
+    includes(:question).where('questions.theme_id IN (?)', themes).references(:questions)
+  end
+
   scope :bad, -> { where(option: false) }
 end

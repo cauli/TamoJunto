@@ -28,5 +28,6 @@
         p = t('.see_more_description')
 
         .topics
-          - @secondary_topics.each do |topic|
-            = link_to topic.title, topic
+          ul
+            - @secondary_topics.each do |topic|
+              li = link_to topic.title, topic

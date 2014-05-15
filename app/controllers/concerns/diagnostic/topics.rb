@@ -1,5 +1,4 @@
 module Diagnostic::Topics
-
   extend ActiveSupport::Concern
 
   included do

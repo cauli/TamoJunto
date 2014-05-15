@@ -1,0 +1,5 @@
+pt-BR:
+  services:
+    new:
+      title: 'Criar novo serviço'
+

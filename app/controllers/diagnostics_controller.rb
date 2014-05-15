@@ -24,6 +24,7 @@ class DiagnosticsController < ApplicationController
       redirect_to diagnostic_path(@diagnostic)
     else
       @diagnostic.answers.build
+      @theme_ids = @diagnostic.themes.map { |t| t.id }
       respond_with @diagnostic
     end
   end

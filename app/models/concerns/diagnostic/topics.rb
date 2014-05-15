@@ -18,10 +18,14 @@ module Diagnostic::Topics
 
     def select_main_topic(theme, index)
       if bad_topics[index].present?
-        bad_topics[index].first
+        bad_topics[index]
       else
-        theme.questions.order(:id).first.topic
+        [theme.questions.order(:id).first.topic]
       end
+    end
+
+    def select_secondary_topics(theme, index)
+
     end
   end
 end

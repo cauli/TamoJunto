@@ -2,6 +2,7 @@
   .row
     .large-12.columns
       - i = 0
+      - @showed_question_ids = []
       - @diagnostic.themes.each do |t|
         - i += 1
 
@@ -29,6 +30,24 @@
                       label: false, collection: [[q.good_answer, true], 
                                                  [q.bad_answer, false]],
                       input_html: { class: 'hide' }, label_wrapper: 'aa'
+          .questions
+            - t.related_questions.filtered(@theme_ids, @showed_question_ids).each do |q|
+              - @showed_question_ids << q.id
+              - iq += 1
+
+              h5
+                small = t('.question', number: iq)
+                br/
+                = q.question_text
+
+              = f.simple_fields_for :answers do |a|
+                  = a.input :question_id, as: :hidden, input_html: { value: q.id }
+                  .answer-inputs.js-answer-inputs
+                    = a.input :option, as: :radio_buttons, required: true, 
+                      label: false, collection: [[q.good_answer, true], 
+                                                 [q.bad_answer, false]],
+                      input_html: { class: 'hide' }, label_wrapper: 'aa'
+
   .row
     .large-12.columns
       = link_to t('words.cancel'), :back, class: 'button secondary'

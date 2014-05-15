@@ -6,6 +6,8 @@
           small = @topic.try(:question).try(:theme).try(:title)
           br/
           = @topic.title
+          p
+            = simple_format @topic.description if @topic.description.present?
 
   .row
     .large-12.columns

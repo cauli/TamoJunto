@@ -71,11 +71,11 @@
               = render @documents
 
         - if @topics.any?
-          section.documents
+          section.topics
             .row
               .title
                 .large-1.columns
-                  =image_tag ('download-icon.png')
+                  =image_tag ('topic-icon.png')
                 h3 = t('.topics.title')
             ol
               = render @topics

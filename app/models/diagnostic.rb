@@ -18,14 +18,7 @@ class Diagnostic < ActiveRecord::Base
       if selected_topics[index].present?
         selected_topics[index].first
       else
-        theme.questions.order(:question_id).first.topic
-      end
-    end
-  end
-  def selected_topics
-    @selected_topics ||= themes.order(:id).map do |theme|
-      answers.by_theme(theme).order(:question_id).bad.map do |a|
-        a.try(:question).try(:topic)
+        theme.questions.order(:id).first.topic
       end
     end
   end

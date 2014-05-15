@@ -17,5 +17,32 @@
       h2 = t('.about')
       p = @organization.about
 
+  .row.content-list
+    .large-12.columns
+      - if @events.any?
+        section.events
+          .row
+            .title
+              .large-1.columns
+                = image_tag ('event-icon.png')
+              h3
+                = t('.events.title')
+                - if current_organization == @organization
+                  .pull-right
+                    = link_to t('.events.new'), new_event_path, class: 'button'
+          .row
+            = render @events
 
-
+      - if @services.any?
+        section.services
+          .row
+            .title
+              .large-1.columns
+                = image_tag ('service-icon.png')
+              h3
+                = t('.services.title')
+                - if current_organization == @organization
+                  .pull-right
+                    = link_to t('.services.new'), new_service_path, class: 'button'
+          .row
+            = render @services

@@ -10,3 +10,9 @@ pt-BR:
       NGO: 'Organização não-governamental'
       university: 'Instituição de Ensino'
       public_organ: 'Orgão Público'
+      events:
+        title: 'Eventos'
+        new: 'Criar novo evento'
+      services:
+        title: 'Serviços'
+        new: 'Criar novo serviço'

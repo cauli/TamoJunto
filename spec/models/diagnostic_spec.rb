@@ -37,8 +37,8 @@ describe Diagnostic do
                      option: false
       end
 
-      it { expect(@diagnostic.topics).to eq [@question1.topic,
-                                             @question2.topic] }
+      it { expect(@diagnostic.main_topics).to eq [@question1.topic,
+                                                  @question2.topic] }
     end
 
     context 'last then first answers false' do
@@ -57,8 +57,8 @@ describe Diagnostic do
                      option: true
       end
 
-      it { expect(@diagnostic.topics).to eq [@question3.topic,
-                                             @question2.topic] }
+      it { expect(@diagnostic.main_topics).to eq [@question3.topic,
+                                                  @question2.topic] }
     end
 
     context 'first then last answers false' do
@@ -77,8 +77,8 @@ describe Diagnostic do
                      option: false
       end
 
-      it { expect(@diagnostic.topics).to eq [@question1.topic,
-                                             @question4.topic] }
+      it { expect(@diagnostic.main_topics).to eq [@question1.topic,
+                                                  @question4.topic] }
     end
 
     context 'all answers true' do
@@ -97,8 +97,8 @@ describe Diagnostic do
                      option: true
       end
 
-      it { expect(@diagnostic.topics).to eq [@question1.topic,
-                                             @question2.topic] }
+      it { expect(@diagnostic.main_topics).to eq [@question1.topic,
+                                                  @question2.topic] }
     end
   end
 end

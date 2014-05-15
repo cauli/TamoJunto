@@ -1,0 +1,9 @@
+pt-BR:
+  services:
+    show:
+      title: 'Serviço'
+      edit: 'Editar serviço'
+      about: 'Sobre'
+      by: 'Por'
+      local: 'Onde'
+      value: 'Quanto'

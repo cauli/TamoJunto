@@ -6,34 +6,37 @@
           =image_tag ('service-icon.png'), class: 'icon-single-page'
           .title
             h4 
-              small Serviço
-            h2 = @service.name
+              small = t('.title')
+            h2
+              = @service.name
+              - if @service.organization == current_organization
+                  .pull-right
+                    = link_to t('.edit'), edit_service_path(@service), class: 'button'
 
   .row
     .about
       .large-4.columns
         .image
-          = image_tag @service.image.url if @service.image.present?
+          = image_tag @service.image.thumb('330x').url if @service.image.present?
 
       .large-8.columns
-        h3 Sobre
+        h3 = t('.about')
         .content
-          p = @service.description
+          p = simple_format @service.description
 
-  
   .content-about
     .row
       .small-12.columns
         .info-field 
           .small-2.columns
-            h5 Por
+            h5 = t('.by')
           .small-10.columns
-            p = @service.organization_id
+            p = link_to @service.organization.name, @service.organization
 
       .small-12.columns
         .info-field
           .small-2.columns 
-            h5 Onde
+            h5 = t('.local')
           .small-10.columns
             address
               p = @service.local
@@ -41,12 +44,6 @@
       .small-12.columns
         .info-field
           .small-2.columns
-            h5 Quanto
+            h5 = t('.value')
           .small-10.columns
             p = @service.value
-      
-
-
-
-
-

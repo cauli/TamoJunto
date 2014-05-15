@@ -71,6 +71,10 @@ pt-BR:
       theme:
         title: 'Titulo'
         description: 'Descrição'
+        good_headline: 'Saudação positiva'
+        good_text: 'Texto positivo'
+        bad_headline: 'Saudação negativa'
+        bad_text: 'Texto negativa'
       user:
         name: 'Nome'
         image: 'Imagem'

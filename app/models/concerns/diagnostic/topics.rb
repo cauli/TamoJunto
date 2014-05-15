@@ -14,6 +14,14 @@ module Diagnostic::Topics
       answers.by_theme(theme).bad.count
     end
 
+    def result_text(theme)
+      if bad_answers_by_theme(theme) / answers.by_theme(theme).count.to_f < 0.5
+        return [theme.good_headline, theme.good_text]
+      else
+        return [theme.bad_headline, theme.bad_text]
+      end
+    end
+
     private
 
     def bad_topics

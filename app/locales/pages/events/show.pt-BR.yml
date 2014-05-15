@@ -1,0 +1,13 @@
+pt-BR:
+  events:
+    show:
+      title: 'Evento'
+      edit: 'Editar evento'
+      about: 'Sobre'
+      by: 'Por'
+      local: 'Onde'
+      value: 'Quanto'
+      when: 'Quando'
+      hour: 'Hora'
+      day: 'Dia'
+      external_link: 'Quero me inscrever'

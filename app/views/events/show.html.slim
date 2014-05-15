@@ -6,17 +6,21 @@
           =image_tag ('event-icon.png'), class: 'icon-single-page'
           .title
             h4 
-              small Evento
-            h2 = @event.name
+              small = t('.title')
+            h2
+              = @event.name
+              - if @event.organization == current_organization
+                  .pull-right
+                    = link_to t('.edit'), edit_event_path(@event), class: 'button'
   .row
     .about
       .large-4.columns
         .image
-          = image_tag @event.image.url if @event.image.present?
+          = image_tag @event.image.thumb('330x').url if @event.image.present?
       .large-8.columns
-        h3 Sobre
+        h3 = t('.about')
         .content
-          p = @event.description
+          p = simple_format @event.description
           p = @event.tag_list
   
   .content-about
@@ -24,14 +28,14 @@
       .small-12.columns
         .info-field 
           .small-2.columns
-            h5 Por
+            h5 = t('.by')
           .small-10.columns
-            p = @event.organization_id
+            p = link_to @event.organization.name, @event.organization
       
       .small-12.columns
         .info-field
           .small-2.columns 
-            h5 Onde
+            h5 = t('.local')
           .small-10.columns
             address
               p = @event.local
@@ -39,26 +43,23 @@
       .small-12.columns
         .info-field
           .small-2.columns
-            h5 Quando
+            h5 = t('.when')
           .small-10.columns
             .small-12.columns.no-left-padding
-              h6 Hora
+              h6 = t('.hour')
               p#hora = @event.time
             .small-12.columns.no-left-padding
-              h6 Dia
-              p#dia = @event.starts_at
+              h6 = t('.day')
+              p#dia = l @event.starts_at
 
       .small-12.columns
         .info-field
           .small-2.columns
-            h5 Quanto
+            h5 = t('.value')
           .small-10.columns
             p = @event.value
 
-    .row  
-      .small-5.small-centered.columns
-        = link_to 'Quero me inscrever', @event.external_link, class: 'button expand'
-        
-        
-
-
+    - if @event.external_link.present?
+      .row  
+        .small-5.small-centered.columns
+          = link_to t('.external_link'), @event.external_link, class: 'button expand'

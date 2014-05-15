@@ -19,7 +19,7 @@ class DiagnosticsController < ApplicationController
 
   def questions
     @diagnostic = Diagnostic.find(params[:diagnostic_id])
-    if @diagnostic.questions.any?
+    if @diagnostic.answers.any?
       redirect_to diagnostic_path(@diagnostic)
     else
       @diagnostic.answers.build

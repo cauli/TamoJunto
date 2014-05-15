@@ -1,3 +1,32 @@
-h3 Diagnostic#show
-- @topics.each do |t|
-  = link_to t.title, t if t.present?
+.diagnostic-page
+  header.title
+    .row
+      .large-12.columns
+        h2 = t('.title')
+
+  .row
+    .large-12.columns
+      - i = 0
+      - @topics.each do |topic|
+        - i += 1
+
+        .result-item
+          .theme
+            h3
+              small = t('.theme', number: i)
+              br/
+              = topic.question.theme.title
+
+          .topic
+            h5 Rafael, vc é um grande vendedor!
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+            h5 = link_to topic.title, topic
+
+      .more-items
+        h5 = t('.see_more')
+        p = t('.see_more_description')
+
+        .topics
+          - @topics.each do |topic|
+            = link_to topic.title, topic

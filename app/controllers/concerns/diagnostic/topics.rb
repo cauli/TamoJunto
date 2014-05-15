@@ -19,7 +19,7 @@ module Diagnostic::Topics
 
     def select_main_topic(theme, index)
       if bad_topics[index].present?
-          bad_topics[index].first
+        bad_topics[index].first
       else
         theme.questions.order(:id).first.topic
       end

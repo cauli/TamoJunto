@@ -3,3 +3,4 @@ pt-BR:
     form:
       themes: 'Escolha dois temas'
       continue: 'Continuar'
+      theme: 'Tema %{number}'

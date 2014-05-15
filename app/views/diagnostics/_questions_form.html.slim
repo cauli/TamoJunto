@@ -1,20 +1,38 @@
 = simple_form_for @diagnostic do |f|
   .row
     .large-12.columns
+      - i = 0
       - @diagnostic.themes.each do |t|
-        h3 = t('.theme') + t.title
-        - t.questions.each do |q|
-          h5 = q.question_text
-          = f.simple_fields_for :answers do |a|
-              = a.input :question_id, as: :hidden, input_html: { value: q.id }
-              = a.input :option, as: :radio_buttons, required: true, 
-                label: false, collection: [[q.good_answer, true], 
-                                           [q.bad_answer, false]]
+        - i += 1
+
+        .item
+          .theme
+            h4
+              small = t('.theme', number: i)
+              br/
+              = t.title
+
+          .questions
+            - iq = 0
+            - t.questions.each do |q|
+              - iq += 1
+
+              h5
+                small = t('.question', number: iq)
+                br/
+                = q.question_text
+
+              = f.simple_fields_for :answers do |a|
+                  = a.input :question_id, as: :hidden, input_html: { value: q.id }
+                  .answer-inputs.js-answer-inputs
+                    = a.input :option, as: :radio_buttons, required: true, 
+                      label: false, collection: [[q.good_answer, true], 
+                                                 [q.bad_answer, false]],
+                      input_html: { class: 'hide' }, label_wrapper: 'aa'
   .row
     .large-12.columns
-      .text-right
-        = link_to t('words.cancel'), :back, class: 'button secondary'
-        | &nbsp;
-        = f.button :submit, t('.continue')
+      = link_to t('words.cancel'), :back, class: 'button secondary'
+      | &nbsp;
+      = f.button :submit, t('.continue')
 
 

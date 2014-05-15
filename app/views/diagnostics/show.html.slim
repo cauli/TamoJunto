@@ -30,4 +30,5 @@
         .topics
           ul
             - @secondary_topics.each do |topic|
-              li = link_to topic.title, topic
+              - if topic.present?
+                li = link_to topic.title, topic

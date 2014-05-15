@@ -9,6 +9,6 @@ class Admin::ThemesController < Admin::BaseController
   end
 
   def permitted_params
-    params.permit(theme: [:title, :description])
+    params.permit(theme: [:title, :description, :good_text, :bad_text])
   end
 end

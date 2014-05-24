@@ -3,8 +3,7 @@
   header.title
     .row
       .large-2.columns
-        - if @organization.image.present?
-          .avatar = image_tag @organization.image.thumb('400x400#').url
+        .avatar = image_tag @organization.avatar_url('150x150#')
       .large-10.columns
         h2 = @organization.name
         .info

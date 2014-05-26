@@ -24,7 +24,14 @@ class ApplicationController < ActionController::Base
                                                               :password,
                                                               :password_confirmation,
                                                               :gender,
-                                                              :birthdate) }
+                                                              :birthdate,
+                                                              :city,
+                                                              :state_id,
+                                                              :business_name,
+                                                              :business_type,
+                                                              :business_created_at,
+                                                              :about_business,
+                                                              :contact) }
 
       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name,
                                                                      :email,
@@ -35,13 +42,24 @@ class ApplicationController < ActionController::Base
                                                                      :current_password,
                                                                      :password_confirmation,
                                                                      :gender,
-                                                                     :birthdate) }
+                                                                     :birthdate,
+                                                                     :city,
+                                                                     :state_id,
+                                                                     :business_name,
+                                                                     :business_type,
+                                                                     :business_created_at,
+                                                                     :about_business,
+                                                                     :contact) }
     elsif resource_class == Organization
       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name,
                                                               :email,
                                                               :kind,
                                                               :password,
-                                                              :password_confirmation) }
+                                                              :password_confirmation,
+                                                              :city,
+                                                              :state_id,
+                                                              :business_created_at,
+                                                              :contact) }
 
       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name,
                                                                      :email,
@@ -49,6 +67,9 @@ class ApplicationController < ActionController::Base
                                                                      :image,
                                                                      :about,
                                                                      :city,
+                                                                     :state_id,
+                                                                     :business_created_at,
+                                                                     :contact,
                                                                      :phone,
                                                                      :password,
                                                                      :current_password,

@@ -25,7 +25,13 @@
                                                       t('organizations.public_organ') => 'public_organ' }
           = f.input :about
           = f.input :phone
-          = f.input :city
+          .row
+            .large-6.columns
+              = f.input :city
+            .large-6.columns
+              = f.association :state
+          = f.input :business_created_at, start_year: Date.today.year - 70
+          = f.input :contact
           = f.input :password, :autocomplete => "off", :required => false
           = f.input :password_confirmation, :required => false
           = f.input :current_password, :required => true

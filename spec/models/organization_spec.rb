@@ -72,6 +72,7 @@ describe Organization do
   describe 'associations' do
     it { should have_many :events }
     it { should have_many :services }
+    it { should belong_to :state }
   end
 
   describe "image" do

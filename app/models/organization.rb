@@ -9,6 +9,7 @@ class Organization < ActiveRecord::Base
 
   has_many :events
   has_many :services
+  belongs_to :state
 
   validates :name, presence: true
   validates :kind, inclusion: { in: %w{individual legal_entity NGO university public_organ}}

@@ -33,7 +33,7 @@
                                                                    t('user.industry') => 'industry',
                                                                    t('user.commerce') => 'commerce' }
             .large-6.columns
-              = f.input :business_created_at, order: [:year]
+              = f.input :business_created_at, order: [:year], start_year: Date.today.year - 70
           = f.input :about_business
           = f.input :contact
           = f.input :password, :autocomplete => "off", :required => false

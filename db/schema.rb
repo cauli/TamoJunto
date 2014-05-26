@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515200101) do
+ActiveRecord::Schema.define(version: 20140526154056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,10 +135,12 @@ ActiveRecord::Schema.define(version: 20140515200101) do
     t.string   "image_uid"
     t.string   "phone"
     t.string   "city"
+    t.integer  "state_id"
   end
 
   add_index "organizations", ["email"], name: "index_organizations_on_email", unique: true, using: :btree
   add_index "organizations", ["reset_password_token"], name: "index_organizations_on_reset_password_token", unique: true, using: :btree
+  add_index "organizations", ["state_id"], name: "index_organizations_on_state_id", using: :btree
 
   create_table "questions", force: true do |t|
     t.text     "question_text"
@@ -195,6 +197,13 @@ ActiveRecord::Schema.define(version: 20140515200101) do
   end
 
   add_index "settings", ["thing_type", "thing_id", "var"], name: "index_settings_on_thing_type_and_thing_id_and_var", unique: true, using: :btree
+
+  create_table "states", force: true do |t|
+    t.string   "name"
+    t.string   "acronym"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
@@ -259,10 +268,13 @@ ActiveRecord::Schema.define(version: 20140515200101) do
     t.boolean  "active",                 default: true,  null: false
     t.date     "birthdate"
     t.string   "gender"
+    t.string   "city"
+    t.integer  "state_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["state_id"], name: "index_users_on_state_id", using: :btree
 
   create_table "videos", force: true do |t|
     t.string   "title"

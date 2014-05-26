@@ -33,6 +33,11 @@ pt-BR:
         birthdate: 'Data de Nascimento'
         gender: 'Sexo'
         current_password: 'Senha atual'
+        business_name: 'Nome do negócio'
+        business_type: 'Tipo do negócio'
+        about_business: 'Descrição do negócio'
+        business_created_at: 'Ano de criação do negócio'
+        contact: 'Contato do negócio: e-mail, telefone etc.'
       organization:
         name: 'Nome'
         password: 'Senha'

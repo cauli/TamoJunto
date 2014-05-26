@@ -10,6 +10,7 @@ acts_as_copy_target
   acts_as_copy_target
 
   has_many :articles
+  belongs_to :state
   has_many :diagnostics
   validates :name, :birthdate, :gender, presence: true
 

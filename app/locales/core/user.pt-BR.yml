@@ -3,3 +3,6 @@ pt-BR:
     gender:
       male: 'Masculino'
       female: 'Feminino'
+    service: 'Serviço'
+    industry: 'Indústria'
+    commerce: 'Comércio'

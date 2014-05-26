@@ -20,6 +20,22 @@
                 = image_tag resource.image.thumb('100x100#').url
           = f.input :birthdate, start_year: Date.today.year - 70, end_year: Date.today.year - 16
           = f.input :gender, as: :radio_buttons, collection: [[t('user.gender.male'), 'm'], [t('user.gender.female'), 'f']]
+          .row
+            .large-6.columns
+              = f.input :city
+            .large-6.columns
+              = f.association :state
+
+          = f.input :business_name
+          .row
+            .large-6.columns
+              = f.input :business_type, as: :select, collection: { t('user.service') => 'service',
+                                                                   t('user.industry') => 'industry',
+                                                                   t('user.commerce') => 'commerce' }
+            .large-6.columns
+              = f.input :business_created_at, order: [:year]
+          = f.input :about_business
+          = f.input :contact
           = f.input :password, :autocomplete => "off", :required => false
           = f.input :password_confirmation, :required => false
           = f.input :current_password, :required => true

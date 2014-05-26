@@ -275,7 +275,7 @@ ActiveRecord::Schema.define(version: 20140526155310) do
     t.text     "contact"
     t.string   "business_name"
     t.string   "business_type"
-    t.string   "about_business"
+    t.text     "about_business"
     t.date     "business_created_at"
   end
 

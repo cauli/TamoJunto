@@ -64,6 +64,7 @@ describe User do
 
   describe 'associations' do
     it { should have_many :articles }
+    it { should belong_to :state }
   end
 
   describe 'validations' do

@@ -26,6 +26,7 @@ gem 'sanitize'
 gem 'auto_html', '~> 1.6.1'
 gem 'kaminari'
 gem 'pg_search'
+gem 'ranked-model'
 
 # I18n
 gem 'rails-i18n'

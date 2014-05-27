@@ -1,5 +1,6 @@
 class Topic < ActiveRecord::Base
   include PgSearch
+  include RankedModel
 
   validates :title, presence: true
 
@@ -11,6 +12,7 @@ class Topic < ActiveRecord::Base
   has_one :question
 
   acts_as_taggable
+  ranks :row_order
 
   pg_search_scope :search_by_title, :against => :title
 

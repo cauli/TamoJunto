@@ -3,15 +3,19 @@ class Admin::TopicsController < Admin::BaseController
   actions :all, except: :show
   respond_to :html
 
-  protected
-  def collection
-    @topics ||= end_of_association_chain.page(params[:page]).order('created_at desc')
+  def sort
+    resource.update_attribute :row_order_position, params[:topic][:row_order_position]
+
+    render nothing: true
   end
+
+  protected
 
   def permitted_params
     params.permit(topic: [:title,
                           :description,
                           :tag_list,
+                          :row_order_position,
                           article_ids: [],
                           document_ids: [],
                           event_ids: [],

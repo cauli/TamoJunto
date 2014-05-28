@@ -43,7 +43,11 @@ TamoJunto::Application.routes.draw do
     resources :users, except: [:new, :create, :show]
     resources :organizations, except: [:new, :create, :show]
     resources :themes, except: :show
-    resources :topics, except: :show
+    resources :topics, except: :show do
+      member do
+        post :sort
+      end
+    end
     resources :questions, except: :show
     resources :events, except: [:new, :create, :show] do
       member do

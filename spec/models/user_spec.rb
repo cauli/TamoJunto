@@ -171,4 +171,9 @@ describe User do
       its(:downvoted_videos) { should eq [downvoted] }
     end
   end
+
+  describe '#first_name' do
+    let (:user) { User.make! name: 'John Snow' }
+    it { expect(user.first_name).to eq 'John'}
+  end
 end

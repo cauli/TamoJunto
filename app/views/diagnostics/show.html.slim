@@ -18,7 +18,7 @@
               = topic.question.theme.title
 
           .topic
-            h5 = "Rafael, #{resource.result_text(topic.question.theme)[0]}"
+            h5 = "#{current_user.first_name}, #{resource.result_text(topic.question.theme)[0]}"
             p = resource.result_text(topic.question.theme)[1] 
 
             h5 = link_to topic.title, topic

@@ -20,4 +20,8 @@ acts_as_copy_target
     update_attribute(:active, false)
   end
 
+  def first_name
+    name.split(' ').first
+  end
+
 end

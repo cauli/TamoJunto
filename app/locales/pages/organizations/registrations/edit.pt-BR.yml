@@ -14,9 +14,11 @@ pt-BR:
         are_you_sure: "Tem certeza?"
         individual: 'Individual'
         legal_entity: 'Entidade Legal'
-        NGO: 'Organização Não-governamental'
+        ngo: 'Organização Não-governamental'
         university: 'Instituição de Ensino'
         public_organ: 'Orgão Público'
+        update: 'Atualizar perfil'
+
     shared:
       social_links:
         sign_in_with: "Sign in with %{provider}"

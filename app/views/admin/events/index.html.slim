@@ -25,7 +25,7 @@
                 li = link_to t('.change_state.approve'), approve_admin_event_path(event)
               - unless event.canceled?
                 li = link_to t('.change_state.cancel'), cancel_admin_event_path(event)
-              - unless event.rejected? || event.canceled?
+              - unless event.rejected? || event.canceled? || event.visible?
                 li = link_to t('.change_state.reject'), reject_admin_event_path(event)
 
 

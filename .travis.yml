@@ -11,3 +11,6 @@ before_script:
 
 script:
   - "CODECLIMATE_REPO_TOKEN=aa10698b99abe3598494654bfd2f146bb7fb9a74056129cc9acceafc4cb08726 bundle exec rspec spec"
+
+notifications:
+  hipchat: 8b95b146338c2ad7b1bd7e15cf7e96@Tamo Junto

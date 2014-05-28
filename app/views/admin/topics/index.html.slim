@@ -8,17 +8,18 @@
           = link_to t('words.create'), new_admin_topic_path, class: 'button'
 
     - Theme.all.order(:created_at).each do |theme|
-      h4 = "Tema: #{theme.title}"
-      table
-        tr
-          th = t('.topic_title')
-          th = t('.created_at')
-          th.edit
-          th.remove
-        - for topic in theme.topics do
+      .topics
+        h4 = "Tema: #{theme.title}"
+        table
           tr
-            td = topic.title
-            td = l topic.created_at, format: :short
-            td = link_to  t('words.edit'), edit_admin_topic_path(topic), class: 'button tiny fa fa-edit'
-            td = link_to t('words.remove'), [:admin, topic], data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button tiny alert fa fa-trash-o'
+            th = t('.topic_title')
+            th = t('.created_at')
+            th.edit
+            th.remove
+          - for topic in theme.topics.rank(:row_order) do
+            tr.sortable[data-update-path=sort_admin_topic_path(topic)]
+              td = topic.title
+              td = l topic.created_at, format: :short
+              td = link_to  t('words.edit'), edit_admin_topic_path(topic), class: 'button tiny fa fa-edit'
+              td = link_to t('words.remove'), [:admin, topic], data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button tiny alert fa fa-trash-o'
 

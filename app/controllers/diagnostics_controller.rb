@@ -42,12 +42,12 @@ class DiagnosticsController < ApplicationController
 
   def show
     authorize resource
-    unless resource.answers.any?
-      redirect_to diagnostic_questions_path(resource)
-    else
+    if resource.answers.any?
       @topics = resource.main_topics
       @secondary_topics = resource.secondary_topics
       show!
+    else
+      redirect_to diagnostic_questions_path(resource)
     end
   end
 

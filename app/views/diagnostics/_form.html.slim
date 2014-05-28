@@ -4,7 +4,7 @@
       h3 = t('.themes')
       .themes-inputs 
         .row
-          = f.association :themes, as: :check_boxes, collection: Theme.all, label: false do |builder|
+          = f.association :themes, as: :check_boxes, collection: Theme.all.order(:created_at), label: false do |builder|
             - if builder.object.any?
               - for theme in builder.object
                 .large-6.columns

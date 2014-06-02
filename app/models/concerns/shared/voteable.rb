@@ -11,9 +11,5 @@ module Shared::Voteable
     def downvotes
       self.votes.where(vote: false).count
     end
-
-    def score
-      self.upvotes - self.downvotes
-    end
   end
 end

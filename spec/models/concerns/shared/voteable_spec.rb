@@ -34,13 +34,4 @@ describe Shared::Voteable do
     its(:downvotes) { should eq 3 }
   end
 
-  describe 'should calculate the correct score' do
-    before do
-      3.times { User.make!.vote_against(article) }
-      5.times { User.make!.vote_for(article) }
-      article.reload
-    end
-
-    its(:score) { should eq 2 }
-  end
 end

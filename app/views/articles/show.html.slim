@@ -19,3 +19,4 @@
             = image_tag @article.image.thumb('251x').url if @article.image.present?
           = render 'shared/vote', resource: @article
           = render 'shared/voted_by', resource: @article
+      = render 'shared/comments'

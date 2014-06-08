@@ -50,4 +50,4 @@ pt-BR:
         city: 'Cidade'
         state: 'Estado'
         business_created_at: 'Data de criação do negócio'
-        contact: 'Contato: e-mail, telefone etc.'
+        contact: 'Endereço'

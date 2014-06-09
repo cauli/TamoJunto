@@ -3,7 +3,7 @@ require 'spec_helper'
 describe ServicesController do
 
   describe '#show' do
-    let(:service) { Service.make! }
+    let(:service) { Service.make! state: :visible }
     before { get :show, id: service }
     it { expect(response).to be_success }
     it { expect(response).to render_template('services/show') }

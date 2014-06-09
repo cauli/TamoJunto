@@ -3,7 +3,7 @@ require 'spec_helper'
 describe EventsController do
 
   describe '#show' do
-    let(:event) { Event.make! }
+    let(:event) { Event.make! state: :visible }
     before { get :show, id: event }
     it { expect(response).to be_success }
     it { expect(response).to render_template('events/show') }

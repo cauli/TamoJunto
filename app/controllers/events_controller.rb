@@ -33,6 +33,11 @@ class EventsController < ApplicationController
     redirect_to event_path(resource), notice: t('.notice')
   end
 
+  def show
+    authorize resource
+    show!
+  end
+
   protected
   def permitted_params
     params.permit(event: [:name,

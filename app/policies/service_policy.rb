@@ -11,6 +11,10 @@ class ServicePolicy < ApplicationPolicy
     done_by_owner
   end
 
+  def show?
+    done_by_owner || record.visible?
+  end
+
   private
   def done_by_owner
     user.present? && record.organization == user

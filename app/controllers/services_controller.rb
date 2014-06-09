@@ -32,6 +32,11 @@ class ServicesController < ApplicationController
     destroy!
   end
 
+  def show
+    authorize resource
+    show!
+  end
+
   protected
   def permitted_params
     params.permit(service: [:name, :image, :description,

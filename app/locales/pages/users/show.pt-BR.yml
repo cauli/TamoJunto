@@ -1,5 +1,6 @@
 pt-BR:
   users:
     show:
+      profile: 'Perfil:'
       upvotes: 'Conteúdo favorito'
       diagnostic: 'Resultado de diagnósticos'

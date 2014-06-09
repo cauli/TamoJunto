@@ -29,21 +29,21 @@
           - if current_organization == @organization
             .pull-right
               = link_to t('.events.new'), new_event_path, class: 'button'
-        - if @events.any?
-          .row
-            = render @events
+          - if @events.any?
+            .row
+              = render @events
 
-      - if @services.any?
-        section.services
-          .row
+      section.services
+        .row
+          - if @services.any?
             .title
               .large-1.columns
                 = image_tag ('service-icon.png')
               h3
                 = t('.services.title')
-      - if current_organization == @organization
-        .pull-right
-                  = link_to t('.services.new'), new_service_path, class: 'button'
-      - if @services.any?
-          .row
-            = render @services
+          - if current_organization == @organization
+            .pull-right
+                      = link_to t('.services.new'), new_service_path, class: 'button'
+          - if @services.any?
+              .row
+                = render @services

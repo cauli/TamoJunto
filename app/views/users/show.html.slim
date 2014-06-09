@@ -21,17 +21,18 @@
 
         - if @user == current_user
           .content#panel-diagnostic
-            table
-              thead
-                tr
-                  th = t('.date')
-                  th = t('.themes')
-                  th = t('.topics')
-              tbody
-                - for diagnostic in @user.diagnostics do
+            - if @user.diagnostics.any?
+              table
+                thead
                   tr
-                    td = link_to l(diagnostic.created_at, format: :short), diagnostic_path(diagnostic)
-                    td = link_to diagnostic.themes.map { |t| t.title }.join(', '), diagnostic_path(diagnostic)
-                    td = link_to diagnostic.main_topics.map { |o| o.title }.join(', '), diagnostic_path(diagnostic)
+                    th = t('.date')
+                    th = t('.themes')
+                    th = t('.topics')
+                tbody
+                  - for diagnostic in @user.diagnostics do
+                    tr
+                      td = link_to l(diagnostic.created_at, format: :short), diagnostic_path(diagnostic)
+                      td = link_to diagnostic.themes.map { |t| t.title }.join(', '), diagnostic_path(diagnostic)
+                      td = link_to diagnostic.main_topics.map { |o| o.title }.join(', '), diagnostic_path(diagnostic)
 
 

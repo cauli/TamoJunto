@@ -1,7 +1,6 @@
 .new-diagnostic-page
   .themes-inputs
     padding-top: +rem-calc(25px)
-    counter-reset: theme-ids
 
 .new-diagnostic-page .themes-inputs,
 .questions-page .answer-inputs
@@ -10,7 +9,6 @@
     font-size: 140%
     margin-bottom: +rem-calc(10px)
     padding: +rem-calc(8px)
-    counter-increment: theme-ids
     border-radius: $global-radius
     font-weight: 500
     float: left
@@ -18,7 +16,6 @@
       background: $alert-color
       color: #fff
     &:before
-      content: counter(theme-ids, lower-alpha)
       padding-right: +rem-calc(7px)
       font-size: 60%
       vertical-align: top

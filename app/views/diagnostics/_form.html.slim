@@ -6,9 +6,11 @@
         .row
           = f.association :themes, as: :check_boxes, collection: Theme.all.order(:created_at), label: false do |builder|
             - if builder.object.any?
+              - images = %w{a b c d e f g h i j k}
               - for theme in builder.object
                 .large-6.columns
                   = f.label "theme_ids_#{theme.id}" do
+                    = image_tag("icon-theme-#{images[theme.id]}.png", size: '55x55')
                     = theme.title
                     .hide
                       = check_box_tag 'diagnostic[theme_ids][]', theme.id, false, {id: "diagnostic_theme_ids_#{theme.id}"}

@@ -24,11 +24,15 @@
             h5 = link_to topic.title, topic
 
       .more-items
-        h5 = t('.see_more')
-        p = t('.see_more_description')
+        h5
+          = link_to t('.see_more'), '#', id: 'see-more', onclick: 'return false'
 
+      .more.hide
+        p = t('.see_more_description')
         .topics
           ul
             - @secondary_topics.each do |topic|
               - if topic.present?
                 li = link_to topic.title, topic
+      br/
+      br/

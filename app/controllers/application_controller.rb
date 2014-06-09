@@ -83,8 +83,13 @@ class ApplicationController < ActionController::Base
         resource.update_attribute(:active, true)
         flash[:notice] = t('controllers.registrations.reactivated')
       end
+      if resource.created_at.round == resource.current_sign_in_at.round
+        flash[:notice] = t('controllers.registrations.welcome', user: resource.name)
+      end
+      user_path(resource)
+    else
+      organization_path(resource)
     end
-    root_path
   end
 
   private

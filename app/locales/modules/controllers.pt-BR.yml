@@ -1,10 +1,13 @@
 pt-BR:
   registrations:
     reactivated: 'Conta reativada'
+    welcome: 'Seja bem vindo %{user}!'
   diagnostics:
     questions_required: 'É necessário preencher todas as perguntas'
   controllers:
     not_authorized: 'Você não tem permissão para acessar esta página'
     diagnostics:
       questions_required: 'Favor preencher todas as questões abaixo'
+    registrations:
+      welcome: 'Seja bem vindo %{user}!'
 

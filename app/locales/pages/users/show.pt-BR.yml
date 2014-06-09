@@ -4,3 +4,6 @@ pt-BR:
       profile: 'Perfil:'
       upvotes: 'Conteúdo favorito'
       diagnostic: 'Resultado de diagnósticos'
+      date: 'Data do diagnóstico'
+      themes: 'Temas selecionados'
+      topics: 'Resultados principais'

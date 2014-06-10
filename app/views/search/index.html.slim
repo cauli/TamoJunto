@@ -4,6 +4,8 @@
       .large-12.columns
         h2
           = t('.title')
+        h3
+          = t('.subtitle')
 
         = simple_form_for :search, url: search_path do |f|
           .row
@@ -12,6 +14,12 @@
               = f.input :query, as: :search, label: false, input_html: { value: params[:search].try(:[], :query) }
             .large-6.columns
               = f.button :submit, t('.submit')
+          .row
+            .large-6.columns
+              .hint
+                ul
+                  li = t('.hint-1')
+                  li = t('.hint-2')
 
   .row.content-list
     .large-12.columns
@@ -19,6 +27,16 @@
       - if @articles.any? || @videos.any? || @events.any? || @services.any? || @documents.any? || @topics.any?
 
         h3.results = t('.result', query: params[:search].try(:[], :query))
+
+        - if @topics.any?
+          section.topics
+            .row
+              .title
+                .large-1.columns
+                  =image_tag ('topic-icon.png')
+                h3 = t('.topics.title')
+            ol
+              = render @topics
 
         - if @articles.any?
           section.articles
@@ -70,12 +88,6 @@
             ol
               = render @documents
 
-        - if @topics.any?
-          section.topics
-            .row
-              .title
-                .large-1.columns
-                  =image_tag ('topic-icon.png')
-                h3 = t('.topics.title')
-            ol
-              = render @topics
+      - else
+        h6 = t('.no-result')
+

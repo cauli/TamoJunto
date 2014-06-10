@@ -14,7 +14,10 @@ header.contain-to-grid.sticky
       / Left Nav Section
       ul.left
         li#new_idea
-        li = link_to t('.search'), search_path
+        li
+          = link_to search_path do
+            i.fa.fa-search
+            = t('.search')
         li = link_to t('.diagnostics'), new_diagnostic_path
 
       / Right Nav Section

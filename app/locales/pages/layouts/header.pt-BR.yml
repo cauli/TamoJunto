@@ -1,8 +1,8 @@
 pt-BR:
   layouts:
     header:
-      search: 'Buscar conteúdo'
-      diagnostics: 'Responder questionário'
+      search: ' Buscar'
+      diagnostics: 'Identifique sua necessidade'
       my-profile: 'Meu perfil'
       sign-in: 'Sou um empreendedor'
       org-sign-in: 'Sou um apoiador'

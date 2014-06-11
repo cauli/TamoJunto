@@ -34,5 +34,7 @@
             - @secondary_topics.each do |topic|
               - if topic.present?
                 li = link_to topic.title, topic
+        = t('.or')
+        p = link_to t('.search'), search_path
       br/
       br/

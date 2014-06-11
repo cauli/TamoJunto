@@ -3,5 +3,7 @@ pt-BR:
     show:
       title: 'Resultados do seu diagnóstico'
       theme: 'Tema %{number}'
-      see_more: 'Ver mais'
-      see_more_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      see_more: 'Não está satisfeito com essas sugestões?'
+      see_more_description: 'Acesse os próximos tópicos indicados para seus interesses!'
+      or: 'Ou'
+      search: 'Faça uma busca livre pelos temas de seu interesse!'

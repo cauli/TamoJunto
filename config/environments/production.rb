@@ -1,6 +1,6 @@
 TamoJunto::Application.configure do
   # Google Analytics
-  config.middleware.use Rack::GoogleAnalytics, :tracker => 'YOUR-ANALYTICS-CODE'
+  config.middleware.use Rack::GoogleAnalytics, :tracker => ENV['ga_tracker']
 
   # Settings specified here will take precedence over those in config/application.rb.
 

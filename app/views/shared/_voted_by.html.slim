@@ -1,4 +1,4 @@
 h4 = t('.title')
-- resource.voters_who_voted.each do |user|
+- resource.voters_who_voted_for.each do |user|
   = link_to user, class: 'avatar' do
     = image_tag user.avatar_url('50x50#'), size: '50x50'

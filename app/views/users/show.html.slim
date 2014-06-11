@@ -33,6 +33,7 @@
                     tr
                       td = link_to l(diagnostic.created_at, format: :short), diagnostic_path(diagnostic)
                       td = link_to diagnostic.themes.map { |t| t.title }.join(', '), diagnostic_path(diagnostic)
-                      td = link_to diagnostic.main_topics.map { |o| o.title }.join(', '), diagnostic_path(diagnostic)
-
+                      td 
+                        - if diagnostic.try(:main_topics).try(:count) > 0
+                          = link_to diagnostic.main_topics.map { |o| o.title }.join(', '), diagnostic_path(diagnostic)
 

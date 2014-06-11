@@ -2,7 +2,7 @@ pt-BR:
   layouts:
     header:
       search: ' Buscar'
-      diagnostics: 'Identifique sua necessidade'
+      diagnostics: ' Identifique sua necessidade'
       my-profile: 'Meu perfil'
       sign-in: 'Sou um empreendedor'
       org-sign-in: 'Sou um apoiador'

@@ -1,3 +1,10 @@
+@mixin vertical-align
+  position: absolute
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
 .new-diagnostic-page
   .themes-inputs
     padding-top: +rem-calc(25px)
@@ -7,7 +14,7 @@
   label
     color: $alert-color
     font-size: 140%
-    margin-bottom: +rem-calc(10px)
+    //margin-bottom: +rem-calc(10px)
     padding: +rem-calc(8px)
     border-radius: $global-radius
     font-weight: 500
@@ -44,6 +51,28 @@
       padding-left: +rem-calc(25px)
       h5
         font-weight: 400
+    .question
+      background-color: #f4f4f4
+      border-radius: +rem-calc(10px)
+      margin-bottom: +rem-calc(20px)
+      min-height: 80px
+      .question-text
+        b
+          color: $secondary-color
+        padding: 29px
+        font-size: +rem-calc(20px)
+      h5
+        font-size: 150%
   .answer-inputs
+    .radio
+      border-radius: +rem-calc(10px)
+      border: 2px solid
     label
-      clear: both
+      float: left
+      margin-bottom: 0px
+  .answers
+    @include vertical-align
+    right: 0px
+    .radio_buttons
+      position: relative
+      float: right

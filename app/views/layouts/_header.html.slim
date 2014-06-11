@@ -18,7 +18,10 @@ header.contain-to-grid.sticky
           = link_to search_path do
             i.fa.fa-search
             = t('.search')
-        li = link_to t('.diagnostics'), new_diagnostic_path
+        li 
+          = link_to new_diagnostic_path do
+            i.fa.fa-file-text
+            = t('.diagnostics')
 
       / Right Nav Section
       ul.right

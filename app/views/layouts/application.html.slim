@@ -20,7 +20,7 @@ head
 
 body
   = initjs_tag app_name: 'TamoJunto'
-  = render 'layouts/header'
+  = render 'layouts/header' unless !user_signed_in? && !organization_signed_in?
   = render 'layouts/flash', flash: flash if flash.present?
   - if admin?
     section.admin

@@ -1,0 +1,24 @@
+pt-BR:
+  home:
+    index:
+      cta: 'Juntos, vamos te ajudar a desenvolver o teu negócio'
+      entepreneur: 'Sou um empreendedor'
+      organization: 'Sou um apoiador'
+      what_is: 'Tamo Junto é o ponto de encontro de pessoas e organizações para oferecer ao microempreendedor(a) brasileiro(a) mais oportunidades de crescimento para ele e para o seu negócio através de conteúdos, serviços e eventos.'
+      advantages: 'Quais são as vantagens para mim?'
+      see_more: 'Quero saber mais'
+      discover_html: 'Descubra <b>conteúdos que vão ajudar você</b> e o seu negócio.'
+      see-content_html: 'Para descobrir <b>os conteúdos que mais se encaixam</b> com o que você precisa para o seu negócio.'
+      search_html: 'Caso você <b>já saiba o que precisa</b>, é só fazer uma <b>busca simples.</b>'
+      become_an_organization: 'Seja um apoiador'
+      organization_text: 'No Tamo Junto você tem a oportunidade de se conectar a milhares de microempreendedores brasileiros através de um cadastro simples. Lá você pode registrar quais serviços você presta, além dos eventos que você organiza. Tudo isso pensando em como melhorar a vida de microempreendedores brasileiros.'
+      become_an_organization: 'Quero ser um apoiador'
+      realization: 'Realização'
+      alianca: 'Organização social que fomenta e apoia o empreendedorismo em comunidades de baixa renda, atravéz de projetos de inclusão empreendedora, negócios inclusivos e disseminação da causa. Desde 2005 já apoiou mais de 15.000 microempreendedores em todo o Brasil oferecendo conhecimento, investimento, redes e oportunidades de mercado.'
+      sponsor_text: 'Patrocínio'
+      help: 'Ajuda'
+      contact: 'Fale conosco'
+      privacy_policy: 'Política de privacidade'
+      terms: 'Termos de utilização'
+      open_source_html: 'Código aberto iniciado em 2014. Disponível no <a href="http://github.com/enageis/tamojunto">Github.</a>'
+

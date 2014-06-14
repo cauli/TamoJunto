@@ -89,5 +89,6 @@
               = render @documents
 
       - else
-        h6 = t('.no-result')
+        - if params[:search]
+          h6 = t('.no-result')
 

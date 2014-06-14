@@ -1,1 +1,14 @@
 footer
+  .row
+    .large-9.columns
+      ul.links
+        li = t('.help')
+        li = t('.contact')
+        li = t('.privacy_policy')
+        li = t('.terms')
+      p.open-source = t('.open_source_html')
+
+    .large-3.columns.text-right
+      = link_to 'http://engage.is' do
+        = image_tag 'engage-logo.png', class: 'logo-engage'
+

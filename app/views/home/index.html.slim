@@ -1,5 +1,71 @@
-.row
-  .large-12.columns
-    br/
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+.home
+  .cta
+    .row
+      .large-4.large-centered.columns
+        .logo
+    .row
+      .large-8.large-centered.columns
+        h1.cta-text = t('.cta')
+    .row
+      .large-6.large-centered.columns
+        ul.buttons
+          li = link_to t('layouts.header.sign-in'), new_user_session_path, class: 'button sign-in'
+          li.right = link_to t('layouts.header.org-sign-in'), new_organization_session_path, class: 'button border-button'
+
+  .video
+    .row
+      .large-6.columns
+        iframe src="//player.vimeo.com/video/97455734?color=ffffff" width="500" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+      .large-5.columns
+        .what-is
+          p.content = t('.what_is')
+
+  .entepreneur
+    .row
+      .large-8.columns.content
+        .small = t('.advantages')
+        h2 = t('layouts.header.sign-in')
+      .large-3.columns
+        .see-more.small.text-right
+          = t('.see_more')
+    .row
+      .large-4.columns
+        .white
+          = image_tag('box-01.png', class: 'discover')
+          p.discover-text.text = t('.discover_html') 
+      .large-4.columns
+        .white
+          = image_tag('box-02.png', class: 'see-content')
+          p.see-content-text.text = t('.see-content_html')
+      .large-4.columns
+        .white
+          = image_tag('box-03.png', class: 'search')
+          p.search-text.text = t('.search_html')
+
+  .organization
+    .row
+      .large-12.columns.organization-box
+        .row
+          .large-8.columns
+            .content-image
+              = image_tag 'apoiadores.png'
+            .content-title
+              h4 = t('.become_an_organization')
+        .row
+          .text
+            = t('.organization_text')
+          .become-an-org
+            = link_to t('.become_an_organization'), '#', class: 'button'
+
+  .sponsors.text-center
+    .title.realization
+      = t('.realization')
+    .alianca-logo
+      = image_tag 'alianca-logo.png'
+    .alianca-text
+      = t('.alianca')
+    .title.sponsrs-title
+      = t('.sponsor_text')
+    .logos
+      ul
+        li = image_tag 'caf-logo.png' 

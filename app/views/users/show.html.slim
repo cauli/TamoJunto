@@ -29,7 +29,7 @@
                     th = t('.themes')
                     th = t('.topics')
                 tbody
-                  - for diagnostic in @user.diagnostics do
+                  - for diagnostic in @user.diagnostics.order('created_at desc') do
                     tr
                       td = link_to l(diagnostic.created_at, format: :short), diagnostic_path(diagnostic)
                       td = link_to diagnostic.themes.map { |t| t.title }.join(', '), diagnostic_path(diagnostic)

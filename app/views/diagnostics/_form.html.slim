@@ -10,7 +10,7 @@
               - for theme in builder.object
                 .large-6.columns.end
                   = f.label "theme_ids_#{theme.id}" do
-                    = image_tag("icon-theme-#{images[theme.id]}.png", size: '55x55')
+                    = image_tag("icon-theme-#{images.shift}.png", size: '55x55')
                     = theme.title
                     .hide
                       = check_box_tag 'diagnostic[theme_ids][]', theme.id, false, {id: "diagnostic_theme_ids_#{theme.id}"}

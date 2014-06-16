@@ -65,6 +65,7 @@ end
 Theme.blueprint do
   title { 'Nice title' }
   description { 'Some nice theme description' }
+  image       { File.open("#{Rails.root}/spec/fixtures/image.png") }
 end
 
 Topic.blueprint do

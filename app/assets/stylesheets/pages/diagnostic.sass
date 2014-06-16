@@ -8,10 +8,10 @@
 
     h2, p
       text-shadow: 4px 4px 10px #000
+
   .themes-inputs
     padding-top: +rem-calc(25px)
-  .divisor
-    margin: 50px 20px
+
 
 .new-diagnostic-page .themes-inputs,
 .questions-page .answer-inputs
@@ -25,8 +25,8 @@
     float: left
     padding-right: +rem-calc(20px)
     +single-transition(all, .3s)
-    margin-right: 19px
-    padding-left: 19px
+    margin-right: +rem-calc(19px)
+    padding-left: +rem-calc(19px)
     
     &.checked
       background: $alert-color
@@ -39,7 +39,7 @@
       background: rgb(248,170,105)
       color: white
     img
-      margin-right: 12px
+      margin-right: +rem-calc(12px)
 
 .diagnostic-page
   .result-item
@@ -53,9 +53,9 @@
         font-size: +rem-calc(28px)
       .icon-theme
         float: left
-        width: 55px
-        margin-top: 18px
-        margin-right: 10px
+        width: +rem-calc(55px)
+        margin-top: +rem-calc(18px)
+        margin-right: +rem-calc(10px)
 
     .topic
       padding-left: +rem-calc(25px)
@@ -65,8 +65,8 @@
   .more-items
     border: 1px solid $alert-color
     padding: 10px 0
-    border-radius: 6px
-    margin-bottom: 20px
+    border-radius: +rem-calc(6px)
+    margin-bottom: +rem-calc(20px)
     h5
       color: $alert-color
       font-weight: 600
@@ -85,9 +85,9 @@
 
     .icon-theme
       float: left
-      width: 55px
-      margin-top: 18px
-      margin-right: 10px
+      width: +rem-calc(55px)
+      margin-top: +rem-calc(18px)
+      margin-right: +rem-calc(10px)
 
     .questions
       padding-left: +rem-calc(10px)
@@ -97,11 +97,11 @@
       background-color: #f4f4f4
       border-radius: +rem-calc(10px)
       margin-bottom: +rem-calc(20px)
-      min-height: 80px
+      min-height: +rem-calc(80px)
       .question-text
         b
           color: $secondary-color
-        padding: 29px
+        padding: +rem-calc(29px)
         font-size: +rem-calc(20px)
       h5
         font-size: 150%
@@ -114,7 +114,7 @@
       margin-bottom: 0
   .answers
     @include vertical-align
-    right: 0px
+    right: 0
     .radio_buttons
       position: relative
       float: right

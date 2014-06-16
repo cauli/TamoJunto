@@ -16,22 +16,29 @@
       h2 = t('.about')
       p = @organization.about
 
+  .row
+    .small-1.small-centered.columns
+      = image_tag ('divisor.png'), class: 'divisor'
+
   .row.content-list
     .large-12.columns
       section.events
         .row
+
           - if @events.any?
             .title
               .large-1.columns
                 = image_tag ('event-icon.png')
               h3
                 = t('.events.title')
+          - if @events.any?
+            .row
+              .small-12.columns
+                = render @events
           - if current_organization == @organization
             .pull-right
               = link_to t('.events.new'), new_event_path, class: 'button'
-          - if @events.any?
-            .row
-              = render @events
+
 
       section.services
         .row
@@ -41,9 +48,12 @@
                 = image_tag ('service-icon.png')
               h3
                 = t('.services.title')
-          - if current_organization == @organization
-            .pull-right
-                      = link_to t('.services.new'), new_service_path, class: 'button'
+
           - if @services.any?
               .row
-                = render @services
+                .small-12.columns
+                  = render @services
+
+          - if current_organization == @organization
+            .pull-right
+              = link_to t('.services.new'), new_service_path, class: 'button'

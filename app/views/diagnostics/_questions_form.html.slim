@@ -29,10 +29,16 @@
                       = f.simple_fields_for :answers do |a|
                           = a.input :question_id, as: :hidden, input_html: { value: q.id }
                           .answer-inputs.js-answer-inputs
-                            = a.input :option, as: :radio_buttons, required: true, 
-                              label: false, collection: [[q.good_answer, true], 
-                                                         [q.bad_answer, false]],
-                              input_html: { class: 'hide' }, label_wrapper: 'aa'
+                            - if q.good_answer.downcase == 'sim'
+                              = a.input :option, as: :radio_buttons, required: true, 
+                                label: false, collection: [[q.good_answer, true], 
+                                                           [q.bad_answer, false]],
+                                input_html: { class: 'hide' }, label_wrapper: 'aa'
+                            - else
+                              = a.input :option, as: :radio_buttons, required: true, 
+                                label: false, collection: [[q.bad_answer, false], 
+                                                           [q.good_answer, true]],
+                                input_html: { class: 'hide' }, label_wrapper: 'aa'
           .questions
             - t.related_questions.filtered(@theme_ids, @showed_question_ids).each do |q|
               - @showed_question_ids << q.id

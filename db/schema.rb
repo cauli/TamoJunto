@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140527210729) do
+ActiveRecord::Schema.define(version: 20140616132726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -234,6 +234,7 @@ ActiveRecord::Schema.define(version: 20140527210729) do
     t.text     "bad_text"
     t.text     "good_headline"
     t.text     "bad_headline"
+    t.string   "image_uid"
   end
 
   create_table "topics", force: true do |t|

@@ -41,6 +41,7 @@ describe Admin::ThemesController do
   protected
   def theme_params
     { 'title'       => 'Some nice theme',
-      'description' => 'Some nice theme description' }
+      'description' => 'Some nice theme description',
+      'image'       => File.open("#{Rails.root}/spec/fixtures/image.png") }
   end
 end

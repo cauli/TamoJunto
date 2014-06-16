@@ -1,7 +1,12 @@
 = simple_form_for [:admin, @theme] do |f|
   .row
-    .large-12.columns
+    .large-8.columns
       = f.input :title
+    .large-4.columns
+      = f.input :image, as: :file, required: false
+      - if @theme.image.present?
+        = image_tag @theme.image.thumb('50x').url
+    .large-12.columns
       = f.input :good_headline, as: :string
       = f.input :good_text
       = f.input :bad_headline, as: :string

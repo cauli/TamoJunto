@@ -6,12 +6,14 @@
 .questions-page .answer-inputs
   label
     color: $alert-color
-    font-size: 140%
+    font-size: 165%
     //margin-bottom: +rem-calc(10px)
     padding: +rem-calc(8px)
     border-radius: $global-radius
     font-weight: 500
     float: left
+    padding-right: +rem-calc(20px)
+    +single-transition(all, .3s)
     &.checked
       background: $alert-color
       color: #fff
@@ -19,6 +21,10 @@
       padding-right: +rem-calc(7px)
       font-size: 60%
       vertical-align: top
+    &:hover
+      background: rgb(248,170,105)
+    img
+      margin-right: 12px
 
 .diagnostic-page
   .result-item

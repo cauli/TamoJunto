@@ -57,15 +57,19 @@
           .become-an-org
             = link_to t('.become_an_organization'), '#', class: 'button'
 
-  .sponsors.text-center
-    .title.realization
+  .sponsors
+    .title#realization.text-center
       = t('.realization')
-    .alianca-logo
-      = image_tag 'alianca-logo.png'
-    .alianca-text
-      = t('.alianca')
-    .title.sponsrs-title
-      = t('.sponsor_text')
-    .logos
-      ul
-        li = image_tag 'caf-logo.png' 
+    .row.logos
+      .small-2.columns
+        = image_tag 'alianca-logo.png'
+      .small-10.columns
+        #alianca-text
+          = t('.alianca')
+    .row
+      .title#sponsors-title.text-center
+        = t('.sponsor_text')
+      .small-12.centered-columns
+        .logos.text-center
+          ul
+            li = image_tag 'caf-logo.png' 

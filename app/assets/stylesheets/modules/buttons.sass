@@ -4,9 +4,13 @@
   &.border-button
     color: white
     border: 2px solid
-    background: transparent !important
+    background: rgba(255,255,255,0.1) !important
     padding-top: +rem-calc(3.5)
     padding-bottom: +rem-calc(4.5)
+    +single-transition(all, .3s)
+
+    &:hover
+      background: rgba(255,255,255,0.3) !important
 
   &.facebook
     background: $facebook-color

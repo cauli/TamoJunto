@@ -1,38 +1,42 @@
 .home
   .cta
     background: asset-url('banner.jpg') center
-    height: 500px
+    height: +rem-calc(500px)
+    
 
   .logo
     background: asset-url('logo-home.png') center no-repeat
-    height: 135px
-    margin-top: 45px
+    height: +rem-calc(135px)
+    margin-top: +rem-calc(45px)
 
   .cta-text
     color: #FFF
-    margin-top: 60px
+    margin-top: +rem-calc(60px)
     text-align: center
-
+    text-shadow: 4px 4px 9px #333
   .buttons
     li
       display: inline
       list-style-type: none
     a
       &.sign-in
-        padding-top: 8px
+        padding-top: +rem-calc(8px)
       line-height: 19pt
       text-align: center
       font-size: +rem-calc(15)
       padding-top: +rem-calc(4.5) center
       padding-bottom: +rem-calc(4.5)
-      margin-top: 20px
-      height: 40px
+      margin-top: +rem-calc(20px)
+      height: +rem-calc(40px)
 
   .video
-    margin-top: 100px
-    margin-bottom: 100px
+    margin-top: +rem-calc(100px)
+    margin-bottom: +rem-calc(100px)
+    iframe
+      border: 5px solid white
+      outline: #ccc solid thin
     .what-is
-      height: 300px
+      height: +rem-calc(300px)
       display: table-cell
       vertical-align: middle
       .content
@@ -84,28 +88,32 @@
 
   .organization
     height: 320px
-    background-color: #f4f4f4
+    background-color: $alert-color
 
     .organization-box
       border-radius: +rem-calc(10px)
-      background-color: #fcfcfc
-      border: #fff 2px solid
+      background-color: #f8aa69
       height: 200px
       margin-top: 60px
 
       .content-image
         padding: 35px 0 0 35px
         float: left
+
       .content-title
         padding: 35px 0 0 15px
         float: left
+        h4
+          color: white
+          font-weight: 600
 
     .text
       padding: 20px 0 0 35px
-      font-size: 12pt
-      color: $secondary-color
+      font-size: 16px
+      color: #fff
       float: left
       width: 700px
+      line-height: 18px
     .become-an-org
       padding-top: 20px
 
@@ -116,26 +124,20 @@
       text-decoration: bold
       font-size: 13pt
       color: #d9d9d9
-      &.realization
+      &#realization
         padding-top: 65px
-      &.sponsrs-title
+      &#sponsors-title
         padding-top: 100px
-    .alianca-logo
-      margin-top: 40px
-    .alianca-text
+
+    #alianca-text
       margin-top: 15px
-      width: 700px
-      display: block
-      margin-left: auto
-      margin-right: auto
-      font-size: 13pt
-      color: $secondary-color
+
     .logos
-      padding-top: 45px
+      padding-top: 20px
       ul
         margin: 0
-      li
-        display: inline
-        list-style-type: none
-        margin: 0 10px 0 10px
+        li
+          display: inline
+          list-style-type: none
+          margin: 0 10px 0 10px
 

@@ -12,7 +12,8 @@
 
         .result-item
           .theme
-            h3
+            = image_tag ('icon-theme-c.png'), class: 'icon-theme'
+            h4
               small = t('.theme', number: i)
               br/
               = topic.question.theme.title
@@ -22,6 +23,10 @@
             p = resource.result_text(topic.question.theme)[1] 
 
             h5 = link_to topic.title, topic
+          
+          .row
+            .small-1.small-centered.columns
+              = image_tag ('divisor.png'), class: 'divisor'
 
       .more-items
         h5
@@ -37,6 +42,9 @@
         = t('.or')
         br/
         br/
-        p = link_to t('.search'), search_path
+        h5 
+          | Faça uma  
+          span = link_to t('.search'), search_path
+          | pelos temas de seu interesse!
       br/
       br/

@@ -1,19 +1,33 @@
-.new-diagnostic-page
+.new-diagnostic-page, .diagnostic-page, .questions-page
+  header
+    background: url('sml-bg.png')
+    h2
+      color: white
+    p
+      color: #eee
+
+    h2, p
+      text-shadow: 4px 4px 10px #000
   .themes-inputs
     padding-top: +rem-calc(25px)
+  .divisor
+    margin: 50px 20px
 
 .new-diagnostic-page .themes-inputs,
 .questions-page .answer-inputs
+
   label
     color: $alert-color
     font-size: 165%
-    //margin-bottom: +rem-calc(10px)
     padding: +rem-calc(8px)
     border-radius: $global-radius
     font-weight: 500
     float: left
     padding-right: +rem-calc(20px)
     +single-transition(all, .3s)
+    margin-right: 19px
+    padding-left: 19px
+    
     &.checked
       background: $alert-color
       color: #fff
@@ -23,6 +37,7 @@
       vertical-align: top
     &:hover
       background: rgb(248,170,105)
+      color: white
     img
       margin-right: 12px
 
@@ -31,23 +46,41 @@
     margin-bottom: +rem-calc(50px)
     .theme
       margin-bottom: +rem-calc(20px)
+      margin-bottom: +rem-calc(20px)
+      h4, small
+        color: $alert-color
+      h4
+        font-size: +rem-calc(28px)
+      .icon-theme
+        float: left
+        width: 55px
+        margin-top: 18px
+        margin-right: 10px
+
     .topic
       padding-left: +rem-calc(25px)
       h5
         font-weight: 400
 
-  .more-items
-    margin-top: +rem-calc(100px)
-    h5
-      color: $alert-color
 
 .questions-page
   .item
     margin-bottom: +rem-calc(25px)
     .theme
       margin-bottom: +rem-calc(20px)
+      h4, small
+        color: $alert-color
+      h4
+        font-size: +rem-calc(28px)
+
+    .icon-theme
+      float: left
+      width: 55px
+      margin-top: 18px
+      margin-right: 10px
+
     .questions
-      padding-left: +rem-calc(25px)
+      padding-left: +rem-calc(10px)
       h5
         font-weight: 400
     .question
@@ -68,7 +101,7 @@
       border: 2px solid
     label
       float: left
-      margin-bottom: 0px
+      margin-bottom: 0
   .answers
     @include vertical-align
     right: 0px

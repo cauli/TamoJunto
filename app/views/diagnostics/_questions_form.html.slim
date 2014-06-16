@@ -8,6 +8,7 @@
 
         .item
           .theme
+            = image_tag ('icon-theme-c.png'), class: 'icon-theme'
             h4
               small = t('.theme', number: i)
               br/
@@ -18,7 +19,7 @@
             - t.questions.each do |q|
               - iq += 1
               .row
-                .large-8.columns.question
+                .large-10.columns.question
                   .row
                     .large-8.columns.question-text
                       b = "0#{iq}. " 
@@ -52,6 +53,9 @@
                               label: false, collection: [[q.good_answer, true], 
                                                          [q.bad_answer, false]],
                               input_html: { class: 'hide' }, label_wrapper: 'aa'
+          .row
+            .small-1.small-centered.columns
+              = image_tag ('divisor.png'), class: 'divisor'
 
   .row
     .large-12.columns

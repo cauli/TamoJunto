@@ -8,7 +8,7 @@
 
         .item
           .theme
-            = image_tag ('icon-theme-c.png'), class: 'icon-theme'
+            = image_tag (t.image.thumb('55x').url), class: 'icon-theme'
             h4
               small = t('.theme', number: i)
               br/
@@ -45,7 +45,7 @@
               - iq += 1
 
               .row
-                .large-8.columns.question
+                .large-10.columns.question
                   .row
                     .large-8.columns.question-text
                       b = "0#{iq}. "
@@ -55,10 +55,16 @@
                       = f.simple_fields_for :answers do |a|
                           = a.input :question_id, as: :hidden, input_html: { value: q.id }
                           .answer-inputs.js-answer-inputs
-                            = a.input :option, as: :radio_buttons, required: true, 
-                              label: false, collection: [[q.good_answer, true], 
-                                                         [q.bad_answer, false]],
-                              input_html: { class: 'hide' }, label_wrapper: 'aa'
+                            - if q.good_answer.downcase == 'sim'
+                              = a.input :option, as: :radio_buttons, required: true, 
+                                label: false, collection: [[q.good_answer, true], 
+                                                           [q.bad_answer, false]],
+                                input_html: { class: 'hide' }, label_wrapper: 'aa'
+                            - else
+                              = a.input :option, as: :radio_buttons, required: true, 
+                                label: false, collection: [[q.bad_answer, false], 
+                                                           [q.good_answer, true]],
+                                input_html: { class: 'hide' }, label_wrapper: 'aa'
           .row
             .small-1.small-centered.columns
               = image_tag ('divisor.png'), class: 'divisor'

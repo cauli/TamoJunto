@@ -1,5 +1,6 @@
 .button
   @extend .radius
+  border: 2px solid $primary-color
 
   &.border-button
     color: white
@@ -16,6 +17,10 @@
     background: $facebook-color
     &:hover
       background: lighten($facebook-color, 0)
+
+  &.sign-in
+    margin-right: +rem-calc(10px)
+    margin-left: +rem-calc(6px)
 
   i
     margin-right: +rem-calc(5px)

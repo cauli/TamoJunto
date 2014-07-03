@@ -7,18 +7,18 @@
       .large-8.large-centered.columns
         h1.cta-text = t('.cta')
     .row
-      .large-6.large-centered.columns
+      .large-7.large-centered.columns
         ul.buttons
           li = link_to t('layouts.header.sign-in'), new_user_session_path, class: 'button sign-in'
-          li.right = link_to t('layouts.header.org-sign-in'), new_organization_session_path, class: 'button border-button'
+          li = link_to t('layouts.header.org-sign-in'), new_organization_session_path, class: 'button border-button'
 
   .video
     .row
-      .large-6.columns
-        iframe src="//player.vimeo.com/video/97455734?color=ffffff" width="500" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
-      .large-5.columns
-        .what-is
-          p.content = t('.what_is')
+      .small-8.small-centered.columns
+        iframe src="//player.vimeo.com/video/97455734?color=ffffff" width="635" height="390" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+    .row
+      .small-9.small-centered.columns.what-is
+        p.content = t('.what_is')
 
   .entepreneur
     .row

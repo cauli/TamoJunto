@@ -4,12 +4,6 @@ pt-BR:
       city: 'Cidade'
       phone: 'Telefone'
       about: 'Sobre'
-      organization: 'Organização'
-      individual: 'Individual'
-      legal_entity: 'Entidade Legal'
-      NGO: 'Organização não-governamental'
-      university: 'Instituição de Ensino'
-      public_organ: 'Orgão Público'
       events:
         title: 'Eventos'
         new: 'Criar novo evento'

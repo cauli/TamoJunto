@@ -1,7 +1,7 @@
 pt-BR:
   organizations:
     individual: 'Pessoa física'
-    legal_entity: 'Pessoa jurídica'
+    legal_entity: 'Empresa'
     NGO: 'ONG ou associação'
     university: 'Universidade'
     public_organ: 'Orgão público'

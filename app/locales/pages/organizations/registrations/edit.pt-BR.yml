@@ -12,11 +12,6 @@ pt-BR:
         back: "Back"
         update: "Update"
         are_you_sure: "Tem certeza?"
-        individual: 'Individual'
-        legal_entity: 'Entidade Legal'
-        ngo: 'Organização Não-governamental'
-        university: 'Instituição de Ensino'
-        public_organ: 'Orgão Público'
         update: 'Atualizar perfil'
 
     shared:

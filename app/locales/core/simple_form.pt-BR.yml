@@ -30,7 +30,7 @@ pt-BR:
         password: 'Senha'
         password_confirmation: 'Confirme a senha'
         remember_me: 'Lembrar de mim'
-        birthdate: 'Data de Nascimento'
+        birthdate: 'Data de criação/Data de nascimento'
         gender: 'Sexo'
         city: 'Cidade'
         state: 'Estado'

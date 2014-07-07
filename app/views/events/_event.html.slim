@@ -15,7 +15,8 @@
         = t('.by', link: link_to(event.organization.name, event.organization)).html_safe
     .large-4.columns
       .right
-        - if event.canceled?
-          = t('activerecord.attributes.event.canceled')
-        - else
-          = link_to t('words.remove'), event, data: { confirm: t('words.are_you_sure') }, method: :delete
+        - if current_organization.present? && event.organization == current_organization
+          - if event.canceled?
+            = t('activerecord.attributes.event.canceled')
+          - else
+            = link_to t('words.remove'), event, data: { confirm: t('words.are_you_sure') }, method: :delete

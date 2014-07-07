@@ -59,7 +59,7 @@
           .small-2.columns
             h5 = t('.value')
           .small-10.columns
-            - if @event.value > 0
+            - if @event.value.present? && @event.value > 0
               p = "R$ #{@event.value.round(2)}"
             - else
               p = t('.free')

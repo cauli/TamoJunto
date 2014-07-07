@@ -2,7 +2,7 @@ pt-BR:
   search:
     index:
       title: 'Buscar'
-      subtitle: 'por videos, artigos, ferramentas, eventos e serviços'
+      subtitle: 'por vídeos, artigos, ferramentas, eventos e serviços'
       submit: 'Buscar'
       hint-1: 'Para fazer sua pesquisa, digite palavras-chave relacionadas ao seu interesse. Por exemplo: "vendas", "fluxo de caixa", "microcrédito".'
       hint-2: 'Não digite frases longas, pois elas dificultam a busca. Por exemplo: "Quero melhorar minhas vendas", "Não sei me formalizar".'

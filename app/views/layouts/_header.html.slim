@@ -40,7 +40,7 @@ header.contain-to-grid.sticky
 
         - if user_signed_in? || organization_signed_in?
           li.has-dropdown
-            a[href="#"]
+            = link_to profile_url do
               .avatar = image_tag image, size: "50x50", class: 'profile-picture', alt: ''
               |  Olá, #{ user_name }!
             ul.dropdown

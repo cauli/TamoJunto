@@ -9,5 +9,13 @@
       h5 = link_to event.name, event, class: 'inverse'
 
   p = truncate(event.description, length: 140, separator:' ')
-  .by
-    = t('.by', link: link_to(event.organization.name, event.organization)).html_safe
+  .row
+    .large-8.columns
+      .by
+        = t('.by', link: link_to(event.organization.name, event.organization)).html_safe
+    .large-4.columns
+      .right
+        - if event.canceled?
+          = t('activerecord.attributes.event.canceled')
+        - else
+          = link_to t('words.remove'), event, data: { confirm: t('words.are_you_sure') }, method: :delete

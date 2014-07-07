@@ -10,4 +10,5 @@ pt-BR:
       when: 'Quando'
       hour: 'Hora'
       day: 'Dia'
-      external_link: 'Quero me inscrever'
+      free: 'Gratuito'
+      external_link: 'Quero saber mais sobre esse evento'

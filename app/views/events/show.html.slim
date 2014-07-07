@@ -21,7 +21,9 @@
         h3 = t('.about')
         .content
           p = simple_format @event.description
-          p = @event.tag_list
+          p
+            - if @event.tag_list.size > 0
+              i = "Tags: #{@event.tag_list}"
   
   .content-about
     .row
@@ -57,7 +59,10 @@
           .small-2.columns
             h5 = t('.value')
           .small-10.columns
-            p = @event.value
+            - if @event.value > 0
+              p = "R$ #{@event.value.round(2)}"
+            - else
+              p = t('.free')
 
     - if @event.external_link.present?
       .row  

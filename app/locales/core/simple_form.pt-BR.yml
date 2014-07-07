@@ -51,3 +51,11 @@ pt-BR:
         state: 'Estado'
         business_created_at: 'Data de criação do negócio'
         contact: 'Endereço'
+    placeholders:
+      event:
+        name: 'Coloque aqui o nome do seu evento'
+        description: 'É importante você dizer o objetivo do seu evento, para qual público-alvo ele se destina e um resumo de como ele está organizado'
+        local: 'Coloque o local do evento juntamente com o endereço'
+        time: 'Exemplo: das 8:00 às 19:00'
+        external_link: 'Caso você esteja divulgando o evento em outro site, coloque aqui o link para mais informações'
+        value: 'Coloque aqui quanto custará a participação no seu evento'

@@ -17,7 +17,7 @@ class Event < ActiveRecord::Base
   dragonfly_accessor :image
   acts_as_taggable
 
-  scope :visible, ->{ where(state: 'visible').where('ends_at > ?', Time.now) }
+  scope :visible, ->{ where(state: 'visible').where('ends_at >= ?', Time.now) }
 
   def self.search(search)
     if search

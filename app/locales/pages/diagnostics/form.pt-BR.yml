@@ -1,6 +1,6 @@
 pt-BR:
   diagnostics:
     form:
-      themes: 'Escolha dois temas'
+      themes: 'Para começar o diagnóstico, escolha dois temas:'
       continue: 'Continuar'
       theme: 'Tema %{number}'

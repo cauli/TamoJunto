@@ -1,25 +1,38 @@
 .user-page, .org-page
   min-height: +rem-calc(500)
   header.title
-    height: +rem-calc(135px)
-    margin-bottom: +rem-calc(75px)
+    margin-bottom: +rem-calc(10px)
+    padding-top: 20px
+    padding-bottom: 0
     h2
-      margin-top: +rem-calc(30px)
-
     .info
       p
         float: left
         margin-right: +rem-calc(25px)
+    .avatar
+      margin-top: 10px
+    #name
+      float: left
+      margin-left: 18px
+      h3
+        font-size: 18px
+        color: #666
+    #contact
+      float: left
+      margin-top: 10px
+      margin-left: 25px
+    #about
+      margin-left: 3px
 
-    .user-tabs
-      padding-top: +rem-calc(15px)
-      dd
-        float: left
-        padding-right: +rem-calc(25px)
-        a
-          color: lighten($body-font-color, 20%)
-        &.active
-          a
-            color: $body-font-color
-            font-weight: bold
+.user-tabs
+  padding-top: +rem-calc(15px)
+  dd
+    float: left
+    padding-right: +rem-calc(25px)
+    a
+      color: lighten($body-font-color, 20%)
+    &.active
+      a
+        color: $body-font-color
+        font-weight: bold
 

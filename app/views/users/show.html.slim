@@ -5,13 +5,25 @@
       .large-2.columns
         .avatar = image_tag @user.avatar_url('150x150#')
       .large-10.columns
-        h2 = @user.name
-        dl.user-tabs data-tab=""
-          dd.active
-            a href='#panel-upvotes' = t('.upvotes')
-          - if @user == current_user
-            dd
-              a href='#panel-diagnostic' = t('.diagnostic')
+        h2 = @user.name 
+        .row
+          #name
+            h3 = @user.business_name
+          #contact 
+            em = @user.contact
+        #about
+          p = @user.about_business
+          p#city = @user.city
+          p = @user.state_id
+
+  .row
+    .large-12.columns
+      dl.user-tabs data-tab=""
+        dd.active
+          a href='#panel-upvotes' = t('.upvotes')
+        - if @user == current_user
+          dd
+            a href='#panel-diagnostic' = t('.diagnostic')
 
   .row
     .large-12.columns

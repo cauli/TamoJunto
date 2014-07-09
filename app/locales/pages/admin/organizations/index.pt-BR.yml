@@ -2,7 +2,7 @@ pt-BR:
   admin:
     organizations:
       index:
-        title: 'Organizações'
+        title: 'Apoiadores'
         create: 'Criar'
         edit: 'Editar'
         remove: 'Remover'

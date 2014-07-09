@@ -10,7 +10,6 @@ class Diagnostic < ActiveRecord::Base
   validates :user_id, presence: true
   validate :validate_theme_count
 
-
   private
   def validate_theme_count
     errors.add(:themes, "invalid") if themes.size < 1

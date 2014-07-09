@@ -8,4 +8,11 @@ class Diagnostic < ActiveRecord::Base
   accepts_nested_attributes_for :answers
 
   validates :user_id, presence: true
+  validate :validate_theme_count
+
+
+  private
+  def validate_theme_count
+    errors.add(:themes, "invalid") if themes.size < 1
+  end
 end

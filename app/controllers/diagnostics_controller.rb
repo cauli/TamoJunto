@@ -11,10 +11,18 @@ class DiagnosticsController < ApplicationController
   end
 
   def create
-    @diagnostic = Diagnostic.new(permitted_params[:diagnostic].
-                       merge(user: current_user))
+    if permitted_params.present?
+      @diagnostic = Diagnostic.new({user: current_user}.merge(permitted_params[:diagnostic]))
+    else
+      @diagnostic = Diagnostic.new
+      route = '#'
+    end
     authorize @diagnostic
-    create! { diagnostic_questions_path(@diagnostic) }
+    if @diagnostic.save
+      route = diagnostic_questions_path(@diagnostic)
+    end
+    respond_with @diagnostic, action: :new,
+                              location: route
   end
 
   def questions

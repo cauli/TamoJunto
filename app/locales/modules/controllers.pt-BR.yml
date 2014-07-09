@@ -11,3 +11,8 @@ pt-BR:
       welcome: 'Seja bem vindo %{user}!'
       reactivated: 'Conta reativada'
 
+  flash:
+    actions:
+      create:
+        alert: 'Preencha pelo menos um tema'
+

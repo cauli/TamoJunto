@@ -45,7 +45,7 @@ describe DiagnosticsController do
 
   protected
   def diagnostic_params
-    Diagnostic.make.attributes
+    Diagnostic.make.attributes.merge(theme_ids: [Theme.make!.id, Theme.make!.id])
   end
 
   def answer_params

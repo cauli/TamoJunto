@@ -11,7 +11,7 @@ class DiagnosticsController < ApplicationController
   end
 
   def create
-    if permitted_params.present?
+    if permitted_params[:diagnostic].present?
       @diagnostic = Diagnostic.new({user: current_user}.merge(permitted_params[:diagnostic]))
     else
       @diagnostic = Diagnostic.new

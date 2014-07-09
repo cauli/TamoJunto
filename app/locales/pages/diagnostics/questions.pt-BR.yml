@@ -2,3 +2,4 @@ pt-BR:
   diagnostics:
     questions:
       title: 'Responda as perguntas abaixo'
+      subtitle: 'Escolha sim ou não para as seguintes afirmações sobre o dia-a-dia do seu negócio'

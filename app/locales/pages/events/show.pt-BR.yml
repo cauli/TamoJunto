@@ -12,3 +12,4 @@ pt-BR:
       day: 'Dia'
       free: 'Gratuito'
       external_link: 'Quero saber mais sobre esse evento'
+      until: ' à '

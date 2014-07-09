@@ -52,7 +52,10 @@
               p#hora = @event.time
             .small-12.columns.no-left-padding
               h6 = t('.day')
-              p#dia = l @event.starts_at
+              - if @event.ends_at.present?
+                p#dia = l(@event.starts_at) + t('.until') + l(@event.ends_at)
+              - else
+                p#dia = l @event.starts_at
 
       .small-12.columns
         .info-field

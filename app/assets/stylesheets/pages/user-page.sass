@@ -28,10 +28,18 @@
   padding-top: +rem-calc(15px)
   dd
     float: left
-    padding-right: +rem-calc(25px)
+    margin-right: +rem-calc(20px)
+    padding-top: +rem-calc(5px)
     a
       color: lighten($body-font-color, 20%)
+      font-size: +rem-calc(20px)
     &.active
+      background-color: #ddd
+      border-radius: 4px
+      padding: +rem-calc(5px 12px)
+      +transition(0.3, all)
+      &:hover
+
       a
         color: $body-font-color
         font-weight: bold

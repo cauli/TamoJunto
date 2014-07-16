@@ -11,3 +11,4 @@ pt-BR:
       search_html: '<b>Clique em buscar</b> na barra escura no topo da página para encontrar conteúdos.'
       diagnostic_modal_html: '<b>Clique em Identifique sua necessidade</b> na barra escura no topo da página para fazer um diagnóstico sobre o seu negócio'
       diagnostic_button: 'Começar meu diagnóstico'
+      no_diagnostics_text: 'Assim que você realizar seu primeiro diagnóstico, o resultado aparecerá aqui para facilitar o seu acesso a ele.'

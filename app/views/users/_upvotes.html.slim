@@ -29,3 +29,6 @@
             h3 = t('.downloads.title')
         ol
           = render @user.upvoted_documents
+
+    - unless @user.upvoted_videos.any? || @user.upvoted_articles.any? || @user.upvoted_documents.any?
+      p = t('.no_upvotes_text')

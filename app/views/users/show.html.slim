@@ -49,10 +49,17 @@
                         td = link_to diagnostic.main_topics.map { |o| o.title }.join(', '), diagnostic_path(diagnostic)
 
 #welcome-modal.reveal-modal.medium data-reveal=""
-  h2 = t('.welcome')
-  ul
-    li = t('.search_html')
-    li = t('.diagnostic_modal_html')
-  = link_to t('.diagnostic_button'), new_diagnostic_path, class: 'button'
-  a.close-reveal-modal &#215
+  .row
+    .large-12.columns
+      h2 = t('.welcome')
+      .row
+        .large-11.columns
+          ul
+            li = t('.search_html')
+            li = t('.diagnostic_modal_html')
+      .row
+        .large-6.large-centered.columns
+
+          = link_to t('.diagnostic_button'), new_diagnostic_path, class: 'button expand'
+    a.close-reveal-modal &#215
 

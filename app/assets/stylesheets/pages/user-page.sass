@@ -34,7 +34,7 @@
       color: lighten($body-font-color, 20%)
       font-size: +rem-calc(20px)
     &.active
-      background-color: #ddd
+      background-color: #f4f4f4
       border-radius: 4px
       padding: +rem-calc(5px 12px)
       &:hover
@@ -42,4 +42,19 @@
       a
         color: $body-font-color
         font-weight: bold
+
+#welcome-modal
+  h2
+    margin-bottom: +rem-calc(20px)
+  ul 
+    font-size: +rem-calc(16px)
+    color: #888
+    margin-left: +rem-calc(20px)
+
+    li
+      line-height: +rem-calc(20px)
+      margin-bottom: +rem-calc(15px)
+
+      &:last-child
+        margin-bottom: +rem-calc(40px)
 

@@ -84,9 +84,11 @@ class ApplicationController < ActionController::Base
         flash[:notice] = t('controllers.registrations.reactivated')
       end
       if resource.created_at.round == resource.current_sign_in_at.round
-        flash[:notice] = t('controllers.registrations.welcome', user: resource.name)
+        #flash[:notice] = t('controllers.registrations.welcome', user: resource.name)
+        user_path(resource, first_login: true)
+      else
+        user_path(resource)
       end
-      user_path(resource)
     else
       organization_path(resource)
     end

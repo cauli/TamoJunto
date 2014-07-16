@@ -49,7 +49,8 @@ class EventsController < ApplicationController
                           :time,
                           :external_link,
                           :value,
-                          :tag_list])
+                          :tag_list,
+                          topic_ids: []])
   end
 
   def pundit_user

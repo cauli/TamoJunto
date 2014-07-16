@@ -39,7 +39,7 @@ pt-BR:
         ends_at: 'Termino em'
         time: 'Hora'
         external_link: 'Link do evento em outro site'
-        value: 'Valor'
+        value: 'Valor (R$)'
         state: 'Estado'
         organization: 'Organização'
         tag_list: 'Tags'

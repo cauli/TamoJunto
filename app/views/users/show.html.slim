@@ -14,7 +14,7 @@
         #about
           p = @user.about_business
           p#city = @user.city
-          p = @user.state.name
+          p = @user.state.try(:name)
 
   .row
     .large-12.columns

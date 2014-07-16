@@ -30,7 +30,7 @@ class EventsController < ApplicationController
   def destroy
     authorize resource
     resource.cancel!
-    redirect_to event_path(resource), notice: t('.notice')
+    redirect_to root_path(), notice: t('.notice')
   end
 
   def show

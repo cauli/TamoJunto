@@ -1,6 +1,7 @@
 pt-BR:
   organizations:
     show:
+      organization: 'Apoiador -'
       city: 'Cidade'
       phone: 'Telefone'
       about: 'Sobre'

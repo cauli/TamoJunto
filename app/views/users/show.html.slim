@@ -47,6 +47,8 @@
                         td = link_to l(diagnostic.created_at, format: :short), diagnostic_path(diagnostic)
                         td = link_to diagnostic.themes.map { |t| t.title }.join(', '), diagnostic_path(diagnostic)
                         td = link_to diagnostic.main_topics.map { |o| o.title }.join(', '), diagnostic_path(diagnostic)
+            - else
+              p = t('.no_diagnostics_text')
 
 #welcome-modal.reveal-modal.medium data-reveal=""
   h2 = t('.welcome')

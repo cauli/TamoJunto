@@ -12,7 +12,7 @@
 
         .result-item
           .theme
-            = image_tag ('icon-theme-c.png'), class: 'icon-theme'
+            = image_tag topic.question.theme.image.url, class: 'icon-theme'
             h4
               small = t('.theme', number: i)
               br/

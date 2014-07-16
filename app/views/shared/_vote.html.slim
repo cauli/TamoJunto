@@ -1,8 +1,7 @@
 h4
   = t('.title')
 p.votes
-  = " #{resource.upvotes} "
-  = t('.total_liked')
+  = t('.total_liked', count: resource.upvotes)
   .large-12.large-centered.columns
     = link_to [:upvote, resource], class: 'button vote-yes' do
       = image_tag ('thumbup.png'), class: 'button-icon'

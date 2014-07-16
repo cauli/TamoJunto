@@ -1,6 +1,4 @@
 pt-BR:
-  registrations:
-    welcome: 'Seja bem vindo %{user}!'
   diagnostics:
     questions_required: 'É necessário preencher todas as perguntas'
   controllers:

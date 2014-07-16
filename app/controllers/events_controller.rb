@@ -30,7 +30,7 @@ class EventsController < ApplicationController
   def destroy
     authorize resource
     resource.cancel!
-    redirect_to event_path(resource), notice: t('.notice')
+    redirect_to root_path(), notice: t('.notice')
   end
 
   def show
@@ -49,7 +49,8 @@ class EventsController < ApplicationController
                           :time,
                           :external_link,
                           :value,
-                          :tag_list])
+                          :tag_list,
+                          topic_ids: []])
   end
 
   def pundit_user

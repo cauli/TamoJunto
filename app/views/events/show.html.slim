@@ -70,4 +70,4 @@
     - if @event.external_link.present?
       .row  
         .small-5.small-centered.columns
-          = link_to t('.external_link'), @event.external_link, class: 'button expand'
+          = link_to t('.external_link'), @event.external_link, target: :blank, class: 'button expand'

@@ -39,7 +39,7 @@ describe EventsController do
 
     describe '#destroy' do
       before { delete :destroy, id: event }
-      it { expect(response).to redirect_to(event_path(event)) }
+      it { expect(response).to redirect_to(root_path) }
       it { expect(assigns(:event).canceled?).to be_true }
     end
   end

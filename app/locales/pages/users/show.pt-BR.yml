@@ -7,3 +7,7 @@ pt-BR:
       date: 'Data do diagnóstico'
       themes: 'Temas selecionados'
       topics: 'Resultados principais'
+      welcome: 'Seja bem vindo ao Tamo Junto!'
+      search_html: '<b>Clique em buscar</b> na barra escura no topo da página para encontrar conteúdos.'
+      diagnostic_modal_html: '<b>Clique em Identifique sua necessidade</b> na barra escura no topo da página para fazer um diagnóstico sobre o seu negócio'
+      diagnostic_button: 'Começar meu disgnóstico'

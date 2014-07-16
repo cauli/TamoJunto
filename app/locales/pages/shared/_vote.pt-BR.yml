@@ -2,4 +2,7 @@ pt-BR:
   shared:
     vote:
       title: 'Gostou deste conteúdo?'
-      total_liked: 'pessoas gostaram'
+      total_liked:
+        zero: ''
+        one: "%{count} pessoa gostou"
+        other: "%{count} pessoas gostaram"

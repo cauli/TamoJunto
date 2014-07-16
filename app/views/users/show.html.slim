@@ -37,16 +37,20 @@
               table
                 thead
                   tr
-                    th = t('.date')
-                    th = t('.themes')
                     th = t('.topics')
+                    th = t('.themes')
+                    th = t('.date')
+                    
+                    
                 tbody
                   - for diagnostic in @user.diagnostics.order('created_at desc') do
                     - if diagnostic.answers.count > 0
                       tr
-                        td = link_to l(diagnostic.created_at, format: :short), diagnostic_path(diagnostic)
-                        td = link_to diagnostic.themes.map { |t| t.title }.join(', '), diagnostic_path(diagnostic)
                         td = link_to diagnostic.main_topics.map { |o| o.title }.join(', '), diagnostic_path(diagnostic)
+                        td = link_to diagnostic.themes.map { |t| t.title }.join(', '), diagnostic_path(diagnostic)
+                        td = link_to l(diagnostic.created_at, format: :short), diagnostic_path(diagnostic)
+                        
+                        
             - else
               p = t('.no_diagnostics_text')
 

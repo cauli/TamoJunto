@@ -46,30 +46,34 @@
     .row
       .large-12.columns.organization-box
         .row
-          .large-8.columns
+          .large-5.large-centered.columns
             .content-image
               = image_tag 'apoiadores.png'
             .content-title
               h4 = t('.become_an_organization')
         .row
-          .text
-            = t('.organization_text')
-          .become-an-org
-            = link_to t('.become_an_organization'), '#', class: 'button'
+          .large-10.large-centered.columns
+            .text
+              = t('.organization_text')
+        .row
+          .large-4.large-centered.columns
+            .become-an-org
+              = link_to t('.become_an_organization'), '#', class: 'button expand'
 
   .sponsors
     .title#realization.text-center
       = t('.realization')
     .row.logos
       .small-2.columns
-        = image_tag 'alianca-logo.png'
+        = link_to 'http://www.aliancaempreendedora.org.br'
+           = image_tag 'alianca-logo.png'
       .small-10.columns
         #alianca-text
           = t('.alianca')
     .row
       .title#sponsors-title.text-center
         = t('.sponsor_text')
-      .small-12.centered-columns
+      .small-12.small-centered
         .logos.text-center
           ul
             li = image_tag 'caf-logo.png' 

@@ -35,9 +35,10 @@
             .row
               .small-12.columns
                 = render @events
+          - else
+            p = t('.no_events')
           - if current_organization == @organization
-            .pull-right
-              = link_to t('.events.new'), new_event_path, class: 'button'
+            = link_to t('.events.new'), new_event_path, class: 'button'
 
 
       section.services
@@ -53,7 +54,7 @@
               .row
                 .small-12.columns
                   = render @services
-
+          - else
+            p = t('.no_services')
           - if current_organization == @organization
-            .pull-right
-              = link_to t('.services.new'), new_service_path, class: 'button'
+            = link_to t('.services.new'), new_service_path, class: 'button'

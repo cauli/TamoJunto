@@ -7,6 +7,20 @@
         .pull-right
           = link_to t('words.create'), new_admin_topic_path, class: 'button'
 
+    h4 = "Topicos sem tema"
+    table
+      tr
+        th = t('.topic_title')
+        th = t('.created_at')
+        th.edit
+        th.remove
+      - Topic.all.reject{ |t| t.question.present? }.each do |topic|
+        tr
+          td = topic.title
+          td = l topic.created_at, format: :short
+          td = link_to  t('words.edit'), edit_admin_topic_path(topic), class: 'button tiny fa fa-edit'
+          td = link_to t('words.remove'), [:admin, topic], data: { confirm: t('words.are_you_sure') }, method: :delete, class: 'button tiny alert fa fa-trash-o'
+
     - Theme.all.order(:created_at).each do |theme|
       .topics
         h4 = "Tema: #{theme.title}"

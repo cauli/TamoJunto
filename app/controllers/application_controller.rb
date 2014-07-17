@@ -90,7 +90,11 @@ class ApplicationController < ActionController::Base
         user_path(resource)
       end
     else
-      organization_path(resource)
+      if resource.created_at.round == resource.current_sign_in_at.round
+        organization_path(resource, first_login: true)
+      else
+        organization_path(resource)
+      end
     end
   end
 

@@ -54,18 +54,19 @@
             - else
               p = t('.no_diagnostics_text')
 
-#welcome-modal.reveal-modal.medium data-reveal=""
-  .row
-    .large-12.columns
-      h2 = t('.welcome')
-      .row
-        .large-11.columns
-          ul
-            li = t('.search_html')
-            li = t('.diagnostic_modal_html')
-      .row
-        .large-6.large-centered.columns
+- if params[:first_login].present?
+  #welcome-modal.reveal-modal.medium data-reveal=""
+    .row
+      .large-12.columns
+        h2 = t('.welcome')
+        .row
+          .large-11.columns
+            ul
+              li = t('.search_html')
+              li = t('.diagnostic_modal_html')
+        .row
+          .large-6.large-centered.columns
 
-          = link_to t('.diagnostic_button'), new_diagnostic_path, class: 'button expand'
-    a.close-reveal-modal &#215
+            = link_to t('.diagnostic_button'), new_diagnostic_path, class: 'button expand'
+      a.close-reveal-modal &#215
 

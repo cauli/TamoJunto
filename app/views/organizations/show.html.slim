@@ -58,3 +58,19 @@
             p = t('.no_services')
           - if current_organization == @organization
             = link_to t('.services.new'), new_service_path, class: 'button'
+
+- if params[:first_login].present?
+  #welcome-modal.reveal-modal.medium data-reveal=""
+    .row
+      .large-12.columns
+        h2 = t('.welcome')
+        .row
+          .large-11.columns
+            ul
+              li = t('.resource_creation_html')
+              li = t('.search_html')
+        .row
+          .large-6.large-centered.columns
+
+            = link_to t('.search_button'), new_diagnostic_path, class: 'button expand'
+      a.close-reveal-modal &#215

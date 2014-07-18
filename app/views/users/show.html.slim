@@ -46,6 +46,7 @@
                   - for diagnostic in @user.diagnostics.order('created_at desc') do
                     - if diagnostic.answers.count > 0
                       tr
+
                         td = link_to diagnostic.main_topics.map { |o| o.title }.join(', '), diagnostic_path(diagnostic)
                         td = link_to diagnostic.themes.map { |t| t.title }.join(', '), diagnostic_path(diagnostic)
                         td = link_to l(diagnostic.created_at, format: :short), diagnostic_path(diagnostic)

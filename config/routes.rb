@@ -68,4 +68,6 @@ TamoJunto::Application.routes.draw do
       resources :organizations, only: :index
     end
   end
+
+  get 'pages/:id', to: 'pages#show', as: :page
 end

@@ -21,11 +21,11 @@
           .topic
             h5 = "#{current_user.first_name}, #{resource.result_text(topic.question.theme)[0]}"
             p = resource.result_text(topic.question.theme)[1] 
+            .goto-topic
+              h6 Tópicos
 
-            h6 Tópicos
-
-            h5 = link_to topic.title, topic
-            .button.small.see-topic Ver tópico 
+              h5 = link_to topic.title, topic
+              .button.small.see-topic Ver tópico 
           
         .row
           .small-1.small-centered.columns

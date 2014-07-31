@@ -22,7 +22,7 @@
                 .user-name = resource.name
               h6.omniauth-description = t('.omniauth_description')
             - else
-              = render "users/shared/social_links"
+              = link_to t(".sign_in_with", provider: 'Facebook'), omniauth_authorize_path(resource_name, :facebook), :class =>"facebook button expand"
 
         - unless resource.authorizations.any?
           .divider

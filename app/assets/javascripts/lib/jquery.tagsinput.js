@@ -177,7 +177,7 @@
 	$.fn.tagsInput = function(options) {
     var settings = jQuery.extend({
       interactive:true,
-      defaultText:'Adicionar tag',
+      defaultText:'Adicionar',
       minChars:0,
       width:'300px',
       height:'100px',
@@ -188,7 +188,7 @@
       removeWithBackspace:true,
       placeholderColor:'#666666',
       autosize: true,
-      comfortZone: 20,
+      comfortZone: 40,
       inputPadding: 6*2
     },options);
 

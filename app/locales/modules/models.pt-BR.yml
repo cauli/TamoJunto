@@ -22,13 +22,13 @@ pt-BR:
         title: 'Título'
         image: 'Imagem'
         content_html: 'Conteúdo'
-        tag_list: 'Tags'
+        tag_list: 'Palavras-chave'
         topics: 'Tópicos'
       document:
         title: 'Título'
         description: 'Descrição'
         file: 'Arquivo'
-        tag_list: 'Tags'
+        tag_list: 'Palavras-chave'
         topics: 'Tópicos'
       event:
         name: 'Nome'
@@ -42,7 +42,7 @@ pt-BR:
         value: 'Valor (R$)'
         state: 'Estado'
         organization: 'Organização'
-        tag_list: 'Tags'
+        tag_list: 'Palavras-chave'
         topics: 'Tópicos'
         canceled: 'Cancelado'
       organization:
@@ -65,8 +65,7 @@ pt-BR:
         local: 'Local'
         external_link: 'Link externo'
         value: 'Valor'
-        tag_list: 'Tags'
-        tag_list_hint: 'la'
+        tag_list: 'Palavras-chave'
       tag:
         name: 'Nome'
       theme:
@@ -89,12 +88,12 @@ pt-BR:
         title: 'Título'
         description: 'Descrição'
         url: 'URL'
-        tag_list: 'Tags'
+        tag_list: 'Palavras-chave'
         topics: 'Tópicos'
       topic:
         title: 'Título'
         description: 'Descrição'
-        tag_list: 'Tags'
+        tag_list: 'Palavras-chave'
         articles: 'Artigos'
         documents: 'Documentos'
         videos: 'Videos'

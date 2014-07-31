@@ -2,10 +2,10 @@ pt-BR:
   admin:
     tags:
       index:
-        title: 'Tags'
+        title: 'Palavras-chave'
         name: 'Nome'
         count: 'Vezes utilizada'
         remove: 'Remover'
         are_you_sure: 'Você tem certeza?'
       destroy:
-        success: 'Tag excluida com sucesso!'
+        success: 'Palavra-chave excluida com sucesso!'

@@ -16,4 +16,4 @@ pt-BR:
       welcome: 'Seja bem vindo ao Tamo Junto! Aqui você acessa sua página de perfil.'
       resource_creation_html: 'Como apoiador, você pode cadastrar os serviços e os eventos que você oferece a microempreendedores. Para cadastrar seus serviços, clique em: <b>Criar novo serviço</b> e para cadastrar eventos: <b>Criar novo evento</b>.'
       search_html: '<b>Clique em Buscar</b> na barra escura no topo da página para encontrar conteúdos.'
-      search_button: 'Buscar conteúdos'
+      close_button: 'Fechar'

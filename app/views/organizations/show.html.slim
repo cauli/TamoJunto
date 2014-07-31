@@ -72,5 +72,6 @@
         .row
           .large-6.large-centered.columns
 
-            = link_to t('.search_button'), new_diagnostic_path, class: 'button expand'
+            = link_to t('.close_button'), '#', class: 'button expand', 
+                      onclick: "$('#welcome-modal').foundation('reveal', 'close')"
       a.close-reveal-modal &#215

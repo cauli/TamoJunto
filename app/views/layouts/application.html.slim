@@ -18,14 +18,9 @@ head
   = javascript_include_tag 'application'
   = stylesheet_link_tag "//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,800,600"
 
-- if params[:controller] != 'home' && (!user_signed_in? && !organization_signed_in?) 
-  body.login-background
-- else
-  body
+body class=('login-background' if params[:controller] != 'home' && (!user_signed_in? && !organization_signed_in?))
   = initjs_tag app_name: 'TamoJunto'
   = render 'layouts/header' unless !user_signed_in? && !organization_signed_in?
-  = render 'layouts/login_header' if params[:controller] != 'home' && (!user_signed_in? && !organization_signed_in?) 
-
   = render 'layouts/flash', flash: flash if flash.present?
   - if admin?
     section.admin

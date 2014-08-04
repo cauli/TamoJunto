@@ -43,7 +43,7 @@ pt-BR:
         state: 'Estado'
         organization: 'Organização'
         tag_list: 'Palavras-chave'
-        topics: 'Tópicos'
+        topics: 'Escolha um ou mais tópicos em que seu evento se encaixa:'
         canceled: 'Cancelado'
       organization:
         email: 'Email'
@@ -66,6 +66,7 @@ pt-BR:
         external_link: 'Link externo'
         value: 'Valor'
         tag_list: 'Palavras-chave'
+        topics: 'Escolha um ou mais tópicos em que seu serviço se encaixa:'
       tag:
         name: 'Nome'
       theme:

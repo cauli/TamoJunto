@@ -9,7 +9,7 @@ pt-BR:
         password: "Senha"
         password_confirmation: "Confirme sua senha"
         omniauth_description: "Complete seu cadastro escolhendo uma senha"
-        sign_in_with: "Crie sua conta com o %{provider}"
+        sign_up_with: "Crie sua conta com o %{provider}"
         have_account: "Já tem uma conta? "
         sign_in_here: "Entre aqui"
         create_account: "Você é uma empresa que nos apoia? "

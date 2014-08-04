@@ -1,4 +1,7 @@
 pt-BR:
   shared:
     voted_by:
-      title: 'Também gostaram desse conteúdo:'
+      title:
+        zero: 'Seja o primeiro a avaliar este conteúdo!'
+        one: '%{count} pessoa gostou deste conteúdo:'
+        other: '%{count} pessoas também gostaram desse conteúdo:'

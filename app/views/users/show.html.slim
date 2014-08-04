@@ -13,7 +13,9 @@
             em = @user.contact
         #about
           p = @user.about_business
-          p#city = @user.city
+          p#city 
+            = @user.city
+            = ', ' if @user.state.present?
           p = @user.state.try(:name)
 
   .row

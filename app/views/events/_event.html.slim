@@ -19,4 +19,5 @@
           - if event.canceled?
             = t('activerecord.attributes.event.canceled')
           - else
-            = link_to t('words.cancel'), event, data: { confirm: t('words.are_you_sure') }, method: :delete
+            = link_to event, data: { confirm: t('words.are_you_sure') }, method: :delete do
+              .button.small.cancel.secondary = t('words.cancel')

@@ -1,9 +1,9 @@
 pt-BR:
   diagnostics:
     show:
-      title: 'Resultados do seu diagnóstico'
+      title: 'Não está satisfeito (a) com essas sugestões?'
       theme: 'Tema %{number}'
       see_more: 'Não está satisfeito com essas sugestões?'
-      see_more_description: 'Acesse os próximos tópicos indicados para seus interesses!'
+      see_more_description: 'Que tal acessar os próximos tópicos indicados para seus interesses?'
       or: 'Ou'
       search: ' busca livre '

@@ -32,7 +32,7 @@
               = f.association :state
           = f.input :business_created_at, start_year: Date.today.year - 70
           = f.input :contact
-          = f.input :password, :autocomplete => "off", :required => false
+          = f.input :password, :autocomplete => "off", :required => false, label: t('simple_form.labels.user.new_password')
           = f.input :password_confirmation, :required => false
           = f.input :current_password, :required => true
         = f.button :submit, t(".update")

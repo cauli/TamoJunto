@@ -1,15 +1,18 @@
+/ This menu is not working yet. We are waiting for content.
 footer
   .row.first-row
-    .large-10.columns
-      ul.links
-      / This menu is not working yet. We are waiting for content.
+    .large-5.columns
+      P 
+        | Realização
+      = link_to 'http://www.aliancaempreendedora.org.br', target: :blank do
+        = image_tag 'aliança-small.png', class: 'alianca-small'
+    .large-7.columns
+      ul.links  
         li = t('.help')
         li = t('.contact')
         li = t('.privacy_policy')
         li = t('.terms')
-    .large-2.columns
-      = link_to 'http://www.aliancaempreendedora.org.br', target: :blank do
-        = image_tag 'aliança-small.png', class: 'alianca-small'
+
 
   .row.second-row
     .large-11.columns

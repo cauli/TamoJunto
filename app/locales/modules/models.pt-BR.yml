@@ -42,7 +42,7 @@ pt-BR:
         value: 'Valor (R$)'
         state: 'Estado'
         organization: 'Organização'
-        tag_list: 'Palavras-chave'
+        tag_list: 'Coloque aqui as principais palavras-chave do seu evento separadas por vírgulas'
         topics: 'Escolha um ou mais tópicos em que seu evento se encaixa:'
         canceled: 'Cancelado'
       organization:
@@ -65,7 +65,7 @@ pt-BR:
         local: 'Local'
         external_link: 'Link externo'
         value: 'Valor'
-        tag_list: 'Palavras-chave'
+        tag_list: 'Coloque aqui as principais palavras-chave do seu serviço separadas por vírgulas'
         topics: 'Escolha um ou mais tópicos em que seu serviço se encaixa:'
       tag:
         name: 'Nome'

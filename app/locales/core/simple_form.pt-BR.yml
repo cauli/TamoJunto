@@ -62,7 +62,7 @@ pt-BR:
         external_link: 'Caso você esteja divulgando o evento em outro site, coloque aqui o link para mais informações'
         value: 'Coloque aqui quanto custará a participação no seu evento'
       service:
-        name: 'Coloque aqui o nome do seu evento'
+        name: 'Coloque aqui o nome do seu serviço'
         description: 'É importante você dizer o objetivo do seu serviço, para qual público ele se destina, e um resumo de como ele funciona'
         local: 'Coloque o local em que você presta o serviço e o endereço'
         external_link: 'Caso você esteja divulgando seu serviço em outro site, coloque aqui o link para mais informações'

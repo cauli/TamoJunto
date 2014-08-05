@@ -3,7 +3,7 @@ pt-BR:
     show:
       title: 'Resultados do seu diagnóstico'
       theme: 'Tema %{number}'
-      see_more: 'Não está satisfeito (a) com essas sugestões?'
+      see_more: 'Não está satisfeito(a) com essas sugestões?'
       see_more_description: 'Que tal acessar os próximos tópicos indicados para seus interesses?'
       or: 'Ou'
       search: ' busca livre '

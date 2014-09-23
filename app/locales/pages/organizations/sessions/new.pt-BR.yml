@@ -3,12 +3,14 @@ pt-BR:
     sessions:
       new:
         sign_in: 'Entre com a sua conta'
+        sign_up: 'Crie sua conta'
         forgot_password: "Esqueceu sua senha? "
         dont_have_account: "Ainda não tem uma conta? "
         create_your_account: "Crie aqui"
         user_account: "Você tem um perfil pessoal? "
         go_user_log_in: "Acesse aqui"
-        icon_title: "  Apoiadores"
+        icon_title: "  Entre usando seu email"
+        icon_title_sign_up: "  Crie sua conta"
 
     shared:
       social_links:

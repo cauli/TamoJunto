@@ -1,24 +1,46 @@
 .row
-  .large-6.large-centered.columns
+  .large-6.columns
     .box
       .large-10.columns.large-centered
         .top
           h3.text-center
             i.fa.fa-users.fa-fw
             = t(".icon_title")
-          //h4.subheader.text-center = t(".sign_in")
-          h4.text-center 
-            small
-              = t(".dont_have_account") 
-              = link_to t(".create_your_account"), new_organization_registration_path  
       hr  
 
       .large-10.columns.large-centered
-    	  = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-    	    .form-inputs
-    	      = f.input :email, :required => false, :autofocus => true
-    	      = f.input :password, :required => false, :hint => false
-    	      = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
-    	      = f.button :submit, t(".sign_in"), :class => "expand radius"
+        = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+          .form-inputs
+            = f.input :email, :required => false, :autofocus => true
+            = f.input :password, :required => false, :hint => false
+            = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
+            = f.button :submit, t(".sign_in"), :class => "expand radius"
             .small  
               = link_to t(".forgot_password"), new_organization_password_path, :class => "forgot_password"
+
+  .large-6.columns
+    .box
+      .large-10.columns.large-centered
+        .top
+          h3.text-center
+            i.fa.fa-users.fa-fw
+            = t(".icon_title_sign_up")
+      hr
+
+
+  
+      .large-10.columns.large-centered
+        = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+          = f.error_notification
+          .form-inputs
+            = f.input :name, :required => true, :autofocus => true
+            = f.input :kind, as: :select, collection: { t('organizations.individual') => 'individual', 
+                                                        t('organizations.legal_entity') => 'legal_entity',
+                                                        t('organizations.NGO') => 'NGO',
+                                                        t('organizations.university') => 'university',
+                                                        t('organizations.public_organ') => 'public_organ' }
+            = f.input :email, :required => true
+            = f.input :password, :required => true, :hint => false
+            = f.input :password_confirmation, :required => true, :hint => false
+
+          = f.button :submit, t(".sign_up"), :class => "expand radius"

@@ -1,10 +1,11 @@
-.row
-  .large-4.large.columns
+.row.sign-in
+  .large-4.columns
     .box
       .large-12.columns.large-centered
         h3.text-center 
           i.fa.fa-facebook.fa-fw
           = t('.facebook')
+        hr
         = render "users/shared/social_links"
 
 
@@ -15,7 +16,7 @@
           h3.text-center
             i.fa.fa-user.fa-fw
             = t(".icon_title")
-
+      hr
       .large-12.columns.large-centered
         = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
           .form-inputs
@@ -27,14 +28,14 @@
           .small  
             = link_to t(".forgot_password"), new_user_password_path, :class => "forgot_password"
 
-  .large-4.large.columns
+  .large-4.columns
     .box
       .large-12.columns.large-centered
         .top
           h3.text-center
             i.fa.fa-user.fa-fw
             = t(".icon_title_sign_up")
-
+      hr
       .row
         .large-10.columns.large-centered
 

@@ -31,7 +31,7 @@ pt-BR:
         new_password: 'Digite sua nova senha'
         password_confirmation: 'Confirme a nova senha'
         remember_me: 'Lembrar de mim'
-        birthdate: 'Data de criação/Data de nascimento'
+        birthdate: 'Data de criação/nascimento'
         gender: 'Sexo'
         city: 'Cidade'
         state: 'Estado'

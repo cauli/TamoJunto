@@ -29,7 +29,7 @@ pt-BR:
         name: 'Nome'
         password: 'Senha'
         new_password: 'Digite sua nova senha'
-        password_confirmation: 'Confirme a nova senha'
+        password_confirmation: 'Confirme a senha'
         remember_me: 'Lembrar de mim'
         birthdate: 'Data de criação/nascimento'
         gender: 'Sexo'

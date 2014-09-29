@@ -24,7 +24,7 @@ Then just checkout the code, configure dependencies and run the tests:
   
   `cp config/database.sample.yml config/database.yml`
  
-5. Create database and talbes
+5. Create database and tables
 
  `bundle exec rake db:create db:migrate db:seed`
 

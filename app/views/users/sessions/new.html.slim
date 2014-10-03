@@ -1,14 +1,5 @@
 .row.sign-in
-  .large-4.columns
-    .box
-      .large-12.columns.large-centered
-        h3.text-center 
-          i.fa.fa-facebook.fa-fw
-          = t('.facebook')
-        hr
-        = render "users/shared/social_links"
-
-  .large-4.columns
+  .large-6.columns
     .box
       .large-12.columns.large-centered
         .top
@@ -16,6 +7,22 @@
             i.fa.fa-user.fa-fw
             = t(".icon_title_sign_up")
       hr
+      .row
+        .large-10.columns.large-centered
+          .omniauth
+            - if resource.authorizations.any?
+              .row
+                .avatar = image_tag resource.avatar_url
+                .user-name = resource.name
+              h6.omniauth-description = t('.omniauth_description')
+            - else
+              = link_to t("users.registrations.new.sign_up_with", provider: 'Facebook'), omniauth_authorize_path(resource_name, :facebook), :class =>"facebook button expand"
+
+        - unless resource.authorizations.any?
+          .divider
+            p
+              = t(".or")
+
       .row
         .large-10.columns.large-centered
 
@@ -35,7 +42,7 @@
             .small  
               = link_to t(".forgot_password"), new_user_password_path, :class => "forgot_password"
 
-  .large-4.large.columns
+  .large-6.large.columns
     .box
       .large-12.columns.large-centered
         .top
@@ -43,6 +50,12 @@
             i.fa.fa-user.fa-fw
             = t(".icon_title")
       hr
+      .row
+        .large-10.columns.large-centered
+          = render "users/shared/social_links"
+      .divider
+        p
+          = t(".or")
       .large-12.columns.large-centered
         = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
           .form-inputs

@@ -52,18 +52,19 @@
       hr
       .row
         .large-10.columns.large-centered
-          = render "users/shared/social_links"
+          = link_to t(".sign_in_with", provider: 'Facebook'), omniauth_authorize_path(resource_name, :facebook), :class =>"facebook button expand"
       .divider
         p
           = t(".or")
-      .large-12.columns.large-centered
-        = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-          .form-inputs
-            = f.input :email, :required => false, :autofocus => true
-            = f.input :password, :required => false, :hint => false
-            = f.input :remember_me, :id => "remember_me", :as => :boolean if devise_mapping.rememberable?
-          .large-12.large-centered
-            = f.button :submit, t(".sign_in"), :class => "expand radius"
-          .small  
-            = link_to t(".forgot_password"), new_user_password_path, :class => "forgot_password"
+      .row
+        .large-10.columns.large-centered
+          = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+            .form-inputs
+              = f.input :email, :required => false, :autofocus => true
+              = f.input :password, :required => false, :hint => false
+              = f.input :remember_me, :id => "remember_me", :as => :boolean if devise_mapping.rememberable?
+            .large-12.large-centered
+              = f.button :submit, t(".sign_in"), :class => "expand radius"
+            .small  
+              = link_to t(".forgot_password"), new_user_password_path, :class => "forgot_password"
   

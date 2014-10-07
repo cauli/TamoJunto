@@ -4,7 +4,7 @@ pt-BR:
       new:
         sign_in: 'Entre com a sua conta'
         sign_up: "Criar uma conta"
-        sign_in_with: "Conecte-se pelo %{provider}"
+        sign_in_with: "Entre através do seu %{provider}"
         dont_have_account: "Ainda não tem conta? "
         create_your_account: "Crie aqui"
         organization_account: "Você é uma empresa que nos apoia? "

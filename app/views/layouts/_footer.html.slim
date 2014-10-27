@@ -1,18 +1,20 @@
 / This menu is not working yet. We are waiting for content.
 footer
   .row.first-row
-    .large-5.columns
+    .large-2.columns
       P 
         | Realização
       = link_to 'http://www.aliancaempreendedora.org.br', target: :blank do
         = image_tag 'aliança-small.png', class: 'alianca-small'
-    .large-7.columns
+    .large-4.columns.facebook
+      iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fsitetamojunto&amp;width=300&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=617182798353994" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:80px;" allowTransparency="true"
+
+    .large-6.columns
       ul.links  
         li = t('.help')
         li = t('.contact')
         li = t('.privacy_policy')
         li = t('.terms')
-
 
   .row.second-row
     .large-11.columns

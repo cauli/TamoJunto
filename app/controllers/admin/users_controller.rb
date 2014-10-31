@@ -9,7 +9,7 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def permitted_params
-    params.permit(user: Organization.attribute_names.map(&:to_sym) - attributes_black_list)
+    params.permit(user: User.attribute_names.map(&:to_sym) - attributes_black_list)
   end
 
   def attributes_black_list

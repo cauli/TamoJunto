@@ -11,7 +11,7 @@
           .row
             .large-6.columns.search-wrapper
               i.fa.fa-search
-              = f.input :query, as: :search, label: false, input_html: { value: params[:search].try(:[], :query) }
+              = f.input :query, as: :search, label: false, input_html: { value: params[:search].try(:[], :query) }, autofocus: true
             .large-6.columns
               = f.button :submit, t('.submit')
           .row

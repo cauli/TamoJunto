@@ -12,16 +12,6 @@
   .row
     .large-12.columns
  
-      - if @topic.articles.any?
-        section.articles
-          .row
-            .title
-              .large-1.columns
-                =image_tag ('article-icon.png')
-              h3 = t('.articles.title')
-          .row
-            = render @topic.articles
-
       - if @topic.videos.any?
         section.videos
           .row
@@ -31,6 +21,16 @@
               h3 = t('.videos.title')
           .row
             = render @topic.videos
+
+      - if @topic.articles.any?
+        section.articles
+          .row
+            .title
+              .large-1.columns
+                =image_tag ('article-icon.png')
+              h3 = t('.articles.title')
+          .row
+            = render @topic.articles
 
       - if @topic.events.visible.any?
         section.events

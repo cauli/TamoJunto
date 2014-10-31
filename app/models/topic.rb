@@ -18,7 +18,7 @@ class Topic < ActiveRecord::Base
 
   def self.search(search)
     if search
-      search_by_title(search) + tagged_with(search)
+      search_by_title(search).merge(tagged_with(search))
     else
       none
     end

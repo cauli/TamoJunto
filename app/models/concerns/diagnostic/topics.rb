@@ -26,9 +26,11 @@ module Diagnostic::Topics
 
     def bad_topics
       themes.order(:id).map do |theme|
-        answers.by_theme(theme).order(:question_id).bad.map do |a|
+        topics = answers.by_theme(theme).order(:question_id).bad.map do |a|
           a.try(:question).try(:topic)
         end
+
+        topics.sort_by{ |topic| topic.row_order }
       end
     end
 

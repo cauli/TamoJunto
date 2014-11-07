@@ -48,8 +48,13 @@ module Diagnostic::Topics
       if bad_topics[index].present?
         bad_topics[index]
       else
-        [theme.questions.order(:id).first.topic,
-         theme.questions.order(:id).try(:second).try(:topic)]
+        topics = theme.questions.map do |question|
+          question.topic
+        end
+        topics = topics.sort_by{ |t| t.row_order }
+
+        [topics.first,
+         topics.try(:second)]
       end
     end
 

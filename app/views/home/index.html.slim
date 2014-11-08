@@ -80,6 +80,17 @@
             li 
               = link_to 'http://www.caf.com', target: '_blank'
                 = image_tag 'caf-logo.png' 
+
+    .row
+      .title.text-center
+        = t('.secondary_sponsor_text')
+      .small-12.small-centered
+        .logos.text-center
+          ul
+            li 
+              = link_to 'http://www.itaipu.gov.br/', target: '_blank'
+                = image_tag 'itaipu.png', width: '200px'
+
     .row
       .title.text-center
         = t('.sponsor_text')
@@ -91,6 +102,8 @@
                 = image_tag 'serasa.png', width: '200px'
 
     .row
+      .title.text-center
+        = t('.divulgation_text')
       .small-12.small-centered
         .logos.text-center
           ul.sponsors-list

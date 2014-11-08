@@ -15,7 +15,7 @@
   .video
     .row
       .small-8.small-centered.columns
-        iframe src="//player.vimeo.com/video/97455734?color=ffffff" width="635" height="390" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+        iframe width="635" showinfo="0" height="390" src="//www.youtube.com/embed/RN1YS6LduE4" frameborder="0" allowfullscreen
     .row
       .small-9.small-centered.columns.what-is
         p.content = t('.what_is')
@@ -73,10 +73,45 @@
           = t('.alianca')
     .row
       .title#sponsors-title.text-center
-        = t('.sponsor_text')
+        = t('.main_sponsor_text')
       .small-12.small-centered
         .logos.text-center
           ul
             li 
               = link_to 'http://www.caf.com', target: '_blank'
                 = image_tag 'caf-logo.png' 
+    .row
+      .title.text-center
+        = t('.sponsor_text')
+      .small-12.small-centered
+        .logos.text-center
+          ul
+            li 
+              = link_to 'http://www.serasaexperian.com.br/', target: '_blank'
+                = image_tag 'serasa.png', width: '200px'
+
+    .row
+      .small-12.small-centered
+        .logos.text-center
+          ul.sponsors-list
+            li 
+              = link_to 'http://curitiba.impacthub.net/', target: '_blank'
+                = image_tag 'impact-hub.png', width: '110px'
+            li 
+              = link_to 'http://www.empreendedorismorosa.com.br/', target: '_blank'
+                = image_tag 'empreendedorismo-rosa.jpg', width: '110px'
+            li 
+              = link_to 'http://www.gentedebem.org/', target: '_blank'
+                = image_tag 'gente-de-bem.jpg', width: '110px'
+            li 
+              = link_to 'http://www.acpr.com.br/site/', target: '_blank'
+                = image_tag 'acp.jpg', width: '110px'
+            li2
+              = link_to 'http://www.solidarium.net', target: '_blank'
+                = image_tag 'solidarium.jpg', width: '110px'
+            li 
+              = link_to 'http://www.icomfloripa.org.br/icom/', target: '_blank'
+                = image_tag 'icom.png', width: '110px'
+            li 
+              = link_to 'http://inkinspira.com.br/', target: '_blank'
+                = image_tag 'ink.png', width: '80px'

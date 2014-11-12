@@ -38,16 +38,6 @@
             ol
               = render @topics
 
-        - if @articles.any?
-          section.articles
-            .row
-              .title
-                .large-1.columns
-                  =image_tag ('article-icon.png')
-                h3 = t('.articles.title')
-            .row
-              = render @articles
-
         - if @videos.any?
           section.videos
             .row
@@ -57,6 +47,16 @@
                 h3 = t('.videos.title')
             .row
               = render @videos
+
+        - if @articles.any?
+          section.articles
+            .row
+              .title
+                .large-1.columns
+                  =image_tag ('article-icon.png')
+                h3 = t('.articles.title')
+            .row
+              = render @articles
 
         - if @events.any?
           section.events

@@ -8,7 +8,7 @@ begin
     authentication: :plain,
     user_name: ENV['MANDRILL_USERNAME'],
     password: ENV['MANDRILL_APIKEY'],
-    domain: 'heroku.com'
+    domain: 'www.tamojunto.org.br'
     }
     ActionMailer::Base.delivery_method = :smtp
   end

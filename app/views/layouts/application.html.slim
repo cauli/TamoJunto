@@ -13,6 +13,12 @@ head
   title = page_title app_name: 'Tamo Junto'
   = stylesheet_link_tag 'application'
   meta[charset='utf-8']
+  meta property="og:title"        content='Tamo Junto'
+  meta property="og:url"          content=url_for(only_path: false)
+  meta property="og:image"        content=image_url('logo-home.png')
+  meta property="og:site_name"    content='Tamo Junto'
+  meta property="fb:app_id"       content=ENV['FB_ID']
+  meta property="og:description"  content='Tamo Junto é o ponto de encontro de pessoas e organizações para oferecer ao microempreendedor(a) brasileiro(a) mais oportunidades de crescimento para ele(a) e para o seu negócio através de conteúdos, serviços e eventos.'
   = yield(:meta_tags)
   = csrf_meta_tag
   = javascript_include_tag 'application'
